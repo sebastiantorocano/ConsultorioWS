@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b556c7f-25b3-4831-816e-44e5c134354a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     proveedores.`nombre_proveedor` AS proveedores_nombre_proveedor,
+     proveedores.`contacto_proveedor` AS proveedores_contacto_proveedor,
+     proveedores.`direccion_proveedor` AS proveedores_direccion_proveedor,
+     proveedor_materiales.`cantidad_inventario` AS proveedor_materiales_cantidad_inventario,
+     materiales_consultorio.`nombre_matcon` AS materiales_consultorio_nombre_matcon
+FROM
+     `proveedores` proveedores INNER JOIN `proveedor_materiales` proveedor_materiales ON proveedores.`id_proveedor` = proveedor_materiales.`id_proveedor_pm`
+     INNER JOIN `materiales_consultorio` materiales_consultorio ON proveedor_materiales.`id_mat_pm` = materiales_consultorio.`id_matcon`]]>
+	</queryString>
+	<field name="proveedores_nombre_proveedor" class="java.lang.String"/>
+	<field name="proveedores_contacto_proveedor" class="java.lang.String"/>
+	<field name="proveedores_direccion_proveedor" class="java.lang.String"/>
+	<field name="materiales_consultorio_nombre_matcon" class="java.lang.String"/>
+	<field name="proveedor_materiales_cantidad_inventario" class="java.lang.Integer"/>
+	<group name="proveedores_nombre_proveedor">
+		<groupExpression><![CDATA[$F{proveedores_nombre_proveedor}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="229" height="24" forecolor="#CC0000" uuid="9282525c-be80-4cde-9f77-3e0d55c46077"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{proveedores_nombre_proveedor}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="e86c2faa-2e39-4700-9ad9-2eac54573a39"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Proveedores]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="82d3ac27-617d-4396-bd1f-b9f45169df95"/>
+				<text><![CDATA[información]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="7e103d5e-1994-4e6d-a177-a9f4f937335c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="58" height="15" uuid="acaecc15-773e-4e3d-8048-ce7f9e2645ed"/>
+				<text><![CDATA[contacto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="117" y="19" width="59" height="15" uuid="1db41475-98c3-4951-8f9e-1349bfb8570c"/>
+				<text><![CDATA[direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="263" y="19" width="138" height="15" uuid="4bd1ca90-7c8c-4ec3-860b-172f8e47a631"/>
+				<text><![CDATA[nombre material]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="20" width="138" height="15" uuid="c8d17458-dddd-4732-a977-e5f546221ee1"/>
+				<text><![CDATA[cantidad inventario]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="2067f91c-7353-49b9-8cf9-9b1344c063a3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="138" height="15" uuid="c10254d8-b85b-453b-bb00-ab41f5690612"/>
+				<textFieldExpression><![CDATA[$F{proveedores_contacto_proveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="138" height="15" uuid="04e92b55-8495-4cac-b16c-de7bac7a4e55"/>
+				<textFieldExpression><![CDATA[$F{proveedores_direccion_proveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="138" height="15" uuid="fc6975f5-3b4a-40df-9a9c-e3fd7aa7b4c4"/>
+				<textFieldExpression><![CDATA[$F{materiales_consultorio_nombre_matcon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="138" height="15" uuid="fbdee5c1-350c-463b-a0f9-142c14c69ea1"/>
+				<textFieldExpression><![CDATA[$F{proveedor_materiales_cantidad_inventario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="9e7125a4-6f67-44ca-b2fd-ca5267c58914"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="0603d74f-8c36-442b-bb7d-57f63c56d1bc"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="c6a41bd4-1b4e-4b31-ae02-00287b76e348"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="a0cb3a0f-55a2-4abc-b4f9-4e6badc3022e"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

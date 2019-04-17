@@ -1,0 +1,10 @@
+-Expandir labels de numero de diente en visor odontograma (todos quedaron con dimensiones 50X - 20Y)
+-Superficie cariada ahora tiene la convencion como X y extraccion indicada quedo con -
+-Se cambio el texto de corona destapada por corona en mal estado
+- Se agrego validacion de longitud de campos segun la base de datos a la mayoria de campos de la pestaña informacion personal del paciente,antecedentes, anexo de ortodoncia (los que se consideraron necesarios)
+-Se corrigieron errores en los botones cancelar (no limpiaban correctamente los campos)
+- En citas eso esta bastante raro, en futuros dias seguire intentandole, lo que pasa es: jcalendario no muestra los numeros de los dias, al momento de modificar o eliminar una cita con un paciente que no tenga hc no muestra mensajes de erro en los JOptionPane y por ejemplo al modificar uno existente lo modifica bien, pero al hacerlo con uno inexistente sale error en fecha. Necesito ayuda con eso.
+-Para citas, se uso una version anterior(31 octubre) y se le deshabilito a esta el boton modificar, ya que modificaba todas las citas del paciente.
+- Se hizo limpieza de codigo de citas y hc (eliminar variables, metodos y comentarios inutiles)
+- queda pendiente revisar en guardar hc las validaciones de logica (no campos vacios)
+-En citas se modifico el consultar(si no encuentra en la talba paciente busca en citas) y modificar (ya solo modifica la ultima cita y no todas).

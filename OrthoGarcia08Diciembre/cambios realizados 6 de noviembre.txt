@@ -1,0 +1,6 @@
+Cambios realizados:
+-A la bd, en la tabla usuarios se agrego el campo estado donde 1 es activo y 0 inactivo
+-En el sw se modifico la ventana usuarios agregando 2 botones (inactivar y activar) ya no hay eliminar
+-Se modifico el login para que solo ingresen usuarios activos y registrados
+-Se modifico citas para que solo liste odontologos activos
+-Se cambio de la bd la mayoria de campos relacionados con observaciones,evoluciones y diagnosticos (de varchar a text)
