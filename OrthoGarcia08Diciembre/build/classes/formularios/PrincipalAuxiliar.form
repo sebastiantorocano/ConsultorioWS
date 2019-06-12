@@ -31,8 +31,7 @@
           <Group type="102" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnacercade" max="32767" attributes="0"/>
-                  <Component id="btnmatcon" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btnacercade" pref="187" max="32767" attributes="0"/>
                   <Component id="btnayuda" alignment="1" max="32767" attributes="0"/>
                   <Component id="btnusuarios" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnsalir" max="32767" attributes="0"/>
@@ -49,14 +48,12 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="btnusuarios" min="-2" pref="79" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnmatcon" min="-2" pref="70" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnacercade" min="-2" pref="73" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnayuda" min="-2" pref="79" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnsalir" min="-2" pref="74" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="83" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,17 +74,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnusuariosActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnmatcon">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/materiales.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Materiales de consultorio"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnmatconActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnacercade">

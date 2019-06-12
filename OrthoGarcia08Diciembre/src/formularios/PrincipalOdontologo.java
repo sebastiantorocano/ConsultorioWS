@@ -34,8 +34,6 @@ public class PrincipalOdontologo extends javax.swing.JFrame {
     private void initComponents() {
 
         btnpacientes = new javax.swing.JButton();
-        btnusuarios = new javax.swing.JButton();
-        btnmatcon = new javax.swing.JButton();
         btnagenda = new javax.swing.JButton();
         btnacercade = new javax.swing.JButton();
         btnayuda = new javax.swing.JButton();
@@ -49,22 +47,6 @@ public class PrincipalOdontologo extends javax.swing.JFrame {
         btnpacientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnpacientesActionPerformed(evt);
-            }
-        });
-
-        btnusuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/usuario.png"))); // NOI18N
-        btnusuarios.setText("Usuarios");
-        btnusuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnusuariosActionPerformed(evt);
-            }
-        });
-
-        btnmatcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/materiales.png"))); // NOI18N
-        btnmatcon.setText("Materiales de consultorio");
-        btnmatcon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmatconActionPerformed(evt);
             }
         });
 
@@ -112,16 +94,14 @@ public class PrincipalOdontologo extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(93, 93, 93)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnsalir, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btnmatcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnusuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnpacientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnagenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnacercade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnayuda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(btnacercade, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                                .addComponent(btnayuda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -130,20 +110,16 @@ public class PrincipalOdontologo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnpacientes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnusuarios)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnmatcon)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnagenda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnacercade)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnpacientes, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnagenda, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnacercade, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btnayuda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnsalir)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();
@@ -154,18 +130,6 @@ public class PrincipalOdontologo extends javax.swing.JFrame {
         frmHistoriaC historia = new frmHistoriaC();
         historia.setVisible(true);//show();
     }//GEN-LAST:event_btnpacientesActionPerformed
-
-    private void btnusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnusuariosActionPerformed
-        // TODO add your handling code here:
-        frmUsuarios usuario = new frmUsuarios();
-        usuario.setVisible(true);
-    }//GEN-LAST:event_btnusuariosActionPerformed
-
-    private void btnmatconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmatconActionPerformed
-        // TODO add your handling code here:
-        frmMatcons matcon = new frmMatcons();
-        matcon.setVisible(true);
-    }//GEN-LAST:event_btnmatconActionPerformed
 
     private void btnagendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagendaActionPerformed
         // TODO add your handling code here:
@@ -251,10 +215,8 @@ public class PrincipalOdontologo extends javax.swing.JFrame {
     private javax.swing.JButton btnacercade;
     private javax.swing.JButton btnagenda;
     private javax.swing.JButton btnayuda;
-    private javax.swing.JButton btnmatcon;
     private javax.swing.JButton btnpacientes;
     private javax.swing.JButton btnsalir;
-    private javax.swing.JButton btnusuarios;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

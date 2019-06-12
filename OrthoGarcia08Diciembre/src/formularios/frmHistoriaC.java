@@ -94,11 +94,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
         Calendar c2 = new GregorianCalendar();
         jDateChooser2.setCalendar(c2);
 
-        jtAObservacionesRadiografias.setEnabled(false);
-        btnCancelarRadio.setEnabled(false);
-        jcmbTipo_radiografia.setEnabled(false);
-        btnAdjuntar1.setEnabled(false);
-        btnAgregarRadiografia.setEnabled(false);
+
 
         SLetras(txtnomsegtrat);
         SLetras(txtapesegtrat);
@@ -107,11 +103,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
         SNumeros(txttelsegtrat);
         txtfechasegtrat.setText(obtener_fecha());
         txtfechasegtrat.setEnabled(false);
-        SNumeros(txtCedulaRadio);
-        SLetras(txtNombresRadio);
-        SLetras(txtApellidosRadio);
-        SNumeros(txtTelefonoRadio);
-
+  
         SNumeros(txtinfonohc);
         SNumeros(txtinfoedad);
         SLetras(txtinfoape);
@@ -629,41 +621,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
         txtnomsegtrat = new javax.swing.JTextField();
         txtapesegtrat = new javax.swing.JTextField();
         txttelsegtrat = new javax.swing.JTextField();
-        jPanel26 = new javax.swing.JPanel();
-        jLabel171 = new javax.swing.JLabel();
-        jLabel172 = new javax.swing.JLabel();
-        txtCedulaRadio = new javax.swing.JTextField();
-        jLabel173 = new javax.swing.JLabel();
-        jLabel174 = new javax.swing.JLabel();
-        jLabel175 = new javax.swing.JLabel();
-        txtNombresRadio = new javax.swing.JTextField();
-        txtApellidosRadio = new javax.swing.JTextField();
-        txtTelefonoRadio = new javax.swing.JTextField();
-        jLabel176 = new javax.swing.JLabel();
-        btnBuscar2 = new javax.swing.JButton();
-        txtrutaPanoramica = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
-        btnAdjuntar1 = new javax.swing.JButton();
-        btnAgregarRadiografia = new javax.swing.JButton();
-        jLabel184 = new javax.swing.JLabel();
-        txtFechaRadio = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel186 = new javax.swing.JLabel();
-        jScrollPane19 = new javax.swing.JScrollPane();
-        TablaPanoramicas = new javax.swing.JTable();
-        jLabel187 = new javax.swing.JLabel();
-        jScrollPane20 = new javax.swing.JScrollPane();
-        TablaCefalicas = new javax.swing.JTable();
-        btnNueva_radiografia = new javax.swing.JButton();
-        txtrutaRadiografiaN = new javax.swing.JTextField();
-        jLabel177 = new javax.swing.JLabel();
-        jcmbTipo_radiografia = new javax.swing.JComboBox();
-        jSeparator1 = new javax.swing.JSeparator();
-        btnCancelarRadio = new javax.swing.JButton();
-        jLabel188 = new javax.swing.JLabel();
-        jScrollPane21 = new javax.swing.JScrollPane();
-        jtAObservacionesRadiografias = new javax.swing.JTextArea();
-        btnCancelar3 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         tblodontogramas_paciente = new javax.swing.JScrollPane();
         tblodontograma = new javax.swing.JTable();
@@ -958,6 +915,11 @@ public class frmHistoriaC extends javax.swing.JFrame {
             }
         });
 
+        txtinfonumdoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtinfonumdocActionPerformed(evt);
+            }
+        });
         txtinfonumdoc.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtinfonumdocKeyTyped(evt);
@@ -4471,297 +4433,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
 
         jtabledpaneInformacion.addTab("Seguimiento de Tratamientos", jPanel25);
 
-        jLabel171.setText("Radiografias.");
-
-        jLabel172.setText(" * Cédula:");
-
-        jLabel173.setText("Nombres:");
-
-        jLabel174.setText("Apellidos:");
-
-        jLabel175.setText("Teléfono:");
-
-        jLabel176.setText("Radiografía ");
-
-        btnBuscar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buscar.png"))); // NOI18N
-        btnBuscar2.setText("Consultar");
-        btnBuscar2.setToolTipText("Buscar ");
-        btnBuscar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscar2ActionPerformed(evt);
-            }
-        });
-
-        txtrutaPanoramica.setEditable(false);
-
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buscar.png"))); // NOI18N
-        jButton5.setText("Ver");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
-        btnAdjuntar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/anexo.png"))); // NOI18N
-        btnAdjuntar1.setText("Adjuntar");
-        btnAdjuntar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdjuntar1ActionPerformed(evt);
-            }
-        });
-
-        btnAgregarRadiografia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addRadiogra.png"))); // NOI18N
-        btnAgregarRadiografia.setText("Agregar");
-        btnAgregarRadiografia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarRadiografiaActionPerformed(evt);
-            }
-        });
-
-        jLabel184.setText("Fecha:");
-
-        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel186.setText("Radiografías panoramicas del paciente.");
-
-        TablaPanoramicas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Fecha", "Còdigo Radiografìa", "Observaciones"
-            }
-        ));
-        TablaPanoramicas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TablaPanoramicasMouseClicked(evt);
-            }
-        });
-        jScrollPane19.setViewportView(TablaPanoramicas);
-
-        jLabel187.setText("Radiografías cefálicas laterales del paciente.");
-
-        TablaCefalicas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Fecha", "Còdigo", "Observaciones"
-            }
-        ));
-        TablaCefalicas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TablaCefalicasMouseClicked(evt);
-            }
-        });
-        jScrollPane20.setViewportView(TablaCefalicas);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel186)
-                    .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel187))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel186)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel187)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane20, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
-        );
-
-        btnNueva_radiografia.setText("Nueva Radiografìa.");
-        btnNueva_radiografia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNueva_radiografiaActionPerformed(evt);
-            }
-        });
-
-        txtrutaRadiografiaN.setEditable(false);
-        txtrutaRadiografiaN.setEnabled(false);
-
-        jLabel177.setText("Tipo de Radiografìa:");
-
-        jcmbTipo_radiografia.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecciones uno.", "Panoramica.", "Cefàlica lateral." }));
-
-        btnCancelarRadio.setText("Cancelar.");
-        btnCancelarRadio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarRadioActionPerformed(evt);
-            }
-        });
-
-        jLabel188.setText("Observaciones:");
-
-        jtAObservacionesRadiografias.setColumns(20);
-        jtAObservacionesRadiografias.setLineWrap(true);
-        jtAObservacionesRadiografias.setRows(5);
-        jtAObservacionesRadiografias.setWrapStyleWord(true);
-        jScrollPane21.setViewportView(jtAObservacionesRadiografias);
-
-        btnCancelar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancelar.png"))); // NOI18N
-        btnCancelar3.setText("Cancelar");
-        btnCancelar3.setToolTipText("Cancelar");
-        btnCancelar3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelar3ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel184)
-                            .addComponent(jLabel172)
-                            .addComponent(jLabel174)
-                            .addComponent(jLabel173)
-                            .addComponent(jLabel175))
-                        .addGap(45, 45, 45)
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombresRadio)
-                            .addComponent(txtCedulaRadio)
-                            .addComponent(txtTelefonoRadio)
-                            .addComponent(txtApellidosRadio)
-                            .addComponent(txtFechaRadio))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnBuscar2)
-                            .addComponent(btnCancelar3))
-                        .addGap(97, 97, 97))
-                    .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel26Layout.createSequentialGroup()
-                                .addComponent(jLabel176)
-                                .addGap(51, 51, 51)
-                                .addComponent(txtrutaPanoramica, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addComponent(jButton5))
-                            .addGroup(jPanel26Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel171)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addComponent(btnNueva_radiografia)
-                        .addGap(33, 33, 33)
-                        .addComponent(btnCancelarRadio))
-                    .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel177)
-                            .addComponent(jLabel188))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane21)
-                            .addComponent(jcmbTipo_radiografia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtrutaRadiografiaN, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addComponent(btnAdjuntar1)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAgregarRadiografia, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(228, 228, 228))
-            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1085, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel171)
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel26Layout.createSequentialGroup()
-                                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel172)
-                                    .addComponent(txtCedulaRadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel173)
-                                    .addComponent(txtNombresRadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(btnBuscar2))
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel26Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel174)
-                                    .addComponent(txtApellidosRadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel175)
-                                    .addComponent(txtTelefonoRadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel26Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(btnCancelar3)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel184)
-                            .addComponent(txtFechaRadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel176)
-                            .addComponent(txtrutaPanoramica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5)))
-                    .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNueva_radiografia)
-                    .addComponent(btnCancelarRadio))
-                .addGap(24, 24, 24)
-                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel177)
-                    .addComponent(jcmbTipo_radiografia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel188)
-                    .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addComponent(txtrutaRadiografiaN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnAdjuntar1)
-                            .addComponent(btnAgregarRadiografia, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(275, Short.MAX_VALUE))
-        );
-
-        jtabledpaneInformacion.addTab("Radiografias.", jPanel26);
-
         tblodontograma.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -4861,50 +4532,41 @@ public class frmHistoriaC extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
-        String Registro[] = new String[4];
+    private void btnBuscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar4ActionPerformed
+        String id = JOptionPane.showInputDialog("Digite el Id odontograma que desea buscar");
+
+        String sql = "SELECT diente_18,diente_17,diente_16,diente_15,diente_14,diente_13,diente_12,diente_11,"
+        + "diente_21,diente_22,diente_23,diente_24,diente_25,diente_26,diente_27,diente_28,"
+        + "diente_55,diente_54,diente_53,diente_52,diente_51,"
+        + "diente_61,diente_62,diente_63,diente_64,diente_65,"
+        + "diente_85,diente_84,diente_83,diente_82,diente_81,"
+        + "diente_71,diente_72,diente_73,diente_74,diente_75,"
+        + "diente_48,diente_47,diente_46,diente_45,diente_44,diente_43,diente_42,diente_41,"
+        + "diente_31,diente_32,diente_33,diente_34,diente_35,diente_36,diente_37,diente_38, tipo_odontograma"
+        + " FROM `odontogramas` WHERE id_odontograma="
+        + id;
+
         conectar cc = new conectar();
         Connection cn = cc.conexion();
-
-        //Validaciones de campos vacios
-        if (txtCedulaRadio.getText().equals("")) {
-            JOptionPane.showMessageDialog(prognatismomand, "Debe digitar una cédula de paciente");
-            return;
-        }
-        if (buscarpaciente(txtCedulaRadio.getText()) == false) {
-            JOptionPane.showMessageDialog(prognatismomand, "El paciente no tiene cita asignada");
-        }
-        Date fecha = new Date();
         try {
-            String consulta_citas_radio = "SELECT id_cita,nombres_pac,apellidos_pac,telefono_paciente_cita,fecha_cita from citas "
-                    + "where id_pac_cita='" + txtCedulaRadio.getText() + "' ORDER BY id_cita ASC";
-
-            Statement estate = cn.createStatement();
-            ResultSet result = estate.executeQuery(consulta_citas_radio);
-
-            while (result.next()) {
-                id_cita_radiografia = result.getString("id_cita");
-                Registro[0] = result.getString("nombres_pac");
-                Registro[1] = result.getString("apellidos_pac");
-                Registro[2] = result.getString("telefono_paciente_cita");
-                fecha = result.getDate("fecha_cita");
-                Registro[3] = fecha.toString();
-            }
-
-            txtNombresRadio.setText(Registro[0]);
-            txtApellidosRadio.setText(Registro[1]);
-            txtTelefonoRadio.setText(Registro[2]);
-            txtFechaRadio.setText(Registro[3]);
-
-        } catch (Exception ex) {
-            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, ex);
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            odontogramagale odo = new odontogramagale();
+            odo.recibir_odontograma(rs);
+            odo.setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(odontogramagale.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }//GEN-LAST:event_btnBuscar4ActionPerformed
 
-        iniciar_tablas(txtCedulaRadio.getText());
+    private void btnGuardar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar3ActionPerformed
+        odontogramagale odont = new odontogramagale();
+        odont.setVisible(true);
+    }//GEN-LAST:event_btnGuardar3ActionPerformed
 
-
-    }//GEN-LAST:event_btnBuscar2ActionPerformed
+    private void txtnhcsegtratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnhcsegtratActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnhcsegtratActionPerformed
 
     private void btnGuardar13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar13ActionPerformed
         if (txtapesegtrat.getText().equals("")) {
@@ -4932,7 +4594,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
         String sql = "";
 
         sql = "INSERT INTO seguimiento_hc (id_seg_hc,num_doc_seg,evolucion_historia,fecha_seguimiento)"
-                + " VALUES(?,?,?,?)";
+        + " VALUES(?,?,?,?)";
         System.out.println("Sentencia para guardar es " + sql);
         String id_seg_hc = "" + Nuevo_Codigo();
         Date fecha = new Date();
@@ -4980,8 +4642,8 @@ public class frmHistoriaC extends javax.swing.JFrame {
         conectar cc = new conectar();
         Connection cn = cc.conexion();
         String sql = "update seguimiento_hc set evolucion_historia='" + tareaevolsegtrat.getText() + "' where "
-                + "num_doc_seg='" + txtcedpacsegtrat.getText() + "' and fecha_seguimiento='" + txtfechasegtrat.getText() + "' "
-                + "and id_seg_hc='" + codigo_seg + "'";
+        + "num_doc_seg='" + txtcedpacsegtrat.getText() + "' and fecha_seguimiento='" + txtfechasegtrat.getText() + "' "
+        + "and id_seg_hc='" + codigo_seg + "'";
         System.out.println("Sentencia para modificar " + sql);
         try {
             PreparedStatement pst = (PreparedStatement) cn.prepareStatement(sql);
@@ -5006,13 +4668,13 @@ public class frmHistoriaC extends javax.swing.JFrame {
         Connection cn = cc.conexion();
 
         String sql = "Select evolucion_historia,fecha_seguimiento,id_seg_hc"
-                + " from seguimiento_hc where num_doc_seg ='" + txtcedpacsegtrat.getText() + "'";
+        + " from seguimiento_hc where num_doc_seg ='" + txtcedpacsegtrat.getText() + "'";
 
         System.out.println("Sentencia para buscar " + sql);
         Statement st = null;
         Statement st2 = null;
         String sql2 = "select num_hc,nombre_paciente,apellido_paciente,telefono_paciente from pacientes"
-                + " where numero_doc_paciente ='" + txtcedpacsegtrat.getText() + "'";
+        + " where numero_doc_paciente ='" + txtcedpacsegtrat.getText() + "'";
 
         try {
             st = cn.createStatement();
@@ -5051,620 +4713,9 @@ public class frmHistoriaC extends javax.swing.JFrame {
         txtfechasegtrat.setText(obtener_fecha());
     }//GEN-LAST:event_btnCancelar11ActionPerformed
 
-    private void btnModificar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar12ActionPerformed
+    private void txtfechasegtratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfechasegtratActionPerformed
         // TODO add your handling code here:
-        String vcblabiosuperior = "n", vcblabioinferior = "n", vcbcomisuras = "n";
-        String vcbmucosaoral = "n", vcbsurcosyugales = "n";
-        String vcbfrenillos = "n", vcborofaringe = "n", vcbpaladar = "n";
-        String vcbglandulassalivales = "n", vcbpisoboca = "n";
-        String vcbdorsolengua = "n", vcbvientrelengua = "n", vcbruidos = "n";
-        String vcbdesviacion = "n", vcbcambiovolumen = "n";
-        String vcbbloqueomandibular = "n", vcblimitacionapertura = "n";
-        String vcbdolorarticular = "n", vcbdolormuscular = "n";
-
-        if (cblabiosuperior.isSelected()) {
-            vcblabiosuperior = "s";
-        }
-        if (cblabioinferior.isSelected()) {
-            vcblabioinferior = "s";
-        }
-        if (cbcomisuras.isSelected()) {
-            vcbcomisuras = "s";
-        }
-        if (cbmucosaoral.isSelected()) {
-            vcbmucosaoral = "s";
-        }
-        if (cbsurcosyugales.isSelected()) {
-            vcbsurcosyugales = "s";
-        }
-        if (cbfrenillos.isSelected()) {
-            vcbfrenillos = "s";
-        }
-        if (cborofaringe.isSelected()) {
-            vcborofaringe = "s";
-        }
-        if (cbpaladar.isSelected()) {
-            vcbpaladar = "s";
-        }
-        if (cbglandulassalivales.isSelected()) {
-            vcbglandulassalivales = "s";
-        }
-        if (cbpisoboca.isSelected()) {
-            vcbpisoboca = "s";
-        }
-        if (cbdorsolengua.isSelected()) {
-            vcbdorsolengua = "s";
-        }
-        if (cbvientrelengua.isSelected()) {
-            vcbvientrelengua = "s";
-        }
-        if (cbruidos.isSelected()) {
-            vcbruidos = "s";
-        }
-        if (cbdesviacion.isSelected()) {
-            vcbdesviacion = "s";
-        }
-        if (cbcambiovolumen.isSelected()) {
-            vcbcambiovolumen = "s";
-        }
-        if (cbbloqueomandibular.isSelected()) {
-            vcbbloqueomandibular = "s";
-        }
-        if (cblimitacionapertura.isSelected()) {
-            vcblimitacionapertura = "s";
-        }
-        if (cbdolorarticular.isSelected()) {
-            vcbdolorarticular = "s";
-        }
-        if (cbdolormuscular.isSelected()) {
-            vcbdolormuscular = "s";
-        }
-
-        String sql = "update pacientes set labio_superior_e_e=?,labio_inferior_e_e=?,"
-                + "comisuras_e_e=?,mucosa_oral_e_e=?,surcos_yugales_e_e=?,frenillos_e_e=?,"
-                + "orofaringe_e_e=?,paladar_e_e=?,glandulas_salivales_e_e=?,piso_boca_e_e=?,"
-                + "dorso_lengua_e_e=?,vientre_lengua_e_e=?,observaciones_e_e=?,"
-                + "ruidos_atm=?,desviacion_atm=?,cambio_volumen_atm=?,bloqueo_mandibular_atm=?,"
-                + "limitacion_apertura_atm=?,dolor_articular_atm=?,dolor_muscular_atm=?,"
-                + "observaciones_atm=?,cariados_cops=?,obturados_cops=?,extraidos_cops=?,"
-                + "sanos_cops=?,cariados_ceo=?,obturados_ceo=?,perdidos_ceo=?,sanos_ceo=?"
-                + ", cedula_usuario_paciente=? "
-                + " where numero_doc_paciente=?";
-        try {
-            conectar cc = new conectar();
-            Connection cn = cc.conexion();
-            java.sql.PreparedStatement ps = cn.prepareStatement(sql);
-
-            ps.setString(1, vcblabiosuperior);
-            ps.setString(2, vcblabioinferior);
-            ps.setString(3, vcbcomisuras);
-            ps.setString(4, vcbmucosaoral);
-            ps.setString(5, vcbsurcosyugales);
-            ps.setString(6, vcbfrenillos);
-            ps.setString(7, vcborofaringe);
-            ps.setString(8, vcbpaladar);
-            ps.setString(9, vcbglandulassalivales);
-            ps.setString(10, vcbpisoboca);
-            ps.setString(11, vcbdorsolengua);
-            ps.setString(12, vcbvientrelengua);
-            ps.setString(13, taobservaciones_e_e.getText());
-            ps.setString(14, vcbruidos);
-            ps.setString(15, vcbdesviacion);
-            ps.setString(16, vcbcambiovolumen);
-            ps.setString(17, vcbbloqueomandibular);
-            ps.setString(18, vcblimitacionapertura);
-            ps.setString(19, vcbdolorarticular);
-            ps.setString(20, vcbdolormuscular);
-            ps.setString(21, taobservaciones_atm.getText());
-            ps.setString(22, txtcopscariados.getText());
-            ps.setString(23, txtcopsobturados.getText());
-            ps.setString(24, txtcopsextraidos.getText());
-            ps.setString(25, txtcopssanos.getText());
-            ps.setString(26, txtceocariados.getText());
-            ps.setString(27, txtceoobturados.getText());
-            ps.setString(28, txtceoperdidos.getText());
-            ps.setString(29, txtceosanos.getText());
-            ps.setString(30, cedula_usuario);
-            ps.setString(31, txtinfonumdoc.getText());
-            int i = ps.executeUpdate();
-            if (i == 0) {
-                JOptionPane.showMessageDialog(null, "Error al modificar el paciente");
-            } else {
-                JOptionPane.showMessageDialog(null, "Paciente modificado con exito");
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, ex);
-        }
-    }//GEN-LAST:event_btnModificar12ActionPerformed
-
-    private void btnBuscar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar12ActionPerformed
-        // TODO add your handling code here:
-        String sql = "select labio_superior_e_e,labio_inferior_e_e,"
-                + "comisuras_e_e,mucosa_oral_e_e,surcos_yugales_e_e,frenillos_e_e,"
-                + "orofaringe_e_e,paladar_e_e,glandulas_salivales_e_e,piso_boca_e_e,"
-                + "dorso_lengua_e_e,vientre_lengua_e_e,observaciones_e_e,"
-                + "ruidos_atm,desviacion_atm,cambio_volumen_atm,bloqueo_mandibular_atm,"
-                + "limitacion_apertura_atm,dolor_articular_atm,dolor_muscular_atm,"
-                + "observaciones_atm,cariados_cops,obturados_cops,extraidos_cops,"
-                + "sanos_cops,cariados_ceo,obturados_ceo,perdidos_ceo,sanos_ceo"
-                + " from pacientes where numero_doc_paciente=?";
-        conectar cc = new conectar();
-        Connection cn = cc.conexion();
-        try {
-            String vcblabiosuperior = "n", vcblabioinferior = "n", vcbcomisuras = "n";
-            String vcbmucosaoral = "n", vcbsurcosyugales = "n";
-            String vcbfrenillos = "n", vcborofaringe = "n", vcbpaladar = "n";
-            String vcbglandulassalivales = "n", vcbpisoboca = "n";
-            String vcbdorsolengua = "n", vcbvientrelengua = "n", vcbruidos = "n";
-            String vcbdesviacion = "n", vcbcambiovolumen = "n";
-            String vcbbloqueomandibular = "n", vcblimitacionapertura = "n";
-            String vcbdolorarticular = "n", vcbdolormuscular = "n";
-            java.sql.PreparedStatement ps = cn.prepareStatement(sql);
-            ps.setString(1, txtinfonumdoc.getText());
-
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                vcblabiosuperior = rs.getString("labio_superior_e_e");
-                vcblabioinferior = rs.getString("labio_inferior_e_e");
-                vcbcomisuras = rs.getString("comisuras_e_e");
-                vcbmucosaoral = rs.getString("mucosa_oral_e_e");
-                vcbsurcosyugales = rs.getString("surcos_yugales_e_e");
-                vcbfrenillos = rs.getString("frenillos_e_e");
-                vcborofaringe = rs.getString("orofaringe_e_e");
-                vcbpaladar = rs.getString("paladar_e_e");
-                vcbglandulassalivales = rs.getString("glandulas_salivales_e_e");
-                vcbpisoboca = rs.getString("piso_boca_e_e");
-                vcbdorsolengua = rs.getString("dorso_lengua_e_e");
-                vcbvientrelengua = rs.getString("vientre_lengua_e_e");
-                taobservaciones_e_e.setText(rs.getString("observaciones_e_e"));
-                vcbruidos = rs.getString("ruidos_atm");
-                vcbdesviacion = rs.getString("desviacion_atm");
-                vcbcambiovolumen = rs.getString("cambio_volumen_atm");
-                vcbbloqueomandibular = rs.getString("bloqueo_mandibular_atm");
-                vcblimitacionapertura = rs.getString("limitacion_apertura_atm");
-                vcbdolorarticular = rs.getString("dolor_articular_atm");
-                vcbdolormuscular = rs.getString("dolor_muscular_atm");
-                taobservaciones_atm.setText(rs.getString("observaciones_atm"));
-                txtcopscariados.setText(rs.getString("cariados_cops"));
-                txtcopsobturados.setText(rs.getString("obturados_cops"));
-                txtcopsextraidos.setText(rs.getString("extraidos_cops"));
-                txtcopssanos.setText(rs.getString("sanos_cops"));
-                txtceocariados.setText(rs.getString("cariados_ceo"));
-                txtceoobturados.setText(rs.getString("obturados_ceo"));
-                txtceoperdidos.setText(rs.getString("perdidos_ceo"));
-                txtceosanos.setText(rs.getString("sanos_ceo"));
-            }
-            if (vcblabiosuperior.equals("s")) {
-                cblabiosuperior.setSelected(true);
-            }
-            if (vcblabiosuperior.equals("n")) {
-                cblabiosuperior.setSelected(false);
-            }
-            if (vcblabioinferior.equals("s")) {
-                cblabioinferior.setSelected(true);
-            }
-            if (vcblabioinferior.equals("n")) {
-                cblabioinferior.setSelected(false);
-            }
-            if (vcbcomisuras.equals("s")) {
-                cbcomisuras.setSelected(true);
-            }
-            if (vcbcomisuras.equals("n")) {
-                cbcomisuras.setSelected(false);
-            }
-            if (vcbmucosaoral.equals("s")) {
-                cbmucosaoral.setSelected(true);
-            }
-            if (vcbmucosaoral.equals("n")) {
-                cbmucosaoral.setSelected(false);
-            }
-            if (vcbsurcosyugales.equals("s")) {
-                cbsurcosyugales.setSelected(true);
-            }
-            if (vcbsurcosyugales.equals("n")) {
-                cbsurcosyugales.setSelected(false);
-            }
-            if (vcbfrenillos.equals("s")) {
-                cbfrenillos.setSelected(true);
-            }
-            if (vcbfrenillos.equals("n")) {
-                cbfrenillos.setSelected(false);
-            }
-            if (vcborofaringe.equals("s")) {
-                cborofaringe.setSelected(true);
-            }
-            if (vcborofaringe.equals("n")) {
-                cborofaringe.setSelected(false);
-            }
-            if (vcbpaladar.equals("s")) {
-                cbpaladar.setSelected(true);
-            }
-            if (vcbpaladar.equals("n")) {
-                cbpaladar.setSelected(false);
-            }
-            if (vcbglandulassalivales.equals("s")) {
-                cbglandulassalivales.setSelected(true);
-            }
-            if (vcbglandulassalivales.equals("n")) {
-                cbglandulassalivales.setSelected(false);
-            }
-            if (vcbpisoboca.equals("s")) {
-                cbpisoboca.setSelected(true);
-            }
-            if (vcbpisoboca.equals("n")) {
-                cbpisoboca.setSelected(false);
-            }
-            if (vcbdorsolengua.equals("s")) {
-                cbdorsolengua.setSelected(true);
-            }
-            if (vcbdorsolengua.equals("n")) {
-                cbdorsolengua.setSelected(false);
-            }
-            if (vcbvientrelengua.equals("s")) {
-                cbvientrelengua.setSelected(true);
-            }
-            if (vcbvientrelengua.equals("n")) {
-                cbvientrelengua.setSelected(false);
-            }
-            if (vcbruidos.equals("s")) {
-                cbruidos.setSelected(true);
-            }
-            if (vcbruidos.equals("n")) {
-                cbruidos.setSelected(false);
-            }
-            if (vcbdesviacion.equals("s")) {
-                cbdesviacion.setSelected(true);
-            }
-            if (vcbdesviacion.equals("n")) {
-                cbdesviacion.setSelected(false);
-            }
-            if (vcbcambiovolumen.equals("s")) {
-                cbcambiovolumen.setSelected(true);
-            }
-            if (vcbcambiovolumen.equals("n")) {
-                cbcambiovolumen.setSelected(false);
-            }
-            if (vcbbloqueomandibular.equals("s")) {
-                cbbloqueomandibular.setSelected(true);
-            }
-            if (vcbbloqueomandibular.equals("n")) {
-                cbbloqueomandibular.setSelected(false);
-            }
-            if (vcblimitacionapertura.equals("s")) {
-                cblimitacionapertura.setSelected(true);
-            }
-            if (vcblimitacionapertura.equals("n")) {
-                cblimitacionapertura.setSelected(false);
-            }
-            if (vcbdolorarticular.equals("s")) {
-                cbdolorarticular.setSelected(true);
-            }
-            if (vcbdolorarticular.equals("n")) {
-                cbdolorarticular.setSelected(false);
-            }
-            if (vcbdolormuscular.equals("s")) {
-                cbdolormuscular.setSelected(true);
-            }
-            if (vcbdolormuscular.equals("n")) {
-                cbdolormuscular.setSelected(false);
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, ex);
-        }
-    }//GEN-LAST:event_btnBuscar12ActionPerformed
-
-    private void btnCancelar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar12ActionPerformed
-        // TODO add your handling code here:
-
-        cblabiosuperior.setSelected(false);
-        cblabioinferior.setSelected(false);
-        cbcomisuras.setSelected(false);
-        cbmucosaoral.setSelected(false);
-        cbsurcosyugales.setSelected(false);
-        cbfrenillos.setSelected(true);
-        cbfrenillos.setSelected(false);
-        cborofaringe.setSelected(false);
-        cbpaladar.setSelected(false);
-        cbglandulassalivales.setSelected(false);
-        cbpisoboca.setSelected(false);
-        cbdorsolengua.setSelected(false);
-        cbvientrelengua.setSelected(false);
-        cbruidos.setSelected(false);
-        cbdesviacion.setSelected(false);
-        cbcambiovolumen.setSelected(false);
-        cbbloqueomandibular.setSelected(false);
-        cblimitacionapertura.setSelected(false);
-        cbdolorarticular.setSelected(false);
-        cbdolormuscular.setSelected(false);
-        taobservaciones_atm.setText("");
-        txtcopscariados.setText("");
-        txtcopsobturados.setText("");
-        txtcopsextraidos.setText("");
-        txtcopssanos.setText("");
-        txtceocariados.setText("");
-        txtceoobturados.setText("");
-        txtceoperdidos.setText("");
-        txtceosanos.setText("");
-        taobservaciones_e_e.setText("");
-
-    }//GEN-LAST:event_btnCancelar12ActionPerformed
-
-    private void btnModificar13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar13ActionPerformed
-        // TODO add your handling code here:
-        String sql = "update pacientes set alergias_o_m=?, discrasia_sanguinea_o_m=?,"
-                + "cardiopatias_o_m=?,embarazo_o_m=?,alter_pres_arterial_o_m=?,"
-                + "toma_medicamentos_o_m=?,trat_med_actual_o_m=?,hepatitis_o_m=?,"
-                + "diabetes_o_m=?,fiebre_reumatica_o_m=?,hiv_sida_o_m=?,inmunosupresion_o_m=?,"
-                + "patologias_renales_o_m=?,patologias_respiratorias_o_m=?,"
-                + "trastornos_gastricos_o_m=?,trastornos_emocionales_o_m=?,"
-                + "sinusitis_o_m=?,cirugias_o_m=?,exodoncias_o_m=?,"
-                + "enfermedades_orales_o_m=?,protesis_aparotologia_o_m=?,"
-                + "otras_pat_antec_o_m=?,observaciones_o_m=?,habitos_asociados_o_m=?"
-                + ",cedula_usuario_paciente=? "
-                + "where numero_doc_paciente=?";
-
-        try {
-            conectar cc = new conectar();
-            Connection cn = cc.conexion();
-            java.sql.PreparedStatement ps = cn.prepareStatement(sql);
-
-            ps.setString(1, vrbalergia);
-            ps.setString(2, vrbdiscrasia);
-            ps.setString(3, vrbcardiopatia);
-            ps.setString(4, vrbembarazo);
-            ps.setString(5, vrbpresionarterial);
-            ps.setString(6, vrbmedicamentos);
-            ps.setString(7, vrbtratmedico);
-            ps.setString(8, vrbhepatitis);
-            ps.setString(9, vrbdiabetes);
-            ps.setString(10, vrbreumatica);
-            ps.setString(11, vrbsida);
-            ps.setString(12, vrbinmunosupresion);
-            ps.setString(13, vrbrenales);
-            ps.setString(14, vrbrespiratorias);
-            ps.setString(15, vrbgastricos);
-            ps.setString(16, vrbemocionales);
-            ps.setString(17, vrbsinusitis);
-            ps.setString(18, vrbcirugias);
-            ps.setString(19, vrbexodoncias);
-            ps.setString(20, vrborales);
-            ps.setString(21, vrbprotesis);
-            ps.setString(22, taotraspatologias.getText());
-            ps.setString(23, taobservaciones_o_m.getText());
-            ps.setString(24, tahabitos.getText());
-            ps.setString(25, cedula_usuario);
-            ps.setString(26, txtinfonumdoc.getText());
-            int i = ps.executeUpdate();
-            if (i == 0) {
-                JOptionPane.showMessageDialog(null, "Error al modificar el paciente");
-            } else {
-                JOptionPane.showMessageDialog(null, "Paciente modificado con exito");
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, ex);
-        }
-    }//GEN-LAST:event_btnModificar13ActionPerformed
-
-    private void btnBuscar13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar13ActionPerformed
-        // TODO add your handling code here:
-        String sql = "select alergias_o_m, discrasia_sanguinea_o_m,"
-                + "cardiopatias_o_m,embarazo_o_m,alter_pres_arterial_o_m,"
-                + "toma_medicamentos_o_m,trat_med_actual_o_m,hepatitis_o_m,"
-                + "diabetes_o_m,fiebre_reumatica_o_m,hiv_sida_o_m,inmunosupresion_o_m,"
-                + "patologias_renales_o_m,patologias_respiratorias_o_m,"
-                + "trastornos_gastricos_o_m,trastornos_emocionales_o_m,"
-                + "sinusitis_o_m,cirugias_o_m,exodoncias_o_m,"
-                + "enfermedades_orales_o_m,protesis_aparotologia_o_m,"
-                + "otras_pat_antec_o_m,observaciones_o_m,habitos_asociados_o_m"
-                + " from pacientes where numero_doc_paciente=?";
-        conectar cc = new conectar();
-        Connection cn = cc.conexion();
-        try {
-
-            java.sql.PreparedStatement ps = cn.prepareStatement(sql);
-            ps.setString(1, txtinfonumdoc.getText());
-
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                vrbalergia = rs.getString("alergias_o_m");
-                vrbdiscrasia = rs.getString("discrasia_sanguinea_o_m");
-                vrbcardiopatia = rs.getString("cardiopatias_o_m");
-                vrbembarazo = rs.getString("embarazo_o_m");
-                vrbpresionarterial = rs.getString("alter_pres_arterial_o_m");
-                vrbmedicamentos = rs.getString("toma_medicamentos_o_m");
-                vrbtratmedico = rs.getString("trat_med_actual_o_m");
-                vrbhepatitis = rs.getString("hepatitis_o_m");
-                vrbdiabetes = rs.getString("diabetes_o_m");
-                vrbreumatica = rs.getString("fiebre_reumatica_o_m");
-                vrbsida = rs.getString("hiv_sida_o_m");
-                vrbinmunosupresion = rs.getString("inmunosupresion_o_m");
-                vrbrenales = rs.getString("patologias_renales_o_m");
-                vrbrespiratorias = rs.getString("patologias_respiratorias_o_m");
-                vrbgastricos = rs.getString("trastornos_gastricos_o_m");
-                vrbemocionales = rs.getString("trastornos_emocionales_o_m");
-                vrbsinusitis = rs.getString("sinusitis_o_m");
-                vrbcirugias = rs.getString("cirugias_o_m");
-                vrbexodoncias = rs.getString("exodoncias_o_m");
-                vrborales = rs.getString("enfermedades_orales_o_m");
-                vrbprotesis = rs.getString("protesis_aparotologia_o_m");
-                taotraspatologias.setText(rs.getString("otras_pat_antec_o_m"));
-                taobservaciones_o_m.setText(rs.getString("observaciones_o_m"));
-                tahabitos.setText(rs.getString("habitos_asociados_o_m"));
-            }
-            if (vrbalergia.equals("s")) {
-                rbsialergias.setSelected(true);
-            }
-            if (vrbalergia.equals("n")) {
-                rbnoalergias.setSelected(true);
-            }
-            if (vrbdiscrasia.equals("s")) {
-                rbsidiscrasia.setSelected(true);
-            }
-            if (vrbdiscrasia.equals("n")) {
-                rbnodiscrasia.setSelected(true);
-            }
-            if (vrbcardiopatia.equals("s")) {
-                rbsicardiopatia.setSelected(true);
-            }
-            if (vrbcardiopatia.equals("n")) {
-                rbnocardiopatia.setSelected(true);
-            }
-            if (vrbembarazo.equals("s")) {
-                rbsiembarazo.setSelected(true);
-            }
-            if (vrbembarazo.equals("n")) {
-                rbnoembarazo.setSelected(true);
-            }
-            if (vrbpresionarterial.equals("s")) {
-                rbsipresarterial.setSelected(true);
-            }
-            if (vrbpresionarterial.equals("n")) {
-                rbnopresarterial.setSelected(true);
-            }
-            if (vrbmedicamentos.equals("s")) {
-                rbsimedicamentos.setSelected(true);
-            }
-            if (vrbmedicamentos.equals("n")) {
-                rbnomedicamentos.setSelected(true);
-            }
-            if (vrbtratmedico.equals("s")) {
-                rbsitratmedicoactual.setSelected(true);
-            }
-            if (vrbtratmedico.equals("n")) {
-                rbnotratmedicoactual.setSelected(true);
-            }
-            if (vrbhepatitis.equals("s")) {
-                rbsihepatitis.setSelected(true);
-            }
-            if (vrbhepatitis.equals("n")) {
-                rbnohepatitis.setSelected(true);
-            }
-            if (vrbdiabetes.equals("s")) {
-                rbsidiabetes.setSelected(true);
-            }
-            if (vrbdiabetes.equals("n")) {
-                rbnodiabetes.setSelected(true);
-            }
-            if (vrbreumatica.equals("s")) {
-                rbsifiebrereumatica.setSelected(true);
-            }
-            if (vrbreumatica.equals("n")) {
-                rbnofiebrereumatica.setSelected(true);
-            }
-            if (vrbsida.equals("s")) {
-                rbsisida.setSelected(true);
-            }
-            if (vrbsida.equals("n")) {
-                rbnosida.setSelected(true);
-            }
-            if (vrbinmunosupresion.equals("s")) {
-                rbsiinmunosupresion.setSelected(true);
-            }
-            if (vrbinmunosupresion.equals("n")) {
-                rbnoinmunosupresion.setSelected(true);
-            }
-            if (vrbrenales.equals("s")) {
-                rbsipatrenales.setSelected(true);
-            }
-            if (vrbrenales.equals("n")) {
-                rbnopatrenales.setSelected(true);
-            }
-            if (vrbrespiratorias.equals("s")) {
-                rbsipatrespiratorias.setSelected(true);
-            }
-            if (vrbrespiratorias.equals("n")) {
-                rbnopatrespiratorias.setSelected(true);
-            }
-            if (vrbgastricos.equals("s")) {
-                rbsitratgastricos.setSelected(true);
-            }
-            if (vrbgastricos.equals("n")) {
-                rbnotratgastricos.setSelected(true);
-            }
-            if (vrbemocionales.equals("s")) {
-                rbsitratemocionales.setSelected(true);
-            }
-            if (vrbemocionales.equals("n")) {
-                rbnotratemocionales.setSelected(true);
-            }
-            if (vrbsinusitis.equals("s")) {
-                rbsisinusitis.setSelected(true);
-            }
-            if (vrbsinusitis.equals("n")) {
-                rbnosinusitis.setSelected(true);
-            }
-            if (vrbcirugias.equals("s")) {
-                rbsicirugias.setSelected(true);
-            }
-            if (vrbcirugias.equals("n")) {
-                rbnocirugias.setSelected(true);
-            }
-            if (vrbexodoncias.equals("s")) {
-                rbsiexodoncia.setSelected(true);
-            }
-            if (vrbexodoncias.equals("n")) {
-                rbnoexodoncia.setSelected(true);
-            }
-            if (vrborales.equals("s")) {
-                rbsienforales.setSelected(true);
-            }
-            if (vrborales.equals("n")) {
-                rbnoenforales.setSelected(true);
-            }
-            if (vrbprotesis.equals("s")) {
-                rbsiprotesis.setSelected(true);
-            }
-            if (vrbprotesis.equals("n")) {
-                rbnoprotesis.setSelected(true);
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, ex);
-        }
-
-    }//GEN-LAST:event_btnBuscar13ActionPerformed
-
-    private void btnCancelar13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar13ActionPerformed
-        // TODO add your handling code here:
-        rbalergias.clearSelection();
-        rbalterpreart.clearSelection();
-        rbcardiopatias.clearSelection();
-        rbcirugias.clearSelection();
-        rbdiabetes.clearSelection();
-        rbdiscsang.clearSelection();
-        rbembarazo.clearSelection();
-        rbenforales.clearSelection();
-        rbexodoncias.clearSelection();
-        rbfiebreraumatica.clearSelection();
-        rbhepatitis.clearSelection();
-        rbinmunosupresion.clearSelection();
-        rbpatolrenales.clearSelection();
-        rbpatolresp.clearSelection();
-        rbprotesis.clearSelection();
-        rbsida.clearSelection();
-        rbsinusitis.clearSelection();
-        rbtomamedic.clearSelection();
-        rbtratemocionales.clearSelection();
-        rbtratgastricos.clearSelection();
-        rbtratmedactual.clearSelection();
-        taotraspatologias.setText("");
-        tahabitos.setText("");
-        taobservaciones_o_m.setText("");
-    }//GEN-LAST:event_btnCancelar13ActionPerformed
-
-    private void rbnoexodonciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoexodonciaActionPerformed
-        // TODO add your handling code here:
-        vrbexodoncias = "n";
-    }//GEN-LAST:event_rbnoexodonciaActionPerformed
-
-    private void rbsisidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsisidaActionPerformed
-        // TODO add your handling code here:
-        vrbsida = "s";
-    }//GEN-LAST:event_rbsisidaActionPerformed
+    }//GEN-LAST:event_txtfechasegtratActionPerformed
 
     private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
         taesqueletico.setText("");
@@ -5678,9 +4729,9 @@ public class frmHistoriaC extends javax.swing.JFrame {
 
     private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
         String sql = "select diagnostico_esqueletico, diagnostico_facial,"
-                + "diagnostico_dental,diagnostico_funcional,plan_tratamiento,"
-                + "objetivos_tratamiento,limites_corregir "
-                + " from pacientes where numero_doc_paciente=?";
+        + "diagnostico_dental,diagnostico_funcional,plan_tratamiento,"
+        + "objetivos_tratamiento,limites_corregir "
+        + " from pacientes where numero_doc_paciente=?";
         conectar cc = new conectar();
         Connection cn = cc.conexion();
         try {
@@ -5709,9 +4760,9 @@ public class frmHistoriaC extends javax.swing.JFrame {
 
     private void btnModificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar1ActionPerformed
         String sql = "update pacientes set diagnostico_esqueletico=?, diagnostico_facial=?,"
-                + "diagnostico_dental=?,diagnostico_funcional=?,plan_tratamiento=?,"
-                + "objetivos_tratamiento=?,limites_corregir=? "
-                + "where numero_doc_paciente=?";
+        + "diagnostico_dental=?,diagnostico_funcional=?,plan_tratamiento=?,"
+        + "objetivos_tratamiento=?,limites_corregir=? "
+        + "where numero_doc_paciente=?";
 
         try {
             conectar cc = new conectar();
@@ -5784,19 +4835,19 @@ public class frmHistoriaC extends javax.swing.JFrame {
 
     private void btnBuscar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar3ActionPerformed
         String sql = "select dientes_ret_imp_ar, cual_diente_ret_imp_ar,"
-                + "dientes_supernum_ar,cual_dientes_supernum_ar,long_rad_dism_ar,"
-                + "cual_long_rad_dis_ar,observaciones_ar,perfil_esqueletico_ac,"
-                + "prognatismo_ac,retrognatismo_ac,tipo_crecimiento_ac,altura_facial_inf_ac,"
-                + "protrusion_dentario,retrusion_dentario,"
-                + "perfil_tejidos_blandos,proquelia_tejidos_blandos,"
-                + "retroquelia_tejidos_blandos,tipo_denticion_am,morf_arco_triang_am,"
-                + "morf_arco_cuadr_am,morf_arco_ovoi_am,"
-                + "tam_dental_normal_am,tam_dental_macrodoncia_am,tam_dental_microdoncia_am,"
-                + "rmc_canino_am,rmc_molar_am,rmc_lineamedia_izq,rmc_lineamedia_der,"
-                + "overjet_am,ovebite_am,mordida_cruzada_am,apinamiento_sup_am,"
-                + "apinamiento_inf_am,diastemas_sup_am,diastemas_inf_am,malposiciones_am,"
-                + "observaciones_am "
-                + " from pacientes where numero_doc_paciente=?";
+        + "dientes_supernum_ar,cual_dientes_supernum_ar,long_rad_dism_ar,"
+        + "cual_long_rad_dis_ar,observaciones_ar,perfil_esqueletico_ac,"
+        + "prognatismo_ac,retrognatismo_ac,tipo_crecimiento_ac,altura_facial_inf_ac,"
+        + "protrusion_dentario,retrusion_dentario,"
+        + "perfil_tejidos_blandos,proquelia_tejidos_blandos,"
+        + "retroquelia_tejidos_blandos,tipo_denticion_am,morf_arco_triang_am,"
+        + "morf_arco_cuadr_am,morf_arco_ovoi_am,"
+        + "tam_dental_normal_am,tam_dental_macrodoncia_am,tam_dental_microdoncia_am,"
+        + "rmc_canino_am,rmc_molar_am,rmc_lineamedia_izq,rmc_lineamedia_der,"
+        + "overjet_am,ovebite_am,mordida_cruzada_am,apinamiento_sup_am,"
+        + "apinamiento_inf_am,diastemas_sup_am,diastemas_inf_am,malposiciones_am,"
+        + "observaciones_am "
+        + " from pacientes where numero_doc_paciente=?";
         conectar cc = new conectar();
         Connection cn = cc.conexion();
         try {
@@ -6008,19 +5059,19 @@ public class frmHistoriaC extends javax.swing.JFrame {
 
     private void btnModificar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar2ActionPerformed
         String sql = "update pacientes set dientes_ret_imp_ar=?, cual_diente_ret_imp_ar=?,"
-                + "dientes_supernum_ar=?,cual_dientes_supernum_ar=?,long_rad_dism_ar=?,"
-                + "cual_long_rad_dis_ar=?,observaciones_ar=?,perfil_esqueletico_ac=?,"
-                + "prognatismo_ac=?,retrognatismo_ac=?,tipo_crecimiento_ac=?,altura_facial_inf_ac=?,"
-                + "protrusion_dentario=?,retrusion_dentario=?,"
-                + "perfil_tejidos_blandos=?,proquelia_tejidos_blandos=?,"
-                + "retroquelia_tejidos_blandos=?,tipo_denticion_am=?,morf_arco_triang_am=?,"
-                + "morf_arco_cuadr_am=?,morf_arco_ovoi_am=?,"
-                + "tam_dental_normal_am=?,tam_dental_macrodoncia_am=?,tam_dental_microdoncia_am=?,"
-                + "rmc_canino_am=?,rmc_molar_am=?,rmc_lineamedia_izq=?,rmc_lineamedia_der=?,"
-                + "overjet_am=?,ovebite_am=?,mordida_cruzada_am=?,apinamiento_sup_am=?,"
-                + "apinamiento_inf_am=?,diastemas_sup_am=?,diastemas_inf_am=?,malposiciones_am=?,"
-                + "observaciones_am=?, cedula_usuario_paciente=? "
-                + "where numero_doc_paciente=?";
+        + "dientes_supernum_ar=?,cual_dientes_supernum_ar=?,long_rad_dism_ar=?,"
+        + "cual_long_rad_dis_ar=?,observaciones_ar=?,perfil_esqueletico_ac=?,"
+        + "prognatismo_ac=?,retrognatismo_ac=?,tipo_crecimiento_ac=?,altura_facial_inf_ac=?,"
+        + "protrusion_dentario=?,retrusion_dentario=?,"
+        + "perfil_tejidos_blandos=?,proquelia_tejidos_blandos=?,"
+        + "retroquelia_tejidos_blandos=?,tipo_denticion_am=?,morf_arco_triang_am=?,"
+        + "morf_arco_cuadr_am=?,morf_arco_ovoi_am=?,"
+        + "tam_dental_normal_am=?,tam_dental_macrodoncia_am=?,tam_dental_microdoncia_am=?,"
+        + "rmc_canino_am=?,rmc_molar_am=?,rmc_lineamedia_izq=?,rmc_lineamedia_der=?,"
+        + "overjet_am=?,ovebite_am=?,mordida_cruzada_am=?,apinamiento_sup_am=?,"
+        + "apinamiento_inf_am=?,diastemas_sup_am=?,diastemas_inf_am=?,malposiciones_am=?,"
+        + "observaciones_am=?, cedula_usuario_paciente=? "
+        + "where numero_doc_paciente=?";
 
         try {
             conectar cc = new conectar();
@@ -6078,9 +5129,1392 @@ public class frmHistoriaC extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnModificar2ActionPerformed
 
+    private void rbmicrodonciainfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmicrodonciainfActionPerformed
+        tamdentalmicro = "i";
+    }//GEN-LAST:event_rbmicrodonciainfActionPerformed
+
+    private void rbmicrodonciasupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmicrodonciasupActionPerformed
+        tamdentalmicro = "s";
+    }//GEN-LAST:event_rbmicrodonciasupActionPerformed
+
+    private void rbmacrodonciainfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmacrodonciainfActionPerformed
+        tamdentalmacro = "i";
+    }//GEN-LAST:event_rbmacrodonciainfActionPerformed
+
+    private void rbmacrodonciasupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmacrodonciasupActionPerformed
+        tamdentalmacro = "s";
+    }//GEN-LAST:event_rbmacrodonciasupActionPerformed
+
+    private void rbnormalinfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnormalinfActionPerformed
+        tamdentalnorm = "i";
+    }//GEN-LAST:event_rbnormalinfActionPerformed
+
+    private void rbnormalsupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnormalsupActionPerformed
+        tamdentalnorm = "s";
+    }//GEN-LAST:event_rbnormalsupActionPerformed
+
+    private void rbovoideinfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbovoideinfActionPerformed
+        morfarcoovo = "i";
+    }//GEN-LAST:event_rbovoideinfActionPerformed
+
+    private void rbovoidesupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbovoidesupActionPerformed
+        morfarcoovo = "s";
+    }//GEN-LAST:event_rbovoidesupActionPerformed
+
+    private void rbcuadradoinfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcuadradoinfActionPerformed
+        morfarcocuad = "i";
+    }//GEN-LAST:event_rbcuadradoinfActionPerformed
+
+    private void rbcuadradosupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcuadradosupActionPerformed
+        morfarcocuad = "s";
+    }//GEN-LAST:event_rbcuadradosupActionPerformed
+
+    private void rbtrianginfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtrianginfActionPerformed
+        morfarcotriang = "i";
+    }//GEN-LAST:event_rbtrianginfActionPerformed
+
+    private void rbtriangsupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtriangsupActionPerformed
+        morfarcotriang = "s";
+    }//GEN-LAST:event_rbtriangsupActionPerformed
+
+    private void txtlineamediaizqKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtlineamediaizqKeyTyped
+        // TODO add your handling code here:
+        if (txtlineamediaizq.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtlineamediaizqKeyTyped
+
+    private void txtlineamediaderKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtlineamediaderKeyTyped
+        // TODO add your handling code here:
+        if (txtlineamediader.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtlineamediaderKeyTyped
+
+    private void txtmalposicionesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmalposicionesKeyTyped
+        // TODO add your handling code here:
+        if (txtmalposiciones.getText().length() == 25) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtmalposicionesKeyTyped
+
+    private void txtdiastemasinfKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdiastemasinfKeyTyped
+        // TODO add your handling code here:
+        if (txtdiastemasinf.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtdiastemasinfKeyTyped
+
+    private void txtdiastemassupKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdiastemassupKeyTyped
+        // TODO add your handling code here:
+        if (txtdiastemassup.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtdiastemassupKeyTyped
+
+    private void txtapinamientoinfKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapinamientoinfKeyTyped
+        // TODO add your handling code here:
+        if (txtapinamientoinf.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtapinamientoinfKeyTyped
+
+    private void txtapinamientosupKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapinamientosupKeyTyped
+        // TODO add your handling code here:
+        if (txtapinamientosup.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtapinamientosupKeyTyped
+
+    private void txtmordidacruzadaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmordidacruzadaKeyTyped
+        // TODO add your handling code here:
+        if (txtmordidacruzada.getText().length() == 20) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtmordidacruzadaKeyTyped
+
+    private void txtovebiteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtovebiteKeyTyped
+        // TODO add your handling code here:
+        if (txtovebite.getText().length() == 20) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtovebiteKeyTyped
+
+    private void txtoverjetKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtoverjetKeyTyped
+        // TODO add your handling code here:
+        if (txtoverjet.getText().length() == 20) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtoverjetKeyTyped
+
+    private void rbmolar3izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar3izqActionPerformed
+        rmcmolar = "i3";
+    }//GEN-LAST:event_rbmolar3izqActionPerformed
+
+    private void rbmolar2izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar2izqActionPerformed
+        rmcmolar = "i2";
+    }//GEN-LAST:event_rbmolar2izqActionPerformed
+
+    private void rbmolar1izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar1izqActionPerformed
+        rmcmolar = "i1";
+    }//GEN-LAST:event_rbmolar1izqActionPerformed
+
+    private void rbmolar3derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar3derActionPerformed
+        rmcmolar = "d3";
+    }//GEN-LAST:event_rbmolar3derActionPerformed
+
+    private void rbmolar2derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar2derActionPerformed
+        rmcmolar = "d2";
+    }//GEN-LAST:event_rbmolar2derActionPerformed
+
+    private void rbmolar1derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar1derActionPerformed
+        rmcmolar = "d1";
+    }//GEN-LAST:event_rbmolar1derActionPerformed
+
+    private void rbcanino3izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino3izqActionPerformed
+        rmccanino = "i3";
+    }//GEN-LAST:event_rbcanino3izqActionPerformed
+
+    private void rbcanino2izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino2izqActionPerformed
+        rmccanino = "i2";
+    }//GEN-LAST:event_rbcanino2izqActionPerformed
+
+    private void rbcanino1izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino1izqActionPerformed
+        rmccanino = "i1";
+    }//GEN-LAST:event_rbcanino1izqActionPerformed
+
+    private void rbcanino3derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino3derActionPerformed
+        rmccanino = "d3";
+    }//GEN-LAST:event_rbcanino3derActionPerformed
+
+    private void rbcanino2derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino2derActionPerformed
+        rmccanino = "d2";
+    }//GEN-LAST:event_rbcanino2derActionPerformed
+
+    private void rbcanino1derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino1derActionPerformed
+        rmccanino = "d1";
+    }//GEN-LAST:event_rbcanino1derActionPerformed
+
+    private void rbdenticionpermanenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbdenticionpermanenteActionPerformed
+        tipodenticion = "Permanente";
+    }//GEN-LAST:event_rbdenticionpermanenteActionPerformed
+
+    private void rbdenticionmixtaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbdenticionmixtaActionPerformed
+        tipodenticion = "Mixta";
+    }//GEN-LAST:event_rbdenticionmixtaActionPerformed
+
+    private void rbdenticiontemporalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbdenticiontemporalActionPerformed
+        tipodenticion = "Temporal";
+    }//GEN-LAST:event_rbdenticiontemporalActionPerformed
+
+    private void rbretroqueliainfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbretroqueliainfActionPerformed
+        retroquelia = "i";
+    }//GEN-LAST:event_rbretroqueliainfActionPerformed
+
+    private void rbretroqueliasupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbretroqueliasupActionPerformed
+        retroquelia = "s";
+    }//GEN-LAST:event_rbretroqueliasupActionPerformed
+
+    private void rbproqueliainfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbproqueliainfActionPerformed
+        proquelia = "i";
+    }//GEN-LAST:event_rbproqueliainfActionPerformed
+
+    private void rbproqueliasupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbproqueliasupActionPerformed
+        proquelia = "s";
+    }//GEN-LAST:event_rbproqueliasupActionPerformed
+
+    private void txtperfiltejidosblandosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtperfiltejidosblandosKeyTyped
+        // TODO add your handling code here:
+        if (txtperfiltejidosblandos.getText().length() == 20) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtperfiltejidosblandosKeyTyped
+
+    private void rbretreusioninfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbretreusioninfActionPerformed
+        retrusion = "i";
+    }//GEN-LAST:event_rbretreusioninfActionPerformed
+
+    private void rbretrusionsupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbretrusionsupActionPerformed
+        retrusion = "s";
+    }//GEN-LAST:event_rbretrusionsupActionPerformed
+
+    private void rbprotrusioninfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbprotrusioninfActionPerformed
+        protrusion = "i";
+    }//GEN-LAST:event_rbprotrusioninfActionPerformed
+
+    private void rbprotrusionsupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbprotrusionsupActionPerformed
+        protrusion = "s";
+    }//GEN-LAST:event_rbprotrusionsupActionPerformed
+
+    private void alturafacialdismActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alturafacialdismActionPerformed
+        alturafacial = "d";
+    }//GEN-LAST:event_alturafacialdismActionPerformed
+
+    private void alturafacialaumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alturafacialaumActionPerformed
+        alturafacial = "a";
+    }//GEN-LAST:event_alturafacialaumActionPerformed
+
+    private void crecimientohorizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crecimientohorizActionPerformed
+        tipocrecimiento = "h";
+    }//GEN-LAST:event_crecimientohorizActionPerformed
+
+    private void crecimientovertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crecimientovertActionPerformed
+        tipocrecimiento = "v";
+    }//GEN-LAST:event_crecimientovertActionPerformed
+
+    private void retrognatismomandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retrognatismomandActionPerformed
+        retrognatismo = "d";
+    }//GEN-LAST:event_retrognatismomandActionPerformed
+
+    private void retrognatismomaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retrognatismomaxActionPerformed
+        retrognatismo = "x";
+    }//GEN-LAST:event_retrognatismomaxActionPerformed
+
+    private void prognatismomandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prognatismomandActionPerformed
+        prognatismo = "d";
+    }//GEN-LAST:event_prognatismomandActionPerformed
+
+    private void prognatismomaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prognatismomaxActionPerformed
+        prognatismo = "x";
+    }//GEN-LAST:event_prognatismomaxActionPerformed
+
+    private void perfilesqc3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilesqc3ActionPerformed
+        perfilesq = "CI.III";
+    }//GEN-LAST:event_perfilesqc3ActionPerformed
+
+    private void perfilesqc2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilesqc2ActionPerformed
+        perfilesq = "CI.II";
+    }//GEN-LAST:event_perfilesqc2ActionPerformed
+
+    private void perfilesqc1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilesqc1ActionPerformed
+        perfilesq = "CI.I";
+    }//GEN-LAST:event_perfilesqc1ActionPerformed
+
+    private void txtlongdisKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtlongdisKeyTyped
+        // TODO add your handling code here:
+        if (txtlongdis.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtlongdisKeyTyped
+
+    private void txtretimpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtretimpKeyTyped
+        // TODO add your handling code here:
+        if (txtretimp.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtretimpKeyTyped
+
+    private void txtsupernumerariosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtsupernumerariosKeyTyped
+        // TODO add your handling code here:
+        if (txtsupernumerarios.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtsupernumerariosKeyTyped
+
+    private void rbnolongdisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnolongdisActionPerformed
+        rblongrad = "n";
+    }//GEN-LAST:event_rbnolongdisActionPerformed
+
+    private void rbsilongradActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsilongradActionPerformed
+        rblongrad = "s";
+    }//GEN-LAST:event_rbsilongradActionPerformed
+
+    private void rbnoretimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoretimpActionPerformed
+        rbretimp = "n";
+    }//GEN-LAST:event_rbnoretimpActionPerformed
+
     private void rbsiretimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiretimpActionPerformed
         rbretimp = "s";
     }//GEN-LAST:event_rbsiretimpActionPerformed
+
+    private void rbnosupernumerariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnosupernumerariosActionPerformed
+        rbsupernum = "n";
+    }//GEN-LAST:event_rbnosupernumerariosActionPerformed
+
+    private void rbsisupernumerariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsisupernumerariosActionPerformed
+        rbsupernum = "s";
+    }//GEN-LAST:event_rbsisupernumerariosActionPerformed
+
+    private void btnModificar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar12ActionPerformed
+        // TODO add your handling code here:
+        String vcblabiosuperior = "n", vcblabioinferior = "n", vcbcomisuras = "n";
+        String vcbmucosaoral = "n", vcbsurcosyugales = "n";
+        String vcbfrenillos = "n", vcborofaringe = "n", vcbpaladar = "n";
+        String vcbglandulassalivales = "n", vcbpisoboca = "n";
+        String vcbdorsolengua = "n", vcbvientrelengua = "n", vcbruidos = "n";
+        String vcbdesviacion = "n", vcbcambiovolumen = "n";
+        String vcbbloqueomandibular = "n", vcblimitacionapertura = "n";
+        String vcbdolorarticular = "n", vcbdolormuscular = "n";
+
+        if (cblabiosuperior.isSelected()) {
+            vcblabiosuperior = "s";
+        }
+        if (cblabioinferior.isSelected()) {
+            vcblabioinferior = "s";
+        }
+        if (cbcomisuras.isSelected()) {
+            vcbcomisuras = "s";
+        }
+        if (cbmucosaoral.isSelected()) {
+            vcbmucosaoral = "s";
+        }
+        if (cbsurcosyugales.isSelected()) {
+            vcbsurcosyugales = "s";
+        }
+        if (cbfrenillos.isSelected()) {
+            vcbfrenillos = "s";
+        }
+        if (cborofaringe.isSelected()) {
+            vcborofaringe = "s";
+        }
+        if (cbpaladar.isSelected()) {
+            vcbpaladar = "s";
+        }
+        if (cbglandulassalivales.isSelected()) {
+            vcbglandulassalivales = "s";
+        }
+        if (cbpisoboca.isSelected()) {
+            vcbpisoboca = "s";
+        }
+        if (cbdorsolengua.isSelected()) {
+            vcbdorsolengua = "s";
+        }
+        if (cbvientrelengua.isSelected()) {
+            vcbvientrelengua = "s";
+        }
+        if (cbruidos.isSelected()) {
+            vcbruidos = "s";
+        }
+        if (cbdesviacion.isSelected()) {
+            vcbdesviacion = "s";
+        }
+        if (cbcambiovolumen.isSelected()) {
+            vcbcambiovolumen = "s";
+        }
+        if (cbbloqueomandibular.isSelected()) {
+            vcbbloqueomandibular = "s";
+        }
+        if (cblimitacionapertura.isSelected()) {
+            vcblimitacionapertura = "s";
+        }
+        if (cbdolorarticular.isSelected()) {
+            vcbdolorarticular = "s";
+        }
+        if (cbdolormuscular.isSelected()) {
+            vcbdolormuscular = "s";
+        }
+
+        String sql = "update pacientes set labio_superior_e_e=?,labio_inferior_e_e=?,"
+        + "comisuras_e_e=?,mucosa_oral_e_e=?,surcos_yugales_e_e=?,frenillos_e_e=?,"
+        + "orofaringe_e_e=?,paladar_e_e=?,glandulas_salivales_e_e=?,piso_boca_e_e=?,"
+        + "dorso_lengua_e_e=?,vientre_lengua_e_e=?,observaciones_e_e=?,"
+        + "ruidos_atm=?,desviacion_atm=?,cambio_volumen_atm=?,bloqueo_mandibular_atm=?,"
+        + "limitacion_apertura_atm=?,dolor_articular_atm=?,dolor_muscular_atm=?,"
+        + "observaciones_atm=?,cariados_cops=?,obturados_cops=?,extraidos_cops=?,"
+        + "sanos_cops=?,cariados_ceo=?,obturados_ceo=?,perdidos_ceo=?,sanos_ceo=?"
+        + ", cedula_usuario_paciente=? "
+        + " where numero_doc_paciente=?";
+        try {
+            conectar cc = new conectar();
+            Connection cn = cc.conexion();
+            java.sql.PreparedStatement ps = cn.prepareStatement(sql);
+
+            ps.setString(1, vcblabiosuperior);
+            ps.setString(2, vcblabioinferior);
+            ps.setString(3, vcbcomisuras);
+            ps.setString(4, vcbmucosaoral);
+            ps.setString(5, vcbsurcosyugales);
+            ps.setString(6, vcbfrenillos);
+            ps.setString(7, vcborofaringe);
+            ps.setString(8, vcbpaladar);
+            ps.setString(9, vcbglandulassalivales);
+            ps.setString(10, vcbpisoboca);
+            ps.setString(11, vcbdorsolengua);
+            ps.setString(12, vcbvientrelengua);
+            ps.setString(13, taobservaciones_e_e.getText());
+            ps.setString(14, vcbruidos);
+            ps.setString(15, vcbdesviacion);
+            ps.setString(16, vcbcambiovolumen);
+            ps.setString(17, vcbbloqueomandibular);
+            ps.setString(18, vcblimitacionapertura);
+            ps.setString(19, vcbdolorarticular);
+            ps.setString(20, vcbdolormuscular);
+            ps.setString(21, taobservaciones_atm.getText());
+            ps.setString(22, txtcopscariados.getText());
+            ps.setString(23, txtcopsobturados.getText());
+            ps.setString(24, txtcopsextraidos.getText());
+            ps.setString(25, txtcopssanos.getText());
+            ps.setString(26, txtceocariados.getText());
+            ps.setString(27, txtceoobturados.getText());
+            ps.setString(28, txtceoperdidos.getText());
+            ps.setString(29, txtceosanos.getText());
+            ps.setString(30, cedula_usuario);
+            ps.setString(31, txtinfonumdoc.getText());
+            int i = ps.executeUpdate();
+            if (i == 0) {
+                JOptionPane.showMessageDialog(null, "Error al modificar el paciente");
+            } else {
+                JOptionPane.showMessageDialog(null, "Paciente modificado con exito");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btnModificar12ActionPerformed
+
+    private void btnBuscar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar12ActionPerformed
+        // TODO add your handling code here:
+        String sql = "select labio_superior_e_e,labio_inferior_e_e,"
+        + "comisuras_e_e,mucosa_oral_e_e,surcos_yugales_e_e,frenillos_e_e,"
+        + "orofaringe_e_e,paladar_e_e,glandulas_salivales_e_e,piso_boca_e_e,"
+        + "dorso_lengua_e_e,vientre_lengua_e_e,observaciones_e_e,"
+        + "ruidos_atm,desviacion_atm,cambio_volumen_atm,bloqueo_mandibular_atm,"
+        + "limitacion_apertura_atm,dolor_articular_atm,dolor_muscular_atm,"
+        + "observaciones_atm,cariados_cops,obturados_cops,extraidos_cops,"
+        + "sanos_cops,cariados_ceo,obturados_ceo,perdidos_ceo,sanos_ceo"
+        + " from pacientes where numero_doc_paciente=?";
+        conectar cc = new conectar();
+        Connection cn = cc.conexion();
+        try {
+            String vcblabiosuperior = "n", vcblabioinferior = "n", vcbcomisuras = "n";
+            String vcbmucosaoral = "n", vcbsurcosyugales = "n";
+            String vcbfrenillos = "n", vcborofaringe = "n", vcbpaladar = "n";
+            String vcbglandulassalivales = "n", vcbpisoboca = "n";
+            String vcbdorsolengua = "n", vcbvientrelengua = "n", vcbruidos = "n";
+            String vcbdesviacion = "n", vcbcambiovolumen = "n";
+            String vcbbloqueomandibular = "n", vcblimitacionapertura = "n";
+            String vcbdolorarticular = "n", vcbdolormuscular = "n";
+            java.sql.PreparedStatement ps = cn.prepareStatement(sql);
+            ps.setString(1, txtinfonumdoc.getText());
+
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                vcblabiosuperior = rs.getString("labio_superior_e_e");
+                vcblabioinferior = rs.getString("labio_inferior_e_e");
+                vcbcomisuras = rs.getString("comisuras_e_e");
+                vcbmucosaoral = rs.getString("mucosa_oral_e_e");
+                vcbsurcosyugales = rs.getString("surcos_yugales_e_e");
+                vcbfrenillos = rs.getString("frenillos_e_e");
+                vcborofaringe = rs.getString("orofaringe_e_e");
+                vcbpaladar = rs.getString("paladar_e_e");
+                vcbglandulassalivales = rs.getString("glandulas_salivales_e_e");
+                vcbpisoboca = rs.getString("piso_boca_e_e");
+                vcbdorsolengua = rs.getString("dorso_lengua_e_e");
+                vcbvientrelengua = rs.getString("vientre_lengua_e_e");
+                taobservaciones_e_e.setText(rs.getString("observaciones_e_e"));
+                vcbruidos = rs.getString("ruidos_atm");
+                vcbdesviacion = rs.getString("desviacion_atm");
+                vcbcambiovolumen = rs.getString("cambio_volumen_atm");
+                vcbbloqueomandibular = rs.getString("bloqueo_mandibular_atm");
+                vcblimitacionapertura = rs.getString("limitacion_apertura_atm");
+                vcbdolorarticular = rs.getString("dolor_articular_atm");
+                vcbdolormuscular = rs.getString("dolor_muscular_atm");
+                taobservaciones_atm.setText(rs.getString("observaciones_atm"));
+                txtcopscariados.setText(rs.getString("cariados_cops"));
+                txtcopsobturados.setText(rs.getString("obturados_cops"));
+                txtcopsextraidos.setText(rs.getString("extraidos_cops"));
+                txtcopssanos.setText(rs.getString("sanos_cops"));
+                txtceocariados.setText(rs.getString("cariados_ceo"));
+                txtceoobturados.setText(rs.getString("obturados_ceo"));
+                txtceoperdidos.setText(rs.getString("perdidos_ceo"));
+                txtceosanos.setText(rs.getString("sanos_ceo"));
+            }
+            if (vcblabiosuperior.equals("s")) {
+                cblabiosuperior.setSelected(true);
+            }
+            if (vcblabiosuperior.equals("n")) {
+                cblabiosuperior.setSelected(false);
+            }
+            if (vcblabioinferior.equals("s")) {
+                cblabioinferior.setSelected(true);
+            }
+            if (vcblabioinferior.equals("n")) {
+                cblabioinferior.setSelected(false);
+            }
+            if (vcbcomisuras.equals("s")) {
+                cbcomisuras.setSelected(true);
+            }
+            if (vcbcomisuras.equals("n")) {
+                cbcomisuras.setSelected(false);
+            }
+            if (vcbmucosaoral.equals("s")) {
+                cbmucosaoral.setSelected(true);
+            }
+            if (vcbmucosaoral.equals("n")) {
+                cbmucosaoral.setSelected(false);
+            }
+            if (vcbsurcosyugales.equals("s")) {
+                cbsurcosyugales.setSelected(true);
+            }
+            if (vcbsurcosyugales.equals("n")) {
+                cbsurcosyugales.setSelected(false);
+            }
+            if (vcbfrenillos.equals("s")) {
+                cbfrenillos.setSelected(true);
+            }
+            if (vcbfrenillos.equals("n")) {
+                cbfrenillos.setSelected(false);
+            }
+            if (vcborofaringe.equals("s")) {
+                cborofaringe.setSelected(true);
+            }
+            if (vcborofaringe.equals("n")) {
+                cborofaringe.setSelected(false);
+            }
+            if (vcbpaladar.equals("s")) {
+                cbpaladar.setSelected(true);
+            }
+            if (vcbpaladar.equals("n")) {
+                cbpaladar.setSelected(false);
+            }
+            if (vcbglandulassalivales.equals("s")) {
+                cbglandulassalivales.setSelected(true);
+            }
+            if (vcbglandulassalivales.equals("n")) {
+                cbglandulassalivales.setSelected(false);
+            }
+            if (vcbpisoboca.equals("s")) {
+                cbpisoboca.setSelected(true);
+            }
+            if (vcbpisoboca.equals("n")) {
+                cbpisoboca.setSelected(false);
+            }
+            if (vcbdorsolengua.equals("s")) {
+                cbdorsolengua.setSelected(true);
+            }
+            if (vcbdorsolengua.equals("n")) {
+                cbdorsolengua.setSelected(false);
+            }
+            if (vcbvientrelengua.equals("s")) {
+                cbvientrelengua.setSelected(true);
+            }
+            if (vcbvientrelengua.equals("n")) {
+                cbvientrelengua.setSelected(false);
+            }
+            if (vcbruidos.equals("s")) {
+                cbruidos.setSelected(true);
+            }
+            if (vcbruidos.equals("n")) {
+                cbruidos.setSelected(false);
+            }
+            if (vcbdesviacion.equals("s")) {
+                cbdesviacion.setSelected(true);
+            }
+            if (vcbdesviacion.equals("n")) {
+                cbdesviacion.setSelected(false);
+            }
+            if (vcbcambiovolumen.equals("s")) {
+                cbcambiovolumen.setSelected(true);
+            }
+            if (vcbcambiovolumen.equals("n")) {
+                cbcambiovolumen.setSelected(false);
+            }
+            if (vcbbloqueomandibular.equals("s")) {
+                cbbloqueomandibular.setSelected(true);
+            }
+            if (vcbbloqueomandibular.equals("n")) {
+                cbbloqueomandibular.setSelected(false);
+            }
+            if (vcblimitacionapertura.equals("s")) {
+                cblimitacionapertura.setSelected(true);
+            }
+            if (vcblimitacionapertura.equals("n")) {
+                cblimitacionapertura.setSelected(false);
+            }
+            if (vcbdolorarticular.equals("s")) {
+                cbdolorarticular.setSelected(true);
+            }
+            if (vcbdolorarticular.equals("n")) {
+                cbdolorarticular.setSelected(false);
+            }
+            if (vcbdolormuscular.equals("s")) {
+                cbdolormuscular.setSelected(true);
+            }
+            if (vcbdolormuscular.equals("n")) {
+                cbdolormuscular.setSelected(false);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btnBuscar12ActionPerformed
+
+    private void btnCancelar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar12ActionPerformed
+        // TODO add your handling code here:
+
+        cblabiosuperior.setSelected(false);
+        cblabioinferior.setSelected(false);
+        cbcomisuras.setSelected(false);
+        cbmucosaoral.setSelected(false);
+        cbsurcosyugales.setSelected(false);
+        cbfrenillos.setSelected(true);
+        cbfrenillos.setSelected(false);
+        cborofaringe.setSelected(false);
+        cbpaladar.setSelected(false);
+        cbglandulassalivales.setSelected(false);
+        cbpisoboca.setSelected(false);
+        cbdorsolengua.setSelected(false);
+        cbvientrelengua.setSelected(false);
+        cbruidos.setSelected(false);
+        cbdesviacion.setSelected(false);
+        cbcambiovolumen.setSelected(false);
+        cbbloqueomandibular.setSelected(false);
+        cblimitacionapertura.setSelected(false);
+        cbdolorarticular.setSelected(false);
+        cbdolormuscular.setSelected(false);
+        taobservaciones_atm.setText("");
+        txtcopscariados.setText("");
+        txtcopsobturados.setText("");
+        txtcopsextraidos.setText("");
+        txtcopssanos.setText("");
+        txtceocariados.setText("");
+        txtceoobturados.setText("");
+        txtceoperdidos.setText("");
+        txtceosanos.setText("");
+        taobservaciones_e_e.setText("");
+    }//GEN-LAST:event_btnCancelar12ActionPerformed
+
+    private void txtceosanosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtceosanosKeyTyped
+        // TODO add your handling code here:
+        if (txtceosanos.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtceosanosKeyTyped
+
+    private void txtceoperdidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtceoperdidosKeyTyped
+        // TODO add your handling code here:
+        if (txtceoperdidos.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtceoperdidosKeyTyped
+
+    private void txtceoobturadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtceoobturadosKeyTyped
+        // TODO add your handling code here:
+        if (txtceoobturados.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtceoobturadosKeyTyped
+
+    private void txtceocariadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtceocariadosKeyTyped
+        // TODO add your handling code here:
+        if (txtceocariados.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtceocariadosKeyTyped
+
+    private void txtcopssanosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcopssanosKeyTyped
+        // TODO add your handling code here:
+        if (txtcopssanos.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtcopssanosKeyTyped
+
+    private void txtcopsextraidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcopsextraidosKeyTyped
+        // TODO add your handling code here:
+        if (txtcopsextraidos.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtcopsextraidosKeyTyped
+
+    private void txtcopsobturadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcopsobturadosKeyTyped
+        // TODO add your handling code here:
+        if (txtcopsobturados.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtcopsobturadosKeyTyped
+
+    private void txtcopscariadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcopscariadosKeyTyped
+        // TODO add your handling code here:
+        if (txtcopscariados.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtcopscariadosKeyTyped
+
+    private void btnModificar13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar13ActionPerformed
+        // TODO add your handling code here:
+        String sql = "update pacientes set alergias_o_m=?, discrasia_sanguinea_o_m=?,"
+        + "cardiopatias_o_m=?,embarazo_o_m=?,alter_pres_arterial_o_m=?,"
+        + "toma_medicamentos_o_m=?,trat_med_actual_o_m=?,hepatitis_o_m=?,"
+        + "diabetes_o_m=?,fiebre_reumatica_o_m=?,hiv_sida_o_m=?,inmunosupresion_o_m=?,"
+        + "patologias_renales_o_m=?,patologias_respiratorias_o_m=?,"
+        + "trastornos_gastricos_o_m=?,trastornos_emocionales_o_m=?,"
+        + "sinusitis_o_m=?,cirugias_o_m=?,exodoncias_o_m=?,"
+        + "enfermedades_orales_o_m=?,protesis_aparotologia_o_m=?,"
+        + "otras_pat_antec_o_m=?,observaciones_o_m=?,habitos_asociados_o_m=?"
+        + ",cedula_usuario_paciente=? "
+        + "where numero_doc_paciente=?";
+
+        try {
+            conectar cc = new conectar();
+            Connection cn = cc.conexion();
+            java.sql.PreparedStatement ps = cn.prepareStatement(sql);
+
+            ps.setString(1, vrbalergia);
+            ps.setString(2, vrbdiscrasia);
+            ps.setString(3, vrbcardiopatia);
+            ps.setString(4, vrbembarazo);
+            ps.setString(5, vrbpresionarterial);
+            ps.setString(6, vrbmedicamentos);
+            ps.setString(7, vrbtratmedico);
+            ps.setString(8, vrbhepatitis);
+            ps.setString(9, vrbdiabetes);
+            ps.setString(10, vrbreumatica);
+            ps.setString(11, vrbsida);
+            ps.setString(12, vrbinmunosupresion);
+            ps.setString(13, vrbrenales);
+            ps.setString(14, vrbrespiratorias);
+            ps.setString(15, vrbgastricos);
+            ps.setString(16, vrbemocionales);
+            ps.setString(17, vrbsinusitis);
+            ps.setString(18, vrbcirugias);
+            ps.setString(19, vrbexodoncias);
+            ps.setString(20, vrborales);
+            ps.setString(21, vrbprotesis);
+            ps.setString(22, taotraspatologias.getText());
+            ps.setString(23, taobservaciones_o_m.getText());
+            ps.setString(24, tahabitos.getText());
+            ps.setString(25, cedula_usuario);
+            ps.setString(26, txtinfonumdoc.getText());
+            int i = ps.executeUpdate();
+            if (i == 0) {
+                JOptionPane.showMessageDialog(null, "Error al modificar el paciente");
+            } else {
+                JOptionPane.showMessageDialog(null, "Paciente modificado con exito");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btnModificar13ActionPerformed
+
+    private void btnBuscar13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar13ActionPerformed
+        // TODO add your handling code here:
+        String sql = "select alergias_o_m, discrasia_sanguinea_o_m,"
+        + "cardiopatias_o_m,embarazo_o_m,alter_pres_arterial_o_m,"
+        + "toma_medicamentos_o_m,trat_med_actual_o_m,hepatitis_o_m,"
+        + "diabetes_o_m,fiebre_reumatica_o_m,hiv_sida_o_m,inmunosupresion_o_m,"
+        + "patologias_renales_o_m,patologias_respiratorias_o_m,"
+        + "trastornos_gastricos_o_m,trastornos_emocionales_o_m,"
+        + "sinusitis_o_m,cirugias_o_m,exodoncias_o_m,"
+        + "enfermedades_orales_o_m,protesis_aparotologia_o_m,"
+        + "otras_pat_antec_o_m,observaciones_o_m,habitos_asociados_o_m"
+        + " from pacientes where numero_doc_paciente=?";
+        conectar cc = new conectar();
+        Connection cn = cc.conexion();
+        try {
+
+            java.sql.PreparedStatement ps = cn.prepareStatement(sql);
+            ps.setString(1, txtinfonumdoc.getText());
+
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                vrbalergia = rs.getString("alergias_o_m");
+                vrbdiscrasia = rs.getString("discrasia_sanguinea_o_m");
+                vrbcardiopatia = rs.getString("cardiopatias_o_m");
+                vrbembarazo = rs.getString("embarazo_o_m");
+                vrbpresionarterial = rs.getString("alter_pres_arterial_o_m");
+                vrbmedicamentos = rs.getString("toma_medicamentos_o_m");
+                vrbtratmedico = rs.getString("trat_med_actual_o_m");
+                vrbhepatitis = rs.getString("hepatitis_o_m");
+                vrbdiabetes = rs.getString("diabetes_o_m");
+                vrbreumatica = rs.getString("fiebre_reumatica_o_m");
+                vrbsida = rs.getString("hiv_sida_o_m");
+                vrbinmunosupresion = rs.getString("inmunosupresion_o_m");
+                vrbrenales = rs.getString("patologias_renales_o_m");
+                vrbrespiratorias = rs.getString("patologias_respiratorias_o_m");
+                vrbgastricos = rs.getString("trastornos_gastricos_o_m");
+                vrbemocionales = rs.getString("trastornos_emocionales_o_m");
+                vrbsinusitis = rs.getString("sinusitis_o_m");
+                vrbcirugias = rs.getString("cirugias_o_m");
+                vrbexodoncias = rs.getString("exodoncias_o_m");
+                vrborales = rs.getString("enfermedades_orales_o_m");
+                vrbprotesis = rs.getString("protesis_aparotologia_o_m");
+                taotraspatologias.setText(rs.getString("otras_pat_antec_o_m"));
+                taobservaciones_o_m.setText(rs.getString("observaciones_o_m"));
+                tahabitos.setText(rs.getString("habitos_asociados_o_m"));
+            }
+            if (vrbalergia.equals("s")) {
+                rbsialergias.setSelected(true);
+            }
+            if (vrbalergia.equals("n")) {
+                rbnoalergias.setSelected(true);
+            }
+            if (vrbdiscrasia.equals("s")) {
+                rbsidiscrasia.setSelected(true);
+            }
+            if (vrbdiscrasia.equals("n")) {
+                rbnodiscrasia.setSelected(true);
+            }
+            if (vrbcardiopatia.equals("s")) {
+                rbsicardiopatia.setSelected(true);
+            }
+            if (vrbcardiopatia.equals("n")) {
+                rbnocardiopatia.setSelected(true);
+            }
+            if (vrbembarazo.equals("s")) {
+                rbsiembarazo.setSelected(true);
+            }
+            if (vrbembarazo.equals("n")) {
+                rbnoembarazo.setSelected(true);
+            }
+            if (vrbpresionarterial.equals("s")) {
+                rbsipresarterial.setSelected(true);
+            }
+            if (vrbpresionarterial.equals("n")) {
+                rbnopresarterial.setSelected(true);
+            }
+            if (vrbmedicamentos.equals("s")) {
+                rbsimedicamentos.setSelected(true);
+            }
+            if (vrbmedicamentos.equals("n")) {
+                rbnomedicamentos.setSelected(true);
+            }
+            if (vrbtratmedico.equals("s")) {
+                rbsitratmedicoactual.setSelected(true);
+            }
+            if (vrbtratmedico.equals("n")) {
+                rbnotratmedicoactual.setSelected(true);
+            }
+            if (vrbhepatitis.equals("s")) {
+                rbsihepatitis.setSelected(true);
+            }
+            if (vrbhepatitis.equals("n")) {
+                rbnohepatitis.setSelected(true);
+            }
+            if (vrbdiabetes.equals("s")) {
+                rbsidiabetes.setSelected(true);
+            }
+            if (vrbdiabetes.equals("n")) {
+                rbnodiabetes.setSelected(true);
+            }
+            if (vrbreumatica.equals("s")) {
+                rbsifiebrereumatica.setSelected(true);
+            }
+            if (vrbreumatica.equals("n")) {
+                rbnofiebrereumatica.setSelected(true);
+            }
+            if (vrbsida.equals("s")) {
+                rbsisida.setSelected(true);
+            }
+            if (vrbsida.equals("n")) {
+                rbnosida.setSelected(true);
+            }
+            if (vrbinmunosupresion.equals("s")) {
+                rbsiinmunosupresion.setSelected(true);
+            }
+            if (vrbinmunosupresion.equals("n")) {
+                rbnoinmunosupresion.setSelected(true);
+            }
+            if (vrbrenales.equals("s")) {
+                rbsipatrenales.setSelected(true);
+            }
+            if (vrbrenales.equals("n")) {
+                rbnopatrenales.setSelected(true);
+            }
+            if (vrbrespiratorias.equals("s")) {
+                rbsipatrespiratorias.setSelected(true);
+            }
+            if (vrbrespiratorias.equals("n")) {
+                rbnopatrespiratorias.setSelected(true);
+            }
+            if (vrbgastricos.equals("s")) {
+                rbsitratgastricos.setSelected(true);
+            }
+            if (vrbgastricos.equals("n")) {
+                rbnotratgastricos.setSelected(true);
+            }
+            if (vrbemocionales.equals("s")) {
+                rbsitratemocionales.setSelected(true);
+            }
+            if (vrbemocionales.equals("n")) {
+                rbnotratemocionales.setSelected(true);
+            }
+            if (vrbsinusitis.equals("s")) {
+                rbsisinusitis.setSelected(true);
+            }
+            if (vrbsinusitis.equals("n")) {
+                rbnosinusitis.setSelected(true);
+            }
+            if (vrbcirugias.equals("s")) {
+                rbsicirugias.setSelected(true);
+            }
+            if (vrbcirugias.equals("n")) {
+                rbnocirugias.setSelected(true);
+            }
+            if (vrbexodoncias.equals("s")) {
+                rbsiexodoncia.setSelected(true);
+            }
+            if (vrbexodoncias.equals("n")) {
+                rbnoexodoncia.setSelected(true);
+            }
+            if (vrborales.equals("s")) {
+                rbsienforales.setSelected(true);
+            }
+            if (vrborales.equals("n")) {
+                rbnoenforales.setSelected(true);
+            }
+            if (vrbprotesis.equals("s")) {
+                rbsiprotesis.setSelected(true);
+            }
+            if (vrbprotesis.equals("n")) {
+                rbnoprotesis.setSelected(true);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btnBuscar13ActionPerformed
+
+    private void btnCancelar13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar13ActionPerformed
+        // TODO add your handling code here:
+        rbalergias.clearSelection();
+        rbalterpreart.clearSelection();
+        rbcardiopatias.clearSelection();
+        rbcirugias.clearSelection();
+        rbdiabetes.clearSelection();
+        rbdiscsang.clearSelection();
+        rbembarazo.clearSelection();
+        rbenforales.clearSelection();
+        rbexodoncias.clearSelection();
+        rbfiebreraumatica.clearSelection();
+        rbhepatitis.clearSelection();
+        rbinmunosupresion.clearSelection();
+        rbpatolrenales.clearSelection();
+        rbpatolresp.clearSelection();
+        rbprotesis.clearSelection();
+        rbsida.clearSelection();
+        rbsinusitis.clearSelection();
+        rbtomamedic.clearSelection();
+        rbtratemocionales.clearSelection();
+        rbtratgastricos.clearSelection();
+        rbtratmedactual.clearSelection();
+        taotraspatologias.setText("");
+        tahabitos.setText("");
+        taobservaciones_o_m.setText("");
+    }//GEN-LAST:event_btnCancelar13ActionPerformed
+
+    private void tahabitosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tahabitosKeyTyped
+        // TODO add your handling code here:
+        if (tahabitos.getText().length() == 60) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_tahabitosKeyTyped
+
+    private void taobservaciones_o_mKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_taobservaciones_o_mKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_taobservaciones_o_mKeyTyped
+
+    private void rbnoprotesisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoprotesisActionPerformed
+        // TODO add your handling code here:
+        vrbprotesis = "n";
+    }//GEN-LAST:event_rbnoprotesisActionPerformed
+
+    private void rbsiprotesisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiprotesisActionPerformed
+        // TODO add your handling code here:
+        vrbprotesis = "s";
+    }//GEN-LAST:event_rbsiprotesisActionPerformed
+
+    private void rbnoenforalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoenforalesActionPerformed
+        // TODO add your handling code here:
+        vrborales = "n";
+    }//GEN-LAST:event_rbnoenforalesActionPerformed
+
+    private void rbsienforalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsienforalesActionPerformed
+        // TODO add your handling code here:
+        vrborales = "s";
+    }//GEN-LAST:event_rbsienforalesActionPerformed
+
+    private void rbsiexodonciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiexodonciaActionPerformed
+        // TODO add your handling code here:
+        vrbexodoncias = "s";
+    }//GEN-LAST:event_rbsiexodonciaActionPerformed
+
+    private void rbnoexodonciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoexodonciaActionPerformed
+        // TODO add your handling code here:
+        vrbexodoncias = "n";
+    }//GEN-LAST:event_rbnoexodonciaActionPerformed
+
+    private void rbnocirugiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnocirugiasActionPerformed
+        // TODO add your handling code here:
+        vrbcirugias = "n";
+    }//GEN-LAST:event_rbnocirugiasActionPerformed
+
+    private void rbsicirugiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsicirugiasActionPerformed
+        // TODO add your handling code here:
+        vrbcirugias = "s";
+    }//GEN-LAST:event_rbsicirugiasActionPerformed
+
+    private void rbnosinusitisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnosinusitisActionPerformed
+        // TODO add your handling code here:
+        vrbsinusitis = "n";
+    }//GEN-LAST:event_rbnosinusitisActionPerformed
+
+    private void rbsisinusitisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsisinusitisActionPerformed
+        // TODO add your handling code here:
+        vrbsinusitis = "s";
+    }//GEN-LAST:event_rbsisinusitisActionPerformed
+
+    private void rbnotratemocionalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnotratemocionalesActionPerformed
+        // TODO add your handling code here:
+        vrbemocionales = "n";
+    }//GEN-LAST:event_rbnotratemocionalesActionPerformed
+
+    private void rbsitratemocionalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsitratemocionalesActionPerformed
+        // TODO add your handling code here:
+        vrbemocionales = "s";
+    }//GEN-LAST:event_rbsitratemocionalesActionPerformed
+
+    private void rbnotratgastricosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnotratgastricosActionPerformed
+        // TODO add your handling code here:
+        vrbgastricos = "n";
+    }//GEN-LAST:event_rbnotratgastricosActionPerformed
+
+    private void rbsitratgastricosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsitratgastricosActionPerformed
+        // TODO add your handling code here:
+        vrbgastricos = "s";
+    }//GEN-LAST:event_rbsitratgastricosActionPerformed
+
+    private void rbnopatrespiratoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnopatrespiratoriasActionPerformed
+        // TODO add your handling code here:
+        vrbrespiratorias = "n";
+    }//GEN-LAST:event_rbnopatrespiratoriasActionPerformed
+
+    private void rbsipatrespiratoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsipatrespiratoriasActionPerformed
+        // TODO add your handling code here:
+        vrbrespiratorias = "s";
+    }//GEN-LAST:event_rbsipatrespiratoriasActionPerformed
+
+    private void rbnopatrenalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnopatrenalesActionPerformed
+        // TODO add your handling code here:
+        vrbrenales = "n";
+    }//GEN-LAST:event_rbnopatrenalesActionPerformed
+
+    private void rbsipatrenalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsipatrenalesActionPerformed
+        // TODO add your handling code here:
+        vrbrenales = "s";
+    }//GEN-LAST:event_rbsipatrenalesActionPerformed
+
+    private void rbnoinmunosupresionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoinmunosupresionActionPerformed
+        // TODO add your handling code here:
+        vrbinmunosupresion = "n";
+    }//GEN-LAST:event_rbnoinmunosupresionActionPerformed
+
+    private void rbsiinmunosupresionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiinmunosupresionActionPerformed
+        // TODO add your handling code here:
+        vrbinmunosupresion = "s";
+    }//GEN-LAST:event_rbsiinmunosupresionActionPerformed
+
+    private void rbnosidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnosidaActionPerformed
+        // TODO add your handling code here:
+        vrbsida = "n";
+    }//GEN-LAST:event_rbnosidaActionPerformed
+
+    private void rbsisidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsisidaActionPerformed
+        // TODO add your handling code here:
+        vrbsida = "s";
+    }//GEN-LAST:event_rbsisidaActionPerformed
+
+    private void rbnofiebrereumaticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnofiebrereumaticaActionPerformed
+        // TODO add your handling code here:
+        vrbreumatica = "n";
+    }//GEN-LAST:event_rbnofiebrereumaticaActionPerformed
+
+    private void rbsifiebrereumaticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsifiebrereumaticaActionPerformed
+        // TODO add your handling code here:
+        vrbreumatica = "s";
+    }//GEN-LAST:event_rbsifiebrereumaticaActionPerformed
+
+    private void rbnodiabetesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnodiabetesActionPerformed
+        // TODO add your handling code here:
+        vrbdiabetes = "n";
+    }//GEN-LAST:event_rbnodiabetesActionPerformed
+
+    private void rbsidiabetesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsidiabetesActionPerformed
+        // TODO add your handling code here:
+        vrbdiabetes = "s";
+    }//GEN-LAST:event_rbsidiabetesActionPerformed
+
+    private void rbsihepatitisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsihepatitisActionPerformed
+        // TODO add your handling code here:
+        vrbhepatitis = "s";
+    }//GEN-LAST:event_rbsihepatitisActionPerformed
+
+    private void rbnohepatitisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnohepatitisActionPerformed
+        // TODO add your handling code here:
+        vrbhepatitis = "n";
+    }//GEN-LAST:event_rbnohepatitisActionPerformed
+
+    private void rbnotratmedicoactualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnotratmedicoactualActionPerformed
+        // TODO add your handling code here:
+        vrbtratmedico = "n";
+    }//GEN-LAST:event_rbnotratmedicoactualActionPerformed
+
+    private void rbsitratmedicoactualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsitratmedicoactualActionPerformed
+        // TODO add your handling code here:
+        vrbtratmedico = "s";
+    }//GEN-LAST:event_rbsitratmedicoactualActionPerformed
+
+    private void rbnomedicamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnomedicamentosActionPerformed
+        // TODO add your handling code here:
+        vrbmedicamentos = "n";
+    }//GEN-LAST:event_rbnomedicamentosActionPerformed
+
+    private void rbsimedicamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsimedicamentosActionPerformed
+        // TODO add your handling code here:
+        vrbmedicamentos = "s";
+    }//GEN-LAST:event_rbsimedicamentosActionPerformed
+
+    private void rbnopresarterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnopresarterialActionPerformed
+        // TODO add your handling code here:
+        vrbpresionarterial = "n";
+    }//GEN-LAST:event_rbnopresarterialActionPerformed
+
+    private void rbsipresarterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsipresarterialActionPerformed
+        // TODO add your handling code here:
+        vrbpresionarterial = "s";
+    }//GEN-LAST:event_rbsipresarterialActionPerformed
+
+    private void rbnoembarazoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoembarazoActionPerformed
+        // TODO add your handling code here:
+        vrbembarazo = "n";
+    }//GEN-LAST:event_rbnoembarazoActionPerformed
+
+    private void rbsiembarazoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiembarazoActionPerformed
+        // TODO add your handling code here:
+        vrbembarazo = "s";
+    }//GEN-LAST:event_rbsiembarazoActionPerformed
+
+    private void rbsicardiopatiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsicardiopatiaActionPerformed
+        // TODO add your handling code here:
+        vrbcardiopatia = "s";
+    }//GEN-LAST:event_rbsicardiopatiaActionPerformed
+
+    private void rbnocardiopatiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnocardiopatiaActionPerformed
+        // TODO add your handling code here:
+        vrbcardiopatia = "n";
+    }//GEN-LAST:event_rbnocardiopatiaActionPerformed
+
+    private void rbnodiscrasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnodiscrasiaActionPerformed
+        // TODO add your handling code here:
+        vrbdiscrasia = "n";
+    }//GEN-LAST:event_rbnodiscrasiaActionPerformed
+
+    private void rbsidiscrasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsidiscrasiaActionPerformed
+        // TODO add your handling code here:
+        vrbdiscrasia = "s";
+    }//GEN-LAST:event_rbsidiscrasiaActionPerformed
+
+    private void rbnoalergiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoalergiasActionPerformed
+        vrbalergia = "n";
+    }//GEN-LAST:event_rbnoalergiasActionPerformed
+
+    private void rbsialergiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsialergiasActionPerformed
+        // TODO add your handling code here:
+        vrbalergia = "s";
+    }//GEN-LAST:event_rbsialergiasActionPerformed
+
+    private void txtinfotelempKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfotelempKeyTyped
+        // TODO add your handling code here:
+        if (txtinfotelemp.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfotelempKeyTyped
+
+    private void txtinfoepsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoepsKeyTyped
+        // TODO add your handling code here:
+        if (txtinfoeps.getText().length() == 50) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfoepsKeyTyped
+
+    private void txtinfoempresaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoempresaKeyTyped
+        // TODO add your handling code here:
+        if (txtinfoempresa.getText().length() == 30) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfoempresaKeyTyped
+
+    private void txtinfoemailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoemailKeyTyped
+        // TODO add your handling code here:
+        if (txtinfoemail.getText().length() == 60) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfoemailKeyTyped
+
+    private void txtinfoocupacionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoocupacionKeyTyped
+        // TODO add your handling code here:
+        if (txtinfoocupacion.getText().length() == 20) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfoocupacionKeyTyped
+
+    private void txtinfocelularKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfocelularKeyTyped
+        // TODO add your handling code here:
+        if (txtinfocelular.getText().length() == 15) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfocelularKeyTyped
+
+    private void txtinfotelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfotelefonoKeyTyped
+        // TODO add your handling code here:
+        if (txtinfotelefono.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfotelefonoKeyTyped
+
+    private void txtinforesiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinforesiKeyTyped
+        // TODO add your handling code here:
+        if (txtinforesi.getText().length() == 60) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinforesiKeyTyped
+
+    private void txtinforesiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinforesiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtinforesiActionPerformed
+
+    private void txtinfobarrioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfobarrioKeyTyped
+        // TODO add your handling code here:
+        if (txtinfobarrio.getText().length() == 20) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfobarrioKeyTyped
+
+    private void txtinfociudadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfociudadKeyTyped
+        // TODO add your handling code here:
+        if (txtinfociudad.getText().length() == 15) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfociudadKeyTyped
+
+    private void txtinfonumdocKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfonumdocKeyTyped
+        // TODO add your handling code here:
+        if (txtinfonumdoc.getText().length() == 15) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfonumdocKeyTyped
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void txtinfoedadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoedadKeyTyped
+        if (txtinfoedad.getText().length() == 2) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfoedadKeyTyped
+
+    private void txtinfoedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinfoedadActionPerformed
+        calcular_edad();
+    }//GEN-LAST:event_txtinfoedadActionPerformed
+
+    private void txtinfonomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfonomKeyTyped
+        if (txtinfonom.getText().length() == 30) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfonomKeyTyped
+
+    private void txtinfoapeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoapeKeyTyped
+        if (txtinfoape.getText().length() == 30) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfoapeKeyTyped
+
+    private void txtinfotelrespKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfotelrespKeyTyped
+        // TODO add your handling code here:
+        if (txtinfotelresp.getText().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfotelrespKeyTyped
+
+    private void txtinfodocrespKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfodocrespKeyTyped
+        // TODO add your handling code here:
+        if (txtinfodocresp.getText().length() == 15) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfodocrespKeyTyped
+
+    private void txtinforeferidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinforeferidoKeyTyped
+        // TODO add your handling code here:
+        if (txtinforeferido.getText().length() == 50) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinforeferidoKeyTyped
+
+    private void txtinfodirrespKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfodirrespKeyTyped
+        // TODO add your handling code here:
+        if (txtinfodirresp.getText().length() == 60) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfodirrespKeyTyped
+
+    private void txtinforespKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinforespKeyTyped
+        // TODO add your handling code here:
+        if (txtinforesp.getText().length() == 50) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinforespKeyTyped
+
+    private void txtinfodiravisoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfodiravisoKeyTyped
+        // TODO add your handling code here:
+        if (txtinfodiraviso.getText().length() == 60) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfodiravisoKeyTyped
+
+    private void txtinfotelavisoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfotelavisoKeyTyped
+        // TODO add your handling code here:
+        if (txtinfotelaviso.getText().length() == 15) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfotelavisoKeyTyped
+
+    private void tainfoantecedentesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tainfoantecedentesKeyTyped
+        // TODO add your handling code here:
+        if (tainfoantecedentes.getText().length() == 60) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_tainfoantecedentesKeyTyped
+
+    private void txtinfoavisarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoavisarKeyTyped
+        // TODO add your handling code here:
+        if (txtinfoavisar.getText().length() == 50) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfoavisarKeyTyped
+
+    private void txtinfonohcKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfonohcKeyTyped
+        if (txtinfonohc.getText().length() == 15) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtinfonohcKeyTyped
+
+    private void txtinfonohcKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfonohcKeyPressed
+
+    }//GEN-LAST:event_txtinfonohcKeyPressed
+
+    private void txtinfonohcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinfonohcActionPerformed
+
+    }//GEN-LAST:event_txtinfonohcActionPerformed
+
+    private void btnreportehcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreportehcActionPerformed
+        // TODO add your handling code here:
+        try {
+            Map selector = new HashMap();
+            selector.put("selector", txtinfonumdoc.getText());
+
+            conectar cc = new conectar();
+            Connection cn = cc.conexion();
+            String dir = "C:\\Users\\Usuario\\Documents\\2016-1\\Implantar\\OrthoGarcia\\Orthogarcia 02052016\\OrthoGarcia08Diciembre\\src\\reportes\\hc.jrxml";
+            JasperReport reporteJasper = JasperCompileManager.compileReport(dir);
+            JasperPrint mostrarReporte = JasperFillManager.fillReport(reporteJasper, selector, cn);
+            JasperViewer.viewReport(mostrarReporte, false);
+
+        } catch (JRException ex) {
+            Logger.getLogger(frmProveedores_1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnreportehcActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         limpiar_info_general();
@@ -6098,15 +6532,15 @@ public class frmHistoriaC extends javax.swing.JFrame {
         Date registro_fechas[] = new Date[2];
         String registros_foraneos[] = new String[5];
         String sql = "SELECT "
-                + "fecha_ingreso_paciente,tipo_doc_paciente,genero_paciente,estado_civil_paciente"
-                + ",apellido_paciente,nombre_paciente,edad_paciente,fecha_nac_paciente,"
-                + "dir_residencia_paciente,ciudad_paciente,barrio_paciente,telefono_paciente,"
-                + "celular_paciente,correo_paciente,eps_paciente,ocupacion_paciente,"
-                + "empresa_paciente,tel_empresa_paciente,nom_responsable_paciente,"
-                + "doc_ident_resp_paciente,tel_resp_paciente,dir_resp_paciente,referido_paciente,"
-                + "caso_urg_aviso_paciente,dir_urg_aviso_paciente,tel_urg_aviso_paciente,"
-                + "motivo_consulta_paciente,evol_est_actual_paciente,antec_fam_paciente,num_hc"
-                + " FROM pacientes Where numero_doc_paciente='" + txtinfonumdoc.getText() + "'";
+        + "fecha_ingreso_paciente,tipo_doc_paciente,genero_paciente,estado_civil_paciente"
+        + ",apellido_paciente,nombre_paciente,edad_paciente,fecha_nac_paciente,"
+        + "dir_residencia_paciente,ciudad_paciente,barrio_paciente,telefono_paciente,"
+        + "celular_paciente,correo_paciente,eps_paciente,ocupacion_paciente,"
+        + "empresa_paciente,tel_empresa_paciente,nom_responsable_paciente,"
+        + "doc_ident_resp_paciente,tel_resp_paciente,dir_resp_paciente,referido_paciente,"
+        + "caso_urg_aviso_paciente,dir_urg_aviso_paciente,tel_urg_aviso_paciente,"
+        + "motivo_consulta_paciente,evol_est_actual_paciente,antec_fam_paciente,num_hc"
+        + " FROM pacientes Where numero_doc_paciente='" + txtinfonumdoc.getText() + "'";
 
         try {
             Statement st = cn.createStatement();
@@ -6149,7 +6583,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
                 registro[27] = rs.getString("num_hc");
             }
             String sql2 = "select nombre_tipo_doc from tipo_documento where"
-                    + " id_tipo_doc='" + registro[0] + "'";
+            + " id_tipo_doc='" + registro[0] + "'";
             Statement st2 = cn.createStatement();
             ResultSet rs2 = st2.executeQuery(sql2);
             while (rs2.next()) {
@@ -6157,7 +6591,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
             }
 
             String sql3 = "select nombre_genero from genero where"
-                    + " id_genero='" + registro[1] + "'";
+            + " id_genero='" + registro[1] + "'";
             Statement st3 = cn.createStatement();
             ResultSet rs3 = st3.executeQuery(sql3);
             while (rs3.next()) {
@@ -6165,7 +6599,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
             }
 
             String sql4 = "select nombre_estado_civil from estado_civil where"
-                    + " id_estado_civil='" + registro[2] + "'";
+            + " id_estado_civil='" + registro[2] + "'";
             Statement st4 = cn.createStatement();
             ResultSet rs4 = st4.executeQuery(sql4);
             while (rs4.next()) {
@@ -6218,7 +6652,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         int rta = JOptionPane.showConfirmDialog(rootPane, "¿Esta seguro de modificar la información? Solo se"
-                + " modificara la evolución del estado actual del paciente");
+            + " modificara la evolución del estado actual del paciente");
         if (rta != 0) {
             return;
         }
@@ -6229,8 +6663,8 @@ public class frmHistoriaC extends javax.swing.JFrame {
         String evol = tainfoevol.getText();
 
         String sql = "UPDATE pacientes SET evol_est_actual_paciente='" + evol + "' "
-                + ", cedula_usuario_paciente='" + cedula_usuario
-                + "' WHERE numero_doc_paciente='" + doc_pac + "'";
+        + ", cedula_usuario_paciente='" + cedula_usuario
+        + "' WHERE numero_doc_paciente='" + doc_pac + "'";
         try {
             PreparedStatement pst = (PreparedStatement) cn.prepareStatement(sql);
 
@@ -6245,7 +6679,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
             Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, ex);
         }
-
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
@@ -6379,15 +6812,15 @@ public class frmHistoriaC extends javax.swing.JFrame {
         conectar cc = new conectar(); //Se crea una instancia de la clase conectar
         Connection cn = cc.conexion(); //se crea una instancia de la clase Connection y se concatena el objeto cc
         String sql = "Insert into pacientes(numero_doc_paciente,cedula_usuario_paciente,"
-                + "fecha_ingreso_paciente,tipo_doc_paciente,genero_paciente,estado_civil_paciente"
-                + ",apellido_paciente,nombre_paciente,edad_paciente,fecha_nac_paciente,"
-                + "dir_residencia_paciente,ciudad_paciente,barrio_paciente,telefono_paciente,"
-                + "celular_paciente,correo_paciente,eps_paciente,ocupacion_paciente,"
-                + "empresa_paciente,tel_empresa_paciente,nom_responsable_paciente,"
-                + "doc_ident_resp_paciente,tel_resp_paciente,dir_resp_paciente,referido_paciente,"
-                + "caso_urg_aviso_paciente,dir_urg_aviso_paciente,tel_urg_aviso_paciente,"
-                + "motivo_consulta_paciente,evol_est_actual_paciente,antec_fam_paciente,num_hc)"
-                + " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        + "fecha_ingreso_paciente,tipo_doc_paciente,genero_paciente,estado_civil_paciente"
+        + ",apellido_paciente,nombre_paciente,edad_paciente,fecha_nac_paciente,"
+        + "dir_residencia_paciente,ciudad_paciente,barrio_paciente,telefono_paciente,"
+        + "celular_paciente,correo_paciente,eps_paciente,ocupacion_paciente,"
+        + "empresa_paciente,tel_empresa_paciente,nom_responsable_paciente,"
+        + "doc_ident_resp_paciente,tel_resp_paciente,dir_resp_paciente,referido_paciente,"
+        + "caso_urg_aviso_paciente,dir_urg_aviso_paciente,tel_urg_aviso_paciente,"
+        + "motivo_consulta_paciente,evol_est_actual_paciente,antec_fam_paciente,num_hc)"
+        + " values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         System.out.println("El usuario con el que ha ingresado es: " + cedula_usuario);
         Date f1 = jDateChooser1.getDate();
@@ -6468,1021 +6901,18 @@ public class frmHistoriaC extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
-    private void txtnhcsegtratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnhcsegtratActionPerformed
+    private void txtinfonumdocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinfonumdocActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtnhcsegtratActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       //validacion de adjuntar la radiografia
-        if (txtrutaPanoramica.getText().equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Debe adjuntar una imagen");
-            return;
-        }
-        boolean closable = false;
-
-        Visor_imagenes visor = new Visor_imagenes(null, closable);
-        visor.setLocationRelativeTo(null);
-        visor.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void btnAdjuntar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdjuntar1ActionPerformed
-       //còdigo para seleccionar la radiografia desde la ubicaciòn en la que se
-        //encuentra almacenada
-        try {
-            JFileChooser Choose = new JFileChooser();
-            Choose.setAcceptAllFileFilterUsed(false);
-
-            FileNameExtensionFilter Filtro1 = new FileNameExtensionFilter("JPG file", "jpg");
-            FileNameExtensionFilter Filtro2 = new FileNameExtensionFilter("PNG file", "png");
-
-            Choose.setFileFilter(Filtro1);
-            Choose.addChoosableFileFilter(Filtro2);
-            Choose.showOpenDialog(null);
-
-            File Archivo = Choose.getSelectedFile();
-            String filename = Archivo.getAbsolutePath();
-
-            txtrutaRadiografiaN.setText(filename.replace("\\", "//"));
-
-        } catch (Exception e) {
-            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, e);
-        }
-    }//GEN-LAST:event_btnAdjuntar1ActionPerformed
-
-    private void btnAgregarRadiografiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRadiografiaActionPerformed
-        conectar cc = new conectar();
-        Connection cn = cc.conexion();
-
-        String tipo_radiografia, url_nueva_radiografia, id_paciente;
-        String id_nueva_radiografia;
-        String observaciones;
-        String registro[] = new String[3];
-
-        //asignacion de datos a las variables de los campos al insertar una nueva radiografia
-        int siguiente_Radio = Nuevo_Codigo_radiografia();
-        id_nueva_radiografia = Integer.toString(siguiente_Radio);
-        tipo_radiografia = (String) jcmbTipo_radiografia.getSelectedItem();
-        url_nueva_radiografia = txtrutaRadiografiaN.getText();
-        id_paciente = txtCedulaRadio.getText();
-        observaciones = jtAObservacionesRadiografias.getText();
-
-        //valida si se ha adjuntado la radiografia
-        if (txtrutaRadiografiaN.getText().equals("")) {
-            JOptionPane.showMessageDialog(prognatismomand, "No se han adjuntado radiografías");
-            return;
-        }
-        if (!txtrutaRadiografiaN.getText().equals("")) {
-
-            String sql = "insert into radiografias (id_radiografia,tipo_radiografia,url_radiografia,id_paciente_radiografia) values (?,?,?,?)";
-            String sql2 = "insert into citas_radiografias(id_cita_cr,id_radiografia_cr,observaciones_cr) values (?,?,?)";
-
-            try {
-
-                java.sql.PreparedStatement st = cn.prepareStatement(sql);
-                st.setString(1, id_nueva_radiografia);
-                st.setString(2, tipo_radiografia);
-                st.setString(3, url_nueva_radiografia);
-                st.setString(4, id_paciente);
-
-                int R = st.executeUpdate();
-                if (R > 0) {
-                    JOptionPane.showMessageDialog(null, "Radiografía agregada correctamente");
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(frmProveedores_1.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null, ex);
-            }
-            try {
-
-                java.sql.PreparedStatement state = cn.prepareStatement(sql2);
-                state.setString(1, id_cita_radiografia);
-                state.setString(2, id_nueva_radiografia);
-                state.setString(3, observaciones);
-
-                int R = state.executeUpdate();
-                if (R > 0) {
-                    JOptionPane.showMessageDialog(null, "Radiografía agregada correctamente");
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(frmProveedores_1.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null, ex);
-            }
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Debe adjuntar una radiografía");
-        }
-        
-        //si el tipo de radiografia es cefàlica lateral
-        if (tipo_radiografia.equals("Cefàlica lateral.")) {
-            registro[0] = txtFechaRadio.getText();
-            registro[1] = id_nueva_radiografia;
-            registro[2] = observaciones;
-            modeloCefalica.addRow(registro);
-            TablaCefalicas.setModel(modeloCefalica);
-        }
-
-        //si el tipo de radiografia es panoramica
-        if (tipo_radiografia.equals("Panoramica.")) {
-            registro[0] = txtFechaRadio.getText();
-            registro[1] = id_nueva_radiografia;
-            registro[2] = observaciones;
-            modeloPanoramica.addRow(registro);
-            TablaPanoramicas.setModel(modeloPanoramica);
-        }
-
-        jcmbTipo_radiografia.setSelectedIndex(0);
-        jtAObservacionesRadiografias.setText("");
-        txtrutaRadiografiaN.setText("");
-        btnAdjuntar1.setEnabled(false);
-        btnAgregarRadiografia.setEnabled(false);
-    }//GEN-LAST:event_btnAgregarRadiografiaActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void rbsialergiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsialergiasActionPerformed
-        // TODO add your handling code here:
-        vrbalergia = "s";
-    }//GEN-LAST:event_rbsialergiasActionPerformed
-
-    private void rbnoalergiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoalergiasActionPerformed
-        vrbalergia = "n";
-    }//GEN-LAST:event_rbnoalergiasActionPerformed
-
-    private void rbsidiscrasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsidiscrasiaActionPerformed
-        // TODO add your handling code here:
-        vrbdiscrasia = "s";
-    }//GEN-LAST:event_rbsidiscrasiaActionPerformed
-
-    private void rbnodiscrasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnodiscrasiaActionPerformed
-        // TODO add your handling code here:
-        vrbdiscrasia = "n";
-    }//GEN-LAST:event_rbnodiscrasiaActionPerformed
-
-    private void rbsicardiopatiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsicardiopatiaActionPerformed
-        // TODO add your handling code here:
-        vrbcardiopatia = "s";
-    }//GEN-LAST:event_rbsicardiopatiaActionPerformed
-
-    private void rbnocardiopatiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnocardiopatiaActionPerformed
-        // TODO add your handling code here:
-        vrbcardiopatia = "n";
-    }//GEN-LAST:event_rbnocardiopatiaActionPerformed
-
-    private void rbsiembarazoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiembarazoActionPerformed
-        // TODO add your handling code here:
-        vrbembarazo = "s";
-    }//GEN-LAST:event_rbsiembarazoActionPerformed
-
-    private void rbnoembarazoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoembarazoActionPerformed
-        // TODO add your handling code here:
-        vrbembarazo = "n";
-    }//GEN-LAST:event_rbnoembarazoActionPerformed
-
-    private void rbsipresarterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsipresarterialActionPerformed
-        // TODO add your handling code here:
-        vrbpresionarterial = "s";
-    }//GEN-LAST:event_rbsipresarterialActionPerformed
-
-    private void rbnopresarterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnopresarterialActionPerformed
-        // TODO add your handling code here:
-        vrbpresionarterial = "n";
-    }//GEN-LAST:event_rbnopresarterialActionPerformed
-
-    private void rbsimedicamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsimedicamentosActionPerformed
-        // TODO add your handling code here:
-        vrbmedicamentos = "s";
-    }//GEN-LAST:event_rbsimedicamentosActionPerformed
-
-    private void rbnomedicamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnomedicamentosActionPerformed
-        // TODO add your handling code here:
-        vrbmedicamentos = "n";
-    }//GEN-LAST:event_rbnomedicamentosActionPerformed
-
-    private void rbsitratmedicoactualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsitratmedicoactualActionPerformed
-        // TODO add your handling code here:
-        vrbtratmedico = "s";
-    }//GEN-LAST:event_rbsitratmedicoactualActionPerformed
-
-    private void rbnotratmedicoactualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnotratmedicoactualActionPerformed
-        // TODO add your handling code here:
-        vrbtratmedico = "n";
-    }//GEN-LAST:event_rbnotratmedicoactualActionPerformed
-
-    private void rbsihepatitisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsihepatitisActionPerformed
-        // TODO add your handling code here:
-        vrbhepatitis = "s";
-    }//GEN-LAST:event_rbsihepatitisActionPerformed
-
-    private void rbnohepatitisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnohepatitisActionPerformed
-        // TODO add your handling code here:
-        vrbhepatitis = "n";
-    }//GEN-LAST:event_rbnohepatitisActionPerformed
-
-    private void rbsidiabetesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsidiabetesActionPerformed
-        // TODO add your handling code here:
-        vrbdiabetes = "s";
-    }//GEN-LAST:event_rbsidiabetesActionPerformed
-
-    private void rbnodiabetesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnodiabetesActionPerformed
-        // TODO add your handling code here:
-        vrbdiabetes = "n";
-    }//GEN-LAST:event_rbnodiabetesActionPerformed
-
-    private void rbsifiebrereumaticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsifiebrereumaticaActionPerformed
-        // TODO add your handling code here:
-        vrbreumatica = "s";
-    }//GEN-LAST:event_rbsifiebrereumaticaActionPerformed
-
-    private void rbnofiebrereumaticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnofiebrereumaticaActionPerformed
-        // TODO add your handling code here:
-        vrbreumatica = "n";
-    }//GEN-LAST:event_rbnofiebrereumaticaActionPerformed
-
-    private void rbnosidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnosidaActionPerformed
-        // TODO add your handling code here:
-        vrbsida = "n";
-    }//GEN-LAST:event_rbnosidaActionPerformed
-
-    private void rbsiinmunosupresionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiinmunosupresionActionPerformed
-        // TODO add your handling code here:
-        vrbinmunosupresion = "s";
-    }//GEN-LAST:event_rbsiinmunosupresionActionPerformed
-
-    private void rbnoinmunosupresionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoinmunosupresionActionPerformed
-        // TODO add your handling code here:
-        vrbinmunosupresion = "n";
-    }//GEN-LAST:event_rbnoinmunosupresionActionPerformed
-
-    private void rbsipatrenalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsipatrenalesActionPerformed
-        // TODO add your handling code here:
-        vrbrenales = "s";
-    }//GEN-LAST:event_rbsipatrenalesActionPerformed
-
-    private void rbnopatrenalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnopatrenalesActionPerformed
-        // TODO add your handling code here:
-        vrbrenales = "n";
-    }//GEN-LAST:event_rbnopatrenalesActionPerformed
-
-    private void rbsipatrespiratoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsipatrespiratoriasActionPerformed
-        // TODO add your handling code here:
-        vrbrespiratorias = "s";
-    }//GEN-LAST:event_rbsipatrespiratoriasActionPerformed
-
-    private void rbnopatrespiratoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnopatrespiratoriasActionPerformed
-        // TODO add your handling code here:
-        vrbrespiratorias = "n";
-    }//GEN-LAST:event_rbnopatrespiratoriasActionPerformed
-
-    private void rbsitratgastricosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsitratgastricosActionPerformed
-        // TODO add your handling code here:
-        vrbgastricos = "s";
-    }//GEN-LAST:event_rbsitratgastricosActionPerformed
-
-    private void rbnotratgastricosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnotratgastricosActionPerformed
-        // TODO add your handling code here:
-        vrbgastricos = "n";
-    }//GEN-LAST:event_rbnotratgastricosActionPerformed
-
-    private void rbsitratemocionalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsitratemocionalesActionPerformed
-        // TODO add your handling code here:
-        vrbemocionales = "s";
-    }//GEN-LAST:event_rbsitratemocionalesActionPerformed
-
-    private void rbnotratemocionalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnotratemocionalesActionPerformed
-        // TODO add your handling code here:
-        vrbemocionales = "n";
-    }//GEN-LAST:event_rbnotratemocionalesActionPerformed
-
-    private void rbsisinusitisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsisinusitisActionPerformed
-        // TODO add your handling code here:
-        vrbsinusitis = "s";
-    }//GEN-LAST:event_rbsisinusitisActionPerformed
-
-    private void rbnosinusitisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnosinusitisActionPerformed
-        // TODO add your handling code here:
-        vrbsinusitis = "n";
-    }//GEN-LAST:event_rbnosinusitisActionPerformed
-
-    private void rbsicirugiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsicirugiasActionPerformed
-        // TODO add your handling code here:
-        vrbcirugias = "s";
-    }//GEN-LAST:event_rbsicirugiasActionPerformed
-
-    private void rbnocirugiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnocirugiasActionPerformed
-        // TODO add your handling code here:
-        vrbcirugias = "n";
-    }//GEN-LAST:event_rbnocirugiasActionPerformed
-
-    private void rbsiexodonciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiexodonciaActionPerformed
-        // TODO add your handling code here:
-        vrbexodoncias = "s";
-    }//GEN-LAST:event_rbsiexodonciaActionPerformed
-
-    private void rbsienforalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsienforalesActionPerformed
-        // TODO add your handling code here:
-        vrborales = "s";
-    }//GEN-LAST:event_rbsienforalesActionPerformed
-
-    private void rbnoenforalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoenforalesActionPerformed
-        // TODO add your handling code here:
-        vrborales = "n";
-    }//GEN-LAST:event_rbnoenforalesActionPerformed
-
-    private void rbsiprotesisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsiprotesisActionPerformed
-        // TODO add your handling code here:
-        vrbprotesis = "s";
-    }//GEN-LAST:event_rbsiprotesisActionPerformed
-
-    private void rbnoprotesisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoprotesisActionPerformed
-        // TODO add your handling code here:
-        vrbprotesis = "n";
-    }//GEN-LAST:event_rbnoprotesisActionPerformed
-
-    private void btnNueva_radiografiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNueva_radiografiaActionPerformed
-        jtAObservacionesRadiografias.setEnabled(true);
-        jcmbTipo_radiografia.setEnabled(true);
-        btnAgregarRadiografia.setEnabled(true);
-        btnAdjuntar1.setEnabled(true);
-        btnCancelarRadio.setEnabled(true);
-    }//GEN-LAST:event_btnNueva_radiografiaActionPerformed
-
-    private void btnCancelarRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarRadioActionPerformed
-        btnCancelarRadio.setEnabled(false);
-        jtAObservacionesRadiografias.setEnabled(false);
-        jcmbTipo_radiografia.setEnabled(false);
-        btnAgregarRadiografia.setEnabled(false);
-        btnAdjuntar1.setEnabled(false);
-        txtrutaRadiografiaN.setText("");
-        btnCancelarRadio.setEnabled(false);
-    }//GEN-LAST:event_btnCancelarRadioActionPerformed
-
-    private void TablaPanoramicasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaPanoramicasMouseClicked
-        String url_bd_radiografia = null;
-        try {
-            int row = TablaPanoramicas.getSelectedRow();
-            String tabla_clic = (TablaPanoramicas.getModel().getValueAt(row, 1).toString());
-            String sql = "select url_radiografia from radiografias where id_radiografia ='" + tabla_clic + "'";
-            conectar cc = new conectar();
-            Connection cn = cc.conexion();
-            Statement st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            while (rs.next()) {
-                url_bd_radiografia = rs.getString("url_radiografia");
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, ex);
-        }
-        txtrutaPanoramica.setText(url_bd_radiografia);
-    }//GEN-LAST:event_TablaPanoramicasMouseClicked
-
-    private void TablaCefalicasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaCefalicasMouseClicked
-        String url_bd_radiografia = null;
-        try {
-            int row = TablaCefalicas.getSelectedRow();
-            String tabla_clic = (TablaCefalicas.getModel().getValueAt(row, 1).toString());
-            String sql = "select url_radiografia from radiografias where id_radiografia ='" + tabla_clic + "'";
-            conectar cc = new conectar();
-            Connection cn = cc.conexion();
-            Statement st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            while (rs.next()) {
-                url_bd_radiografia = rs.getString("url_radiografia");
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(frmHistoriaC.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, ex);
-        }
-        txtrutaPanoramica.setText(url_bd_radiografia);
-    }//GEN-LAST:event_TablaCefalicasMouseClicked
-
-    private void txtfechasegtratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfechasegtratActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtfechasegtratActionPerformed
-
-    private void rbsisupernumerariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsisupernumerariosActionPerformed
-        rbsupernum = "s";
-    }//GEN-LAST:event_rbsisupernumerariosActionPerformed
-
-    private void rbnosupernumerariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnosupernumerariosActionPerformed
-        rbsupernum = "n";
-    }//GEN-LAST:event_rbnosupernumerariosActionPerformed
-
-    private void rbnoretimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnoretimpActionPerformed
-        rbretimp = "n";
-    }//GEN-LAST:event_rbnoretimpActionPerformed
-
-    private void rbsilongradActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbsilongradActionPerformed
-        rblongrad = "s";
-    }//GEN-LAST:event_rbsilongradActionPerformed
-
-    private void rbnolongdisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnolongdisActionPerformed
-        rblongrad = "n";
-    }//GEN-LAST:event_rbnolongdisActionPerformed
-
-    private void perfilesqc1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilesqc1ActionPerformed
-        perfilesq = "CI.I";
-    }//GEN-LAST:event_perfilesqc1ActionPerformed
-
-    private void perfilesqc2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilesqc2ActionPerformed
-        perfilesq = "CI.II";
-    }//GEN-LAST:event_perfilesqc2ActionPerformed
-
-    private void perfilesqc3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilesqc3ActionPerformed
-        perfilesq = "CI.III";
-    }//GEN-LAST:event_perfilesqc3ActionPerformed
-
-    private void prognatismomaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prognatismomaxActionPerformed
-        prognatismo = "x";
-    }//GEN-LAST:event_prognatismomaxActionPerformed
-
-    private void prognatismomandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prognatismomandActionPerformed
-        prognatismo = "d";
-    }//GEN-LAST:event_prognatismomandActionPerformed
-
-    private void retrognatismomaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retrognatismomaxActionPerformed
-        retrognatismo = "x";
-    }//GEN-LAST:event_retrognatismomaxActionPerformed
-
-    private void retrognatismomandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retrognatismomandActionPerformed
-        retrognatismo = "d";
-    }//GEN-LAST:event_retrognatismomandActionPerformed
-
-    private void crecimientovertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crecimientovertActionPerformed
-        tipocrecimiento = "v";
-    }//GEN-LAST:event_crecimientovertActionPerformed
-
-    private void crecimientohorizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crecimientohorizActionPerformed
-        tipocrecimiento = "h";
-    }//GEN-LAST:event_crecimientohorizActionPerformed
-
-    private void alturafacialaumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alturafacialaumActionPerformed
-        alturafacial = "a";
-    }//GEN-LAST:event_alturafacialaumActionPerformed
-
-    private void alturafacialdismActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alturafacialdismActionPerformed
-        alturafacial = "d";
-    }//GEN-LAST:event_alturafacialdismActionPerformed
-
-    private void rbprotrusionsupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbprotrusionsupActionPerformed
-        protrusion = "s";
-    }//GEN-LAST:event_rbprotrusionsupActionPerformed
-
-    private void rbprotrusioninfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbprotrusioninfActionPerformed
-        protrusion = "i";
-    }//GEN-LAST:event_rbprotrusioninfActionPerformed
-
-    private void rbretrusionsupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbretrusionsupActionPerformed
-        retrusion = "s";
-    }//GEN-LAST:event_rbretrusionsupActionPerformed
-
-    private void rbretreusioninfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbretreusioninfActionPerformed
-        retrusion = "i";
-    }//GEN-LAST:event_rbretreusioninfActionPerformed
-
-    private void rbproqueliasupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbproqueliasupActionPerformed
-        proquelia = "s";
-    }//GEN-LAST:event_rbproqueliasupActionPerformed
-
-    private void rbproqueliainfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbproqueliainfActionPerformed
-        proquelia = "i";
-    }//GEN-LAST:event_rbproqueliainfActionPerformed
-
-    private void rbretroqueliasupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbretroqueliasupActionPerformed
-        retroquelia = "s";
-    }//GEN-LAST:event_rbretroqueliasupActionPerformed
-
-    private void rbretroqueliainfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbretroqueliainfActionPerformed
-        retroquelia = "i";
-    }//GEN-LAST:event_rbretroqueliainfActionPerformed
-
-    private void rbdenticiontemporalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbdenticiontemporalActionPerformed
-        tipodenticion = "Temporal";
-    }//GEN-LAST:event_rbdenticiontemporalActionPerformed
-
-    private void rbdenticionmixtaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbdenticionmixtaActionPerformed
-        tipodenticion = "Mixta";
-    }//GEN-LAST:event_rbdenticionmixtaActionPerformed
-
-    private void rbdenticionpermanenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbdenticionpermanenteActionPerformed
-        tipodenticion = "Permanente";
-    }//GEN-LAST:event_rbdenticionpermanenteActionPerformed
-
-    private void rbtriangsupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtriangsupActionPerformed
-        morfarcotriang = "s";
-    }//GEN-LAST:event_rbtriangsupActionPerformed
-
-    private void rbtrianginfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtrianginfActionPerformed
-        morfarcotriang = "i";
-    }//GEN-LAST:event_rbtrianginfActionPerformed
-
-    private void rbcuadradosupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcuadradosupActionPerformed
-        morfarcocuad = "s";
-    }//GEN-LAST:event_rbcuadradosupActionPerformed
-
-    private void rbcuadradoinfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcuadradoinfActionPerformed
-        morfarcocuad = "i";
-    }//GEN-LAST:event_rbcuadradoinfActionPerformed
-
-    private void rbovoidesupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbovoidesupActionPerformed
-        morfarcoovo = "s";
-    }//GEN-LAST:event_rbovoidesupActionPerformed
-
-    private void rbovoideinfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbovoideinfActionPerformed
-        morfarcoovo = "i";
-    }//GEN-LAST:event_rbovoideinfActionPerformed
-
-    private void rbnormalsupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnormalsupActionPerformed
-        tamdentalnorm = "s";
-    }//GEN-LAST:event_rbnormalsupActionPerformed
-
-    private void rbnormalinfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnormalinfActionPerformed
-        tamdentalnorm = "i";
-    }//GEN-LAST:event_rbnormalinfActionPerformed
-
-    private void rbmacrodonciasupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmacrodonciasupActionPerformed
-        tamdentalmacro = "s";
-    }//GEN-LAST:event_rbmacrodonciasupActionPerformed
-
-    private void rbmacrodonciainfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmacrodonciainfActionPerformed
-        tamdentalmacro = "i";
-    }//GEN-LAST:event_rbmacrodonciainfActionPerformed
-
-    private void rbmicrodonciasupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmicrodonciasupActionPerformed
-        tamdentalmicro = "s";
-    }//GEN-LAST:event_rbmicrodonciasupActionPerformed
-
-    private void rbmicrodonciainfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmicrodonciainfActionPerformed
-        tamdentalmicro = "i";
-    }//GEN-LAST:event_rbmicrodonciainfActionPerformed
-
-    private void rbcanino1derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino1derActionPerformed
-        rmccanino = "d1";
-    }//GEN-LAST:event_rbcanino1derActionPerformed
-
-    private void rbcanino2derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino2derActionPerformed
-        rmccanino = "d2";
-    }//GEN-LAST:event_rbcanino2derActionPerformed
-
-    private void rbcanino3derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino3derActionPerformed
-        rmccanino = "d3";
-    }//GEN-LAST:event_rbcanino3derActionPerformed
-
-    private void rbcanino1izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino1izqActionPerformed
-        rmccanino = "i1";
-    }//GEN-LAST:event_rbcanino1izqActionPerformed
-
-    private void rbcanino2izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino2izqActionPerformed
-        rmccanino = "i2";
-    }//GEN-LAST:event_rbcanino2izqActionPerformed
-
-    private void rbcanino3izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcanino3izqActionPerformed
-        rmccanino = "i3";
-    }//GEN-LAST:event_rbcanino3izqActionPerformed
-
-    private void rbmolar1derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar1derActionPerformed
-        rmcmolar = "d1";
-    }//GEN-LAST:event_rbmolar1derActionPerformed
-
-    private void rbmolar2derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar2derActionPerformed
-        rmcmolar = "d2";
-    }//GEN-LAST:event_rbmolar2derActionPerformed
-
-    private void rbmolar3derActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar3derActionPerformed
-        rmcmolar = "d3";
-    }//GEN-LAST:event_rbmolar3derActionPerformed
-
-    private void rbmolar1izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar1izqActionPerformed
-        rmcmolar = "i1";
-    }//GEN-LAST:event_rbmolar1izqActionPerformed
-
-    private void rbmolar2izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar2izqActionPerformed
-        rmcmolar = "i2";
-    }//GEN-LAST:event_rbmolar2izqActionPerformed
-
-    private void rbmolar3izqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmolar3izqActionPerformed
-        rmcmolar = "i3";
-    }//GEN-LAST:event_rbmolar3izqActionPerformed
-
-    private void btnCancelar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar3ActionPerformed
-        txtCedulaRadio.setText("");
-        txtNombresRadio.setText("");
-        txtApellidosRadio.setText("");
-        txtTelefonoRadio.setText("");
-        txtFechaRadio.setText("");
-        txtrutaPanoramica.setText("");
-    }//GEN-LAST:event_btnCancelar3ActionPerformed
-
-    private void txtinforesiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinforesiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtinforesiActionPerformed
-
-    private void btnreportehcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreportehcActionPerformed
-        // TODO add your handling code here:
-        try {
-            Map selector = new HashMap();
-            selector.put("selector", txtinfonumdoc.getText());
-
-            conectar cc = new conectar();
-            Connection cn = cc.conexion();
-            String dir = "C:\\Users\\Usuario\\Documents\\2016-1\\Implantar\\OrthoGarcia\\Orthogarcia 02052016\\OrthoGarcia08Diciembre\\src\\reportes\\hc.jrxml";
-            JasperReport reporteJasper = JasperCompileManager.compileReport(dir);
-            JasperPrint mostrarReporte = JasperFillManager.fillReport(reporteJasper, selector, cn);
-            JasperViewer.viewReport(mostrarReporte, false);
-
-        } catch (JRException ex) {
-            Logger.getLogger(frmProveedores_1.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnreportehcActionPerformed
-
-    private void txtinfoedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinfoedadActionPerformed
-        calcular_edad();
-    }//GEN-LAST:event_txtinfoedadActionPerformed
-
-    private void btnGuardar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar3ActionPerformed
-        odontogramagale odont = new odontogramagale();
-        odont.setVisible(true);
-    }//GEN-LAST:event_btnGuardar3ActionPerformed
-
-    private void btnBuscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar4ActionPerformed
-        String id = JOptionPane.showInputDialog("Digite el Id odontograma que desea buscar");
-
-        String sql = "SELECT diente_18,diente_17,diente_16,diente_15,diente_14,diente_13,diente_12,diente_11,"
-                + "diente_21,diente_22,diente_23,diente_24,diente_25,diente_26,diente_27,diente_28,"
-                + "diente_55,diente_54,diente_53,diente_52,diente_51,"
-                + "diente_61,diente_62,diente_63,diente_64,diente_65,"
-                + "diente_85,diente_84,diente_83,diente_82,diente_81,"
-                + "diente_71,diente_72,diente_73,diente_74,diente_75,"
-                + "diente_48,diente_47,diente_46,diente_45,diente_44,diente_43,diente_42,diente_41,"
-                + "diente_31,diente_32,diente_33,diente_34,diente_35,diente_36,diente_37,diente_38, tipo_odontograma"
-                + " FROM `odontogramas` WHERE id_odontograma="
-                + id;
-
-        conectar cc = new conectar();
-        Connection cn = cc.conexion();
-        try {
-            Statement st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            odontogramagale odo = new odontogramagale();
-            odo.recibir_odontograma(rs);
-            odo.setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(odontogramagale.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnBuscar4ActionPerformed
-
-    private void txtinfonohcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinfonohcActionPerformed
-
-    }//GEN-LAST:event_txtinfonohcActionPerformed
-
-    private void txtinfonohcKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfonohcKeyPressed
-
-    }//GEN-LAST:event_txtinfonohcKeyPressed
-
-    private void txtinfonohcKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfonohcKeyTyped
-        if (txtinfonohc.getText().length() == 15) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfonohcKeyTyped
-
-    private void txtinfoapeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoapeKeyTyped
-        if (txtinfoape.getText().length() == 30) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfoapeKeyTyped
-
-    private void txtinfonomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfonomKeyTyped
-        if (txtinfonom.getText().length() == 30) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfonomKeyTyped
-
-    private void txtinfoedadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoedadKeyTyped
-        if (txtinfoedad.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfoedadKeyTyped
-
-    private void txtinfonumdocKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfonumdocKeyTyped
-        // TODO add your handling code here:
-        if (txtinfonumdoc.getText().length() == 15) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfonumdocKeyTyped
-
-    private void txtinforesiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinforesiKeyTyped
-        // TODO add your handling code here:
-        if (txtinforesi.getText().length() == 60) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinforesiKeyTyped
-
-    private void txtinfociudadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfociudadKeyTyped
-        // TODO add your handling code here:
-        if (txtinfociudad.getText().length() == 15) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfociudadKeyTyped
-
-    private void txtinfobarrioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfobarrioKeyTyped
-        // TODO add your handling code here:
-        if (txtinfobarrio.getText().length() == 20) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfobarrioKeyTyped
-
-    private void txtinfotelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfotelefonoKeyTyped
-        // TODO add your handling code here:
-        if (txtinfotelefono.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfotelefonoKeyTyped
-
-    private void txtinfocelularKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfocelularKeyTyped
-        // TODO add your handling code here:
-        if (txtinfocelular.getText().length() == 15) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfocelularKeyTyped
-
-    private void txtinfoemailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoemailKeyTyped
-        // TODO add your handling code here:
-        if (txtinfoemail.getText().length() == 60) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfoemailKeyTyped
-
-    private void txtinfoepsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoepsKeyTyped
-        // TODO add your handling code here:
-        if (txtinfoeps.getText().length() == 50) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfoepsKeyTyped
-
-    private void txtinfoocupacionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoocupacionKeyTyped
-        // TODO add your handling code here:
-        if (txtinfoocupacion.getText().length() == 20) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfoocupacionKeyTyped
-
-    private void txtinfoempresaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoempresaKeyTyped
-        // TODO add your handling code here:
-        if (txtinfoempresa.getText().length() == 30) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfoempresaKeyTyped
-
-    private void txtinfotelempKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfotelempKeyTyped
-        // TODO add your handling code here:
-        if (txtinfotelemp.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfotelempKeyTyped
-
-    private void txtinforespKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinforespKeyTyped
-        // TODO add your handling code here:
-        if (txtinforesp.getText().length() == 50) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinforespKeyTyped
-
-    private void txtinfodocrespKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfodocrespKeyTyped
-        // TODO add your handling code here:
-        if (txtinfodocresp.getText().length() == 15) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfodocrespKeyTyped
-
-    private void txtinfotelrespKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfotelrespKeyTyped
-        // TODO add your handling code here:
-        if (txtinfotelresp.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfotelrespKeyTyped
-
-    private void txtinfodirrespKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfodirrespKeyTyped
-        // TODO add your handling code here:
-        if (txtinfodirresp.getText().length() == 60) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfodirrespKeyTyped
-
-    private void txtinforeferidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinforeferidoKeyTyped
-        // TODO add your handling code here:
-        if (txtinforeferido.getText().length() == 50) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinforeferidoKeyTyped
-
-    private void txtinfoavisarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfoavisarKeyTyped
-        // TODO add your handling code here:
-        if (txtinfoavisar.getText().length() == 50) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfoavisarKeyTyped
-
-    private void txtinfodiravisoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfodiravisoKeyTyped
-        // TODO add your handling code here:
-        if (txtinfodiraviso.getText().length() == 60) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfodiravisoKeyTyped
-
-    private void txtinfotelavisoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtinfotelavisoKeyTyped
-        // TODO add your handling code here:
-        if (txtinfotelaviso.getText().length() == 15) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtinfotelavisoKeyTyped
-
-    private void tainfoantecedentesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tainfoantecedentesKeyTyped
-        // TODO add your handling code here:
-        if (tainfoantecedentes.getText().length() == 60) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_tainfoantecedentesKeyTyped
-
-    private void taobservaciones_o_mKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_taobservaciones_o_mKeyTyped
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_taobservaciones_o_mKeyTyped
-
-    private void tahabitosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tahabitosKeyTyped
-        // TODO add your handling code here:
-        if (tahabitos.getText().length() == 60) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_tahabitosKeyTyped
-
-    private void txtcopscariadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcopscariadosKeyTyped
-        // TODO add your handling code here:
-        if (txtcopscariados.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtcopscariadosKeyTyped
-
-    private void txtcopsobturadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcopsobturadosKeyTyped
-        // TODO add your handling code here:
-        if (txtcopsobturados.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtcopsobturadosKeyTyped
-
-    private void txtcopsextraidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcopsextraidosKeyTyped
-        // TODO add your handling code here:
-        if (txtcopsextraidos.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtcopsextraidosKeyTyped
-
-    private void txtcopssanosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcopssanosKeyTyped
-        // TODO add your handling code here:
-        if (txtcopssanos.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtcopssanosKeyTyped
-
-    private void txtceocariadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtceocariadosKeyTyped
-        // TODO add your handling code here:
-        if (txtceocariados.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtceocariadosKeyTyped
-
-    private void txtceoobturadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtceoobturadosKeyTyped
-        // TODO add your handling code here:
-        if (txtceoobturados.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtceoobturadosKeyTyped
-
-    private void txtceoperdidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtceoperdidosKeyTyped
-        // TODO add your handling code here:
-        if (txtceoperdidos.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtceoperdidosKeyTyped
-
-    private void txtceosanosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtceosanosKeyTyped
-        // TODO add your handling code here:
-        if (txtceosanos.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtceosanosKeyTyped
-
-    private void txtsupernumerariosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtsupernumerariosKeyTyped
-        // TODO add your handling code here:
-        if (txtsupernumerarios.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtsupernumerariosKeyTyped
-
-    private void txtretimpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtretimpKeyTyped
-        // TODO add your handling code here:
-        if (txtretimp.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtretimpKeyTyped
-
-    private void txtlongdisKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtlongdisKeyTyped
-        // TODO add your handling code here:
-        if (txtlongdis.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtlongdisKeyTyped
-
-    private void txtperfiltejidosblandosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtperfiltejidosblandosKeyTyped
-        // TODO add your handling code here:
-        if (txtperfiltejidosblandos.getText().length() == 20) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtperfiltejidosblandosKeyTyped
-
-    private void txtoverjetKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtoverjetKeyTyped
-        // TODO add your handling code here:
-        if (txtoverjet.getText().length() == 20) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtoverjetKeyTyped
-
-    private void txtovebiteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtovebiteKeyTyped
-        // TODO add your handling code here:
-        if (txtovebite.getText().length() == 20) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtovebiteKeyTyped
-
-    private void txtmordidacruzadaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmordidacruzadaKeyTyped
-        // TODO add your handling code here:
-        if (txtmordidacruzada.getText().length() == 20) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtmordidacruzadaKeyTyped
-
-    private void txtapinamientosupKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapinamientosupKeyTyped
-        // TODO add your handling code here:
-        if (txtapinamientosup.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtapinamientosupKeyTyped
-
-    private void txtapinamientoinfKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapinamientoinfKeyTyped
-        // TODO add your handling code here:
-        if (txtapinamientoinf.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtapinamientoinfKeyTyped
-
-    private void txtdiastemassupKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdiastemassupKeyTyped
-        // TODO add your handling code here:
-        if (txtdiastemassup.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtdiastemassupKeyTyped
-
-    private void txtdiastemasinfKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdiastemasinfKeyTyped
-        // TODO add your handling code here:
-        if (txtdiastemasinf.getText().length() == 10) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtdiastemasinfKeyTyped
-
-    private void txtmalposicionesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmalposicionesKeyTyped
-        // TODO add your handling code here:
-        if (txtmalposiciones.getText().length() == 25) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtmalposicionesKeyTyped
-
-    private void txtlineamediaderKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtlineamediaderKeyTyped
-        // TODO add your handling code here:
-        if (txtlineamediader.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtlineamediaderKeyTyped
-
-    private void txtlineamediaizqKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtlineamediaizqKeyTyped
-        // TODO add your handling code here:
-        if (txtlineamediaizq.getText().length() == 2) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtlineamediaizqKeyTyped
+    }//GEN-LAST:event_txtinfonumdocActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable TablaCefalicas;
-    private javax.swing.JTable TablaPanoramicas;
     private javax.swing.JRadioButton alturafacialaum;
     private javax.swing.JRadioButton alturafacialdism;
-    private javax.swing.JButton btnAdjuntar1;
-    private javax.swing.JButton btnAgregarRadiografia;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnBuscar1;
     private javax.swing.JButton btnBuscar11;
     private javax.swing.JButton btnBuscar12;
     private javax.swing.JButton btnBuscar13;
-    private javax.swing.JButton btnBuscar2;
     private javax.swing.JButton btnBuscar3;
     private javax.swing.JButton btnBuscar4;
     private javax.swing.JButton btnCancelar;
@@ -7491,8 +6921,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JButton btnCancelar12;
     private javax.swing.JButton btnCancelar13;
     private javax.swing.JButton btnCancelar2;
-    private javax.swing.JButton btnCancelar3;
-    private javax.swing.JButton btnCancelarRadio;
     private javax.swing.JButton btnGuardar13;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JButton btnGuardar3;
@@ -7502,7 +6930,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JButton btnModificar12;
     private javax.swing.JButton btnModificar13;
     private javax.swing.JButton btnModificar2;
-    private javax.swing.JButton btnNueva_radiografia;
     private javax.swing.JButton btnreportehc;
     private java.awt.Canvas canvas2;
     private javax.swing.JCheckBox cbbloqueomandibular;
@@ -7527,7 +6954,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JRadioButton crecimientohoriz;
     private javax.swing.JRadioButton crecimientovert;
     private javax.swing.Box.Filler filler1;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
@@ -7613,13 +7039,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel170;
-    private javax.swing.JLabel jLabel171;
-    private javax.swing.JLabel jLabel172;
-    private javax.swing.JLabel jLabel173;
-    private javax.swing.JLabel jLabel174;
-    private javax.swing.JLabel jLabel175;
-    private javax.swing.JLabel jLabel176;
-    private javax.swing.JLabel jLabel177;
     private javax.swing.JLabel jLabel178;
     private javax.swing.JLabel jLabel179;
     private javax.swing.JLabel jLabel18;
@@ -7627,11 +7046,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel181;
     private javax.swing.JLabel jLabel182;
     private javax.swing.JLabel jLabel183;
-    private javax.swing.JLabel jLabel184;
     private javax.swing.JLabel jLabel185;
-    private javax.swing.JLabel jLabel186;
-    private javax.swing.JLabel jLabel187;
-    private javax.swing.JLabel jLabel188;
     private javax.swing.JLabel jLabel189;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -7733,14 +7148,12 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
@@ -7767,10 +7180,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane18;
-    private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane20;
-    private javax.swing.JScrollPane jScrollPane21;
     private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -7779,11 +7189,8 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JComboBox jcmbTipo_radiografia;
-    private javax.swing.JTextArea jtAObservacionesRadiografias;
     private javax.swing.JTabbedPane jtabledpaneInformacion;
     private javax.swing.JRadioButton perfilesqc1;
     private javax.swing.JRadioButton perfilesqc2;
@@ -7941,11 +7348,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JTextArea tareaevolsegtrat;
     private javax.swing.JTable tblodontograma;
     private javax.swing.JScrollPane tblodontogramas_paciente;
-    private javax.swing.JTextField txtApellidosRadio;
-    private javax.swing.JTextField txtCedulaRadio;
-    private javax.swing.JTextField txtFechaRadio;
-    private javax.swing.JTextField txtNombresRadio;
-    private javax.swing.JTextField txtTelefonoRadio;
     private javax.swing.JTextField txtapesegtrat;
     private javax.swing.JTextField txtapinamientoinf;
     private javax.swing.JTextField txtapinamientosup;
@@ -7996,8 +7398,6 @@ public class frmHistoriaC extends javax.swing.JFrame {
     private javax.swing.JTextField txtoverjet;
     private javax.swing.JTextField txtperfiltejidosblandos;
     private javax.swing.JTextField txtretimp;
-    public static javax.swing.JTextField txtrutaPanoramica;
-    public static javax.swing.JTextField txtrutaRadiografiaN;
     private javax.swing.JTextField txtsupernumerarios;
     private javax.swing.JTextField txttelsegtrat;
     // End of variables declaration//GEN-END:variables
@@ -8119,67 +7519,7 @@ public class frmHistoriaC extends javax.swing.JFrame {
         }
     }
 
-    /**
-     * Meotodo inicia las tablas de las radiografias de la ventana
-     *
-     * @param cedula_paciente para cargar las radiografias de ese paciente
-     */
-    public void iniciar_tablas(String cedula_paciente) {
-
-        try {
-            conectar cc = new conectar();
-            Connection cn = cc.conexion();
-            String[] titulos = new String[3];
-            String id_cita;
-            String tipo_radiografia = null;
-
-            titulos[0] = "Fecha";
-            titulos[1] = "Código radiografía";
-            titulos[2] = "Observaciones";
-
-            String sql = "select * from citas where id_pac_cita ='" + cedula_paciente + "'";
-            modeloPanoramica = new DefaultTableModel(null, titulos);
-            modeloCefalica = new DefaultTableModel(null, titulos);
-            Statement st = cn.createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            String[] registro = new String[3];
-            while (rs.next()) {
-                id_cita = rs.getString("id_cita");
-                registro[0] = rs.getString("fecha_cita");
-                String sql2 = "select * from citas_radiografias where id_cita_cr='" + id_cita + "'";
-                Statement state = cn.createStatement();
-                ResultSet res = state.executeQuery(sql2);
-
-                while (res.next()) {
-                    registro[1] = res.getString("id_radiografia_cr");
-                    registro[2] = res.getString("observaciones_cr");
-
-                    String sql3 = "select tipo_radiografia from radiografias where id_radiografia='" + registro[1] + "'";
-                    Statement states = cn.createStatement();
-                    ResultSet resu = states.executeQuery(sql3);
-
-                    while (resu.next()) {
-                        tipo_radiografia = resu.getString("tipo_radiografia");
-
-                        if (tipo_radiografia.equals("Panoramica.")) {
-                            modeloPanoramica.addRow(registro);
-                        }
-                        if (tipo_radiografia.equals("Cefàlica lateral.")) {
-                            modeloCefalica.addRow(registro);
-                        }
-                    }
-                }
-            }
-
-            TablaPanoramicas.setModel(modeloPanoramica);
-            TablaCefalicas.setModel(modeloCefalica);
-
-        } catch (SQLException ex) {
-            Logger.getLogger(frmProveedores_1.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, ex);
-        }
-    }
-
+   
     //limpiar los campos de la ventana
     private void limpiar() {
         txtapesegtrat.setText("");

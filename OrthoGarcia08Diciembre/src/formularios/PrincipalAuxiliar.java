@@ -34,7 +34,6 @@ public class PrincipalAuxiliar extends javax.swing.JFrame {
     private void initComponents() {
 
         btnusuarios = new javax.swing.JButton();
-        btnmatcon = new javax.swing.JButton();
         btnacercade = new javax.swing.JButton();
         btnayuda = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
@@ -49,14 +48,6 @@ public class PrincipalAuxiliar extends javax.swing.JFrame {
         btnusuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnusuariosActionPerformed(evt);
-            }
-        });
-
-        btnmatcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/materiales.png"))); // NOI18N
-        btnmatcon.setText("Materiales de consultorio");
-        btnmatcon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmatconActionPerformed(evt);
             }
         });
 
@@ -97,8 +88,7 @@ public class PrincipalAuxiliar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnacercade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnmatcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnacercade, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                     .addComponent(btnayuda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnusuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -112,14 +102,12 @@ public class PrincipalAuxiliar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnusuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnmatcon, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnacercade, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addGap(18, 18, 18)
                 .addComponent(btnayuda, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         pack();
@@ -130,12 +118,6 @@ public class PrincipalAuxiliar extends javax.swing.JFrame {
         frmCitas citas = new frmCitas();
         citas.setVisible(true);
     }//GEN-LAST:event_btnusuariosActionPerformed
-
-    private void btnmatconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmatconActionPerformed
-        // TODO add your handling code here:
-        frmMatcons matcon = new frmMatcons();
-        matcon.setVisible(true);
-    }//GEN-LAST:event_btnmatconActionPerformed
 
     private void btnacercadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnacercadeActionPerformed
         // TODO add your handling code here:
@@ -214,7 +196,6 @@ public class PrincipalAuxiliar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnacercade;
     private javax.swing.JButton btnayuda;
-    private javax.swing.JButton btnmatcon;
     private javax.swing.JButton btnsalir;
     private javax.swing.JButton btnusuarios;
     private javax.swing.JLabel jLabel1;
