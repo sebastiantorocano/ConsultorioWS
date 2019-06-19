@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5dd371ab-3e78-48dc-9b51-4078e9836f2f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="799"/>
+	<parameter name="selector" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     pacientes.`numero_doc_paciente` AS pacientes_numero_doc_paciente,
+     pacientes.`cedula_usuario_paciente` AS pacientes_cedula_usuario_paciente,
+     pacientes.`fecha_ingreso_paciente` AS pacientes_fecha_ingreso_paciente,
+     pacientes.`tipo_doc_paciente` AS pacientes_tipo_doc_paciente,
+     pacientes.`genero_paciente` AS pacientes_genero_paciente,
+     pacientes.`estado_civil_paciente` AS pacientes_estado_civil_paciente,
+     pacientes.`apellido_paciente` AS pacientes_apellido_paciente,
+     pacientes.`nombre_paciente` AS pacientes_nombre_paciente,
+     pacientes.`edad_paciente` AS pacientes_edad_paciente,
+     pacientes.`fecha_nac_paciente` AS pacientes_fecha_nac_paciente,
+     pacientes.`dir_residencia_paciente` AS pacientes_dir_residencia_paciente,
+     pacientes.`ciudad_paciente` AS pacientes_ciudad_paciente,
+     pacientes.`barrio_paciente` AS pacientes_barrio_paciente,
+     pacientes.`telefono_paciente` AS pacientes_telefono_paciente,
+     pacientes.`celular_paciente` AS pacientes_celular_paciente,
+     pacientes.`correo_paciente` AS pacientes_correo_paciente,
+     pacientes.`eps_paciente` AS pacientes_eps_paciente,
+     pacientes.`ocupacion_paciente` AS pacientes_ocupacion_paciente,
+     pacientes.`empresa_paciente` AS pacientes_empresa_paciente,
+     pacientes.`tel_empresa_paciente` AS pacientes_tel_empresa_paciente,
+     pacientes.`nom_responsable_paciente` AS pacientes_nom_responsable_paciente,
+     pacientes.`doc_ident_resp_paciente` AS pacientes_doc_ident_resp_paciente,
+     pacientes.`tel_resp_paciente` AS pacientes_tel_resp_paciente,
+     pacientes.`dir_resp_paciente` AS pacientes_dir_resp_paciente,
+     pacientes.`referido_paciente` AS pacientes_referido_paciente,
+     pacientes.`caso_urg_aviso_paciente` AS pacientes_caso_urg_aviso_paciente,
+     pacientes.`dir_urg_aviso_paciente` AS pacientes_dir_urg_aviso_paciente,
+     pacientes.`tel_urg_aviso_paciente` AS pacientes_tel_urg_aviso_paciente,
+     pacientes.`motivo_consulta_paciente` AS pacientes_motivo_consulta_paciente,
+     pacientes.`evol_est_actual_paciente` AS pacientes_evol_est_actual_paciente,
+     pacientes.`antec_fam_paciente` AS pacientes_antec_fam_paciente,
+     pacientes.`id_estado_paciente` AS pacientes_id_estado_paciente,
+     pacientes.`num_hc` AS pacientes_num_hc,
+     pacientes.`alergias_o_m` AS pacientes_alergias_o_m,
+     pacientes.`discrasia_sanguinea_o_m` AS pacientes_discrasia_sanguinea_o_m,
+     pacientes.`cardiopatias_o_m` AS pacientes_cardiopatias_o_m,
+     pacientes.`embarazo_o_m` AS pacientes_embarazo_o_m,
+     pacientes.`alter_pres_arterial_o_m` AS pacientes_alter_pres_arterial_o_m,
+     pacientes.`toma_medicamentos_o_m` AS pacientes_toma_medicamentos_o_m,
+     pacientes.`trat_med_actual_o_m` AS pacientes_trat_med_actual_o_m,
+     pacientes.`hepatitis_o_m` AS pacientes_hepatitis_o_m,
+     pacientes.`diabetes_o_m` AS pacientes_diabetes_o_m,
+     pacientes.`fiebre_reumatica_o_m` AS pacientes_fiebre_reumatica_o_m,
+     pacientes.`hiv_sida_o_m` AS pacientes_hiv_sida_o_m,
+     pacientes.`inmunosupresion_o_m` AS pacientes_inmunosupresion_o_m,
+     pacientes.`patologias_renales_o_m` AS pacientes_patologias_renales_o_m,
+     pacientes.`patologias_respiratorias_o_m` AS pacientes_patologias_respiratorias_o_m,
+     pacientes.`trastornos_gastricos_o_m` AS pacientes_trastornos_gastricos_o_m,
+     pacientes.`trastornos_emocionales_o_m` AS pacientes_trastornos_emocionales_o_m,
+     pacientes.`sinusitis_o_m` AS pacientes_sinusitis_o_m,
+     pacientes.`cirugias_o_m` AS pacientes_cirugias_o_m,
+     pacientes.`exodoncias_o_m` AS pacientes_exodoncias_o_m,
+     pacientes.`enfermedades_orales_o_m` AS pacientes_enfermedades_orales_o_m,
+     pacientes.`protesis_aparotologia_o_m` AS pacientes_protesis_aparotologia_o_m,
+     pacientes.`otras_pat_antec_o_m` AS pacientes_otras_pat_antec_o_m,
+     pacientes.`observaciones_o_m` AS pacientes_observaciones_o_m,
+     pacientes.`habitos_asociados_o_m` AS pacientes_habitos_asociados_o_m,
+     pacientes.`labio_superior_e_e` AS pacientes_labio_superior_e_e,
+     pacientes.`labio_inferior_e_e` AS pacientes_labio_inferior_e_e,
+     pacientes.`comisuras_e_e` AS pacientes_comisuras_e_e,
+     pacientes.`mucosa_oral_e_e` AS pacientes_mucosa_oral_e_e,
+     pacientes.`surcos_yugales_e_e` AS pacientes_surcos_yugales_e_e,
+     pacientes.`frenillos_e_e` AS pacientes_frenillos_e_e,
+     pacientes.`orofaringe_e_e` AS pacientes_orofaringe_e_e,
+     pacientes.`paladar_e_e` AS pacientes_paladar_e_e,
+     pacientes.`glandulas_salivales_e_e` AS pacientes_glandulas_salivales_e_e,
+     pacientes.`piso_boca_e_e` AS pacientes_piso_boca_e_e,
+     pacientes.`dorso_lengua_e_e` AS pacientes_dorso_lengua_e_e,
+     pacientes.`vientre_lengua_e_e` AS pacientes_vientre_lengua_e_e,
+     pacientes.`observaciones_e_e` AS pacientes_observaciones_e_e,
+     pacientes.`ruidos_atm` AS pacientes_ruidos_atm,
+     pacientes.`desviacion_atm` AS pacientes_desviacion_atm,
+     pacientes.`cambio_volumen_atm` AS pacientes_cambio_volumen_atm,
+     pacientes.`bloqueo_mandibular_atm` AS pacientes_bloqueo_mandibular_atm,
+     pacientes.`limitacion_apertura_atm` AS pacientes_limitacion_apertura_atm,
+     pacientes.`dolor_articular_atm` AS pacientes_dolor_articular_atm,
+     pacientes.`dolor_muscular_atm` AS pacientes_dolor_muscular_atm,
+     pacientes.`observaciones_atm` AS pacientes_observaciones_atm,
+     pacientes.`cariados_cops` AS pacientes_cariados_cops,
+     pacientes.`obturados_cops` AS pacientes_obturados_cops,
+     pacientes.`extraidos_cops` AS pacientes_extraidos_cops,
+     pacientes.`sanos_cops` AS pacientes_sanos_cops,
+     pacientes.`cariados_ceo` AS pacientes_cariados_ceo,
+     pacientes.`obturados_ceo` AS pacientes_obturados_ceo,
+     pacientes.`perdidos_ceo` AS pacientes_perdidos_ceo,
+     pacientes.`sanos_ceo` AS pacientes_sanos_ceo,
+     pacientes.`dientes_ret_imp_ar` AS pacientes_dientes_ret_imp_ar,
+     pacientes.`cual_diente_ret_imp_ar` AS pacientes_cual_diente_ret_imp_ar,
+     pacientes.`dientes_supernum_ar` AS pacientes_dientes_supernum_ar,
+     pacientes.`cual_dientes_supernum_ar` AS pacientes_cual_dientes_supernum_ar,
+     pacientes.`long_rad_dism_ar` AS pacientes_long_rad_dism_ar,
+     pacientes.`cual_long_rad_dis_ar` AS pacientes_cual_long_rad_dis_ar,
+     pacientes.`observaciones_ar` AS pacientes_observaciones_ar,
+     pacientes.`perfil_esqueletico_ac` AS pacientes_perfil_esqueletico_ac,
+     pacientes.`prognatismo_ac` AS pacientes_prognatismo_ac,
+     pacientes.`retrognatismo_ac` AS pacientes_retrognatismo_ac,
+     pacientes.`tipo_crecimiento_ac` AS pacientes_tipo_crecimiento_ac,
+     pacientes.`altura_facial_inf_ac` AS pacientes_altura_facial_inf_ac,
+     pacientes.`protrusion_dentario` AS pacientes_protrusion_dentario,
+     pacientes.`retrusion_dentario` AS pacientes_retrusion_dentario,
+     pacientes.`perfil_tejidos_blandos` AS pacientes_perfil_tejidos_blandos,
+     pacientes.`proquelia_tejidos_blandos` AS pacientes_proquelia_tejidos_blandos,
+     pacientes.`retroquelia_tejidos_blandos` AS pacientes_retroquelia_tejidos_blandos,
+     pacientes.`tipo_denticion_am` AS pacientes_tipo_denticion_am,
+     pacientes.`morf_arco_triang_am` AS pacientes_morf_arco_triang_am,
+     pacientes.`morf_arco_cuadr_am` AS pacientes_morf_arco_cuadr_am,
+     pacientes.`morf_arco_ovoi_am` AS pacientes_morf_arco_ovoi_am,
+     pacientes.`tam_dental_normal_am` AS pacientes_tam_dental_normal_am,
+     pacientes.`tam_dental_macrodoncia_am` AS pacientes_tam_dental_macrodoncia_am,
+     pacientes.`tam_dental_microdoncia_am` AS pacientes_tam_dental_microdoncia_am,
+     pacientes.`rmc_canino_am` AS pacientes_rmc_canino_am,
+     pacientes.`rmc_molar_am` AS pacientes_rmc_molar_am,
+     pacientes.`rmc_lineamedia_izq` AS pacientes_rmc_lineamedia_izq,
+     pacientes.`rmc_lineamedia_der` AS pacientes_rmc_lineamedia_der,
+     pacientes.`overjet_am` AS pacientes_overjet_am,
+     pacientes.`ovebite_am` AS pacientes_ovebite_am,
+     pacientes.`mordida_cruzada_am` AS pacientes_mordida_cruzada_am,
+     pacientes.`apinamiento_sup_am` AS pacientes_apinamiento_sup_am,
+     pacientes.`apinamiento_inf_am` AS pacientes_apinamiento_inf_am,
+     pacientes.`diastemas_sup_am` AS pacientes_diastemas_sup_am,
+     pacientes.`diastemas_inf_am` AS pacientes_diastemas_inf_am,
+     pacientes.`malposiciones_am` AS pacientes_malposiciones_am,
+     pacientes.`observaciones_am` AS pacientes_observaciones_am,
+     pacientes.`diagnostico_esqueletico` AS pacientes_diagnostico_esqueletico,
+     pacientes.`diagnostico_facial` AS pacientes_diagnostico_facial,
+     pacientes.`diagnostico_dental` AS pacientes_diagnostico_dental,
+     pacientes.`diagnostico_funcional` AS pacientes_diagnostico_funcional,
+     pacientes.`plan_tratamiento` AS pacientes_plan_tratamiento,
+     pacientes.`objetivos_tratamiento` AS pacientes_objetivos_tratamiento,
+     pacientes.`limites_corregir` AS pacientes_limites_corregir,
+     pacientes.`medidas_esqueletica_ac` AS pacientes_medidas_esqueletica_ac,
+     pacientes.`medidas_tejidos_blandos_ac` AS pacientes_medidas_tejidos_blandos_ac,
+     pacientes.`medidas_dentarias_ac` AS pacientes_medidas_dentarias_ac,
+     pacientes.`diagnostico_ac` AS pacientes_diagnostico_ac,
+     pacientes.`id_radiografia` AS pacientes_id_radiografia,
+     genero.`id_genero` AS genero_id_genero,
+     genero.`nombre_genero` AS genero_nombre_genero,
+     estado_civil.`id_estado_civil` AS estado_civil_id_estado_civil,
+     estado_civil.`nombre_estado_civil` AS estado_civil_nombre_estado_civil,
+     tipo_documento.`id_tipo_doc` AS tipo_documento_id_tipo_doc,
+     tipo_documento.`nombre_tipo_doc` AS tipo_documento_nombre_tipo_doc
+FROM
+     `genero` genero INNER JOIN `pacientes` pacientes ON genero.`id_genero` = pacientes.`genero_paciente`
+     INNER JOIN `estado_civil` estado_civil ON pacientes.`estado_civil_paciente` = estado_civil.`id_estado_civil`
+     INNER JOIN `tipo_documento` tipo_documento ON pacientes.`tipo_doc_paciente` = tipo_documento.`id_tipo_doc`
+WHERE numero_doc_paciente=$P{selector};]]>
+	</queryString>
+	<field name="pacientes_numero_doc_paciente" class="java.lang.String"/>
+	<field name="pacientes_cedula_usuario_paciente" class="java.lang.String"/>
+	<field name="pacientes_fecha_ingreso_paciente" class="java.sql.Date"/>
+	<field name="pacientes_tipo_doc_paciente" class="java.lang.String"/>
+	<field name="pacientes_genero_paciente" class="java.lang.String"/>
+	<field name="pacientes_estado_civil_paciente" class="java.lang.String"/>
+	<field name="pacientes_apellido_paciente" class="java.lang.String"/>
+	<field name="pacientes_nombre_paciente" class="java.lang.String"/>
+	<field name="pacientes_edad_paciente" class="java.lang.String"/>
+	<field name="pacientes_fecha_nac_paciente" class="java.sql.Date"/>
+	<field name="pacientes_dir_residencia_paciente" class="java.lang.String"/>
+	<field name="pacientes_ciudad_paciente" class="java.lang.String"/>
+	<field name="pacientes_barrio_paciente" class="java.lang.String"/>
+	<field name="pacientes_telefono_paciente" class="java.lang.String"/>
+	<field name="pacientes_celular_paciente" class="java.lang.String"/>
+	<field name="pacientes_correo_paciente" class="java.lang.String"/>
+	<field name="pacientes_eps_paciente" class="java.lang.String"/>
+	<field name="pacientes_ocupacion_paciente" class="java.lang.String"/>
+	<field name="pacientes_empresa_paciente" class="java.lang.String"/>
+	<field name="pacientes_tel_empresa_paciente" class="java.lang.String"/>
+	<field name="pacientes_nom_responsable_paciente" class="java.lang.String"/>
+	<field name="pacientes_doc_ident_resp_paciente" class="java.lang.String"/>
+	<field name="pacientes_tel_resp_paciente" class="java.lang.String"/>
+	<field name="pacientes_dir_resp_paciente" class="java.lang.String"/>
+	<field name="pacientes_referido_paciente" class="java.lang.String"/>
+	<field name="pacientes_caso_urg_aviso_paciente" class="java.lang.String"/>
+	<field name="pacientes_dir_urg_aviso_paciente" class="java.lang.String"/>
+	<field name="pacientes_tel_urg_aviso_paciente" class="java.lang.String"/>
+	<field name="pacientes_motivo_consulta_paciente" class="java.lang.String"/>
+	<field name="pacientes_evol_est_actual_paciente" class="java.lang.String"/>
+	<field name="pacientes_antec_fam_paciente" class="java.lang.String"/>
+	<field name="pacientes_id_estado_paciente" class="java.lang.String"/>
+	<field name="pacientes_num_hc" class="java.lang.String"/>
+	<field name="pacientes_alergias_o_m" class="java.lang.String"/>
+	<field name="pacientes_discrasia_sanguinea_o_m" class="java.lang.String"/>
+	<field name="pacientes_cardiopatias_o_m" class="java.lang.String"/>
+	<field name="pacientes_embarazo_o_m" class="java.lang.String"/>
+	<field name="pacientes_alter_pres_arterial_o_m" class="java.lang.String"/>
+	<field name="pacientes_toma_medicamentos_o_m" class="java.lang.String"/>
+	<field name="pacientes_trat_med_actual_o_m" class="java.lang.String"/>
+	<field name="pacientes_hepatitis_o_m" class="java.lang.String"/>
+	<field name="pacientes_diabetes_o_m" class="java.lang.String"/>
+	<field name="pacientes_fiebre_reumatica_o_m" class="java.lang.String"/>
+	<field name="pacientes_hiv_sida_o_m" class="java.lang.String"/>
+	<field name="pacientes_inmunosupresion_o_m" class="java.lang.String"/>
+	<field name="pacientes_patologias_renales_o_m" class="java.lang.String"/>
+	<field name="pacientes_patologias_respiratorias_o_m" class="java.lang.String"/>
+	<field name="pacientes_trastornos_gastricos_o_m" class="java.lang.String"/>
+	<field name="pacientes_trastornos_emocionales_o_m" class="java.lang.String"/>
+	<field name="pacientes_sinusitis_o_m" class="java.lang.String"/>
+	<field name="pacientes_cirugias_o_m" class="java.lang.String"/>
+	<field name="pacientes_exodoncias_o_m" class="java.lang.String"/>
+	<field name="pacientes_enfermedades_orales_o_m" class="java.lang.String"/>
+	<field name="pacientes_protesis_aparotologia_o_m" class="java.lang.String"/>
+	<field name="pacientes_otras_pat_antec_o_m" class="java.lang.String"/>
+	<field name="pacientes_observaciones_o_m" class="java.lang.String"/>
+	<field name="pacientes_habitos_asociados_o_m" class="java.lang.String"/>
+	<field name="pacientes_labio_superior_e_e" class="java.lang.String"/>
+	<field name="pacientes_labio_inferior_e_e" class="java.lang.String"/>
+	<field name="pacientes_comisuras_e_e" class="java.lang.String"/>
+	<field name="pacientes_mucosa_oral_e_e" class="java.lang.String"/>
+	<field name="pacientes_surcos_yugales_e_e" class="java.lang.String"/>
+	<field name="pacientes_frenillos_e_e" class="java.lang.String"/>
+	<field name="pacientes_orofaringe_e_e" class="java.lang.String"/>
+	<field name="pacientes_paladar_e_e" class="java.lang.String"/>
+	<field name="pacientes_glandulas_salivales_e_e" class="java.lang.String"/>
+	<field name="pacientes_piso_boca_e_e" class="java.lang.String"/>
+	<field name="pacientes_dorso_lengua_e_e" class="java.lang.String"/>
+	<field name="pacientes_vientre_lengua_e_e" class="java.lang.String"/>
+	<field name="pacientes_observaciones_e_e" class="java.lang.String"/>
+	<field name="pacientes_ruidos_atm" class="java.lang.String"/>
+	<field name="pacientes_desviacion_atm" class="java.lang.String"/>
+	<field name="pacientes_cambio_volumen_atm" class="java.lang.String"/>
+	<field name="pacientes_bloqueo_mandibular_atm" class="java.lang.String"/>
+	<field name="pacientes_limitacion_apertura_atm" class="java.lang.String"/>
+	<field name="pacientes_dolor_articular_atm" class="java.lang.String"/>
+	<field name="pacientes_dolor_muscular_atm" class="java.lang.String"/>
+	<field name="pacientes_observaciones_atm" class="java.lang.String"/>
+	<field name="pacientes_cariados_cops" class="java.lang.String"/>
+	<field name="pacientes_obturados_cops" class="java.lang.String"/>
+	<field name="pacientes_extraidos_cops" class="java.lang.String"/>
+	<field name="pacientes_sanos_cops" class="java.lang.String"/>
+	<field name="pacientes_cariados_ceo" class="java.lang.String"/>
+	<field name="pacientes_obturados_ceo" class="java.lang.String"/>
+	<field name="pacientes_perdidos_ceo" class="java.lang.String"/>
+	<field name="pacientes_sanos_ceo" class="java.lang.String"/>
+	<field name="pacientes_dientes_ret_imp_ar" class="java.lang.String"/>
+	<field name="pacientes_cual_diente_ret_imp_ar" class="java.lang.String"/>
+	<field name="pacientes_dientes_supernum_ar" class="java.lang.String"/>
+	<field name="pacientes_cual_dientes_supernum_ar" class="java.lang.String"/>
+	<field name="pacientes_long_rad_dism_ar" class="java.lang.String"/>
+	<field name="pacientes_cual_long_rad_dis_ar" class="java.lang.String"/>
+	<field name="pacientes_observaciones_ar" class="java.lang.String"/>
+	<field name="pacientes_perfil_esqueletico_ac" class="java.lang.String"/>
+	<field name="pacientes_prognatismo_ac" class="java.lang.String"/>
+	<field name="pacientes_retrognatismo_ac" class="java.lang.String"/>
+	<field name="pacientes_tipo_crecimiento_ac" class="java.lang.String"/>
+	<field name="pacientes_altura_facial_inf_ac" class="java.lang.String"/>
+	<field name="pacientes_protrusion_dentario" class="java.lang.String"/>
+	<field name="pacientes_retrusion_dentario" class="java.lang.String"/>
+	<field name="pacientes_perfil_tejidos_blandos" class="java.lang.String"/>
+	<field name="pacientes_proquelia_tejidos_blandos" class="java.lang.String"/>
+	<field name="pacientes_retroquelia_tejidos_blandos" class="java.lang.String"/>
+	<field name="pacientes_tipo_denticion_am" class="java.lang.String"/>
+	<field name="pacientes_morf_arco_triang_am" class="java.lang.String"/>
+	<field name="pacientes_morf_arco_cuadr_am" class="java.lang.String"/>
+	<field name="pacientes_morf_arco_ovoi_am" class="java.lang.String"/>
+	<field name="pacientes_tam_dental_normal_am" class="java.lang.String"/>
+	<field name="pacientes_tam_dental_macrodoncia_am" class="java.lang.String"/>
+	<field name="pacientes_tam_dental_microdoncia_am" class="java.lang.String"/>
+	<field name="pacientes_rmc_canino_am" class="java.lang.String"/>
+	<field name="pacientes_rmc_molar_am" class="java.lang.String"/>
+	<field name="pacientes_rmc_lineamedia_izq" class="java.lang.String"/>
+	<field name="pacientes_rmc_lineamedia_der" class="java.lang.String"/>
+	<field name="pacientes_overjet_am" class="java.lang.String"/>
+	<field name="pacientes_ovebite_am" class="java.lang.String"/>
+	<field name="pacientes_mordida_cruzada_am" class="java.lang.String"/>
+	<field name="pacientes_apinamiento_sup_am" class="java.lang.String"/>
+	<field name="pacientes_apinamiento_inf_am" class="java.lang.String"/>
+	<field name="pacientes_diastemas_sup_am" class="java.lang.String"/>
+	<field name="pacientes_diastemas_inf_am" class="java.lang.String"/>
+	<field name="pacientes_malposiciones_am" class="java.lang.String"/>
+	<field name="pacientes_observaciones_am" class="java.lang.String"/>
+	<field name="pacientes_diagnostico_esqueletico" class="java.lang.String"/>
+	<field name="pacientes_diagnostico_facial" class="java.lang.String"/>
+	<field name="pacientes_diagnostico_dental" class="java.lang.String"/>
+	<field name="pacientes_diagnostico_funcional" class="java.lang.String"/>
+	<field name="pacientes_plan_tratamiento" class="java.lang.String"/>
+	<field name="pacientes_objetivos_tratamiento" class="java.lang.String"/>
+	<field name="pacientes_limites_corregir" class="java.lang.String"/>
+	<field name="pacientes_medidas_esqueletica_ac" class="java.lang.String"/>
+	<field name="pacientes_medidas_tejidos_blandos_ac" class="java.lang.String"/>
+	<field name="pacientes_medidas_dentarias_ac" class="java.lang.String"/>
+	<field name="pacientes_diagnostico_ac" class="java.lang.String"/>
+	<field name="pacientes_id_radiografia" class="java.lang.String"/>
+	<field name="genero_id_genero" class="java.lang.String"/>
+	<field name="genero_nombre_genero" class="java.lang.String"/>
+	<field name="estado_civil_id_estado_civil" class="java.lang.String"/>
+	<field name="estado_civil_nombre_estado_civil" class="java.lang.String"/>
+	<field name="tipo_documento_id_tipo_doc" class="java.lang.String"/>
+	<field name="tipo_documento_nombre_tipo_doc" class="java.lang.String"/>
+	<detail>
+		<band height="340">
+			<textField>
+				<reportElement x="239" y="40" width="195" height="20" uuid="d6386af1-025b-45cf-b294-13638634b339"/>
+				<textFieldExpression><![CDATA[$F{pacientes_nombre_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="3e8650e1-d3be-4cb9-8023-30a09925cb32"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de ingreso:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="34f80196-0d71-4253-be91-9f28acc1f321"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Identificación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="40" width="39" height="20" uuid="72d6892f-9666-4a48-8ca5-c76d8c270fa4"/>
+				<text><![CDATA[Nombres:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="468" y="40" width="88" height="20" uuid="a324ad15-cd73-43f7-b48b-310ec6274d16"/>
+				<textFieldExpression><![CDATA[$F{pacientes_edad_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="434" y="40" width="34" height="20" uuid="1d085f59-10c3-4e11-930f-ff66d06ce54a"/>
+				<text><![CDATA[Edad:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="d4283381-e06c-46d1-8258-3018d39b067e"/>
+				<textFieldExpression><![CDATA[$F{pacientes_fecha_ingreso_paciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="40" width="147" height="20" uuid="f2090ada-9e2b-4ff5-bd2f-c3e2e3e410d5"/>
+				<textFieldExpression><![CDATA[$F{pacientes_apellido_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="53" height="20" uuid="d2d1a379-0356-4af6-9052-cb33b22f9e9c"/>
+				<text><![CDATA[Apellidos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="456" y="0" width="100" height="20" uuid="b942c12a-6645-46e3-9894-edbb1f82683f"/>
+				<textFieldExpression><![CDATA[$F{pacientes_num_hc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="366" y="0" width="90" height="20" uuid="2038be16-d162-4d2a-b14e-f4120ff7da01"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No H.Cl.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="126" height="20" uuid="988f8abb-2a90-4997-a57e-c87ad9b8eed9"/>
+				<text><![CDATA[Documento de identidad:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="208" y="60" width="100" height="20" uuid="57d863bc-bcb5-415f-ad2a-72e175b64f6c"/>
+				<textFieldExpression><![CDATA[$F{pacientes_numero_doc_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="60" width="39" height="20" uuid="83a076dd-03ec-40bc-90ad-7ac22718fcb6"/>
+				<text><![CDATA[NO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="60" width="35" height="20" uuid="8135c745-2842-4ab5-8965-6ba0cccfdce6"/>
+				<text><![CDATA[Sexo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="60" width="64" height="20" uuid="5c1465c7-8ed6-4a47-a978-790ba45aaadf"/>
+				<text><![CDATA[Estado civil:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="343" y="60" width="53" height="20" uuid="e56aa6a4-7987-45d8-914a-15e317dee919"/>
+				<textFieldExpression><![CDATA[$F{genero_nombre_genero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="60" width="43" height="20" uuid="3b3de4e9-8721-4810-b39b-7b8428dace44"/>
+				<textFieldExpression><![CDATA[$F{tipo_documento_nombre_tipo_doc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="60" width="95" height="20" uuid="085562ca-1b27-4355-a30e-89f32c659e07"/>
+				<textFieldExpression><![CDATA[$F{estado_civil_nombre_estado_civil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="80" width="90" height="20" uuid="98b7e24d-6b20-48cb-a1cd-66aafaafd0a9"/>
+				<text><![CDATA[Fecha nacimiento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="80" width="100" height="20" uuid="b202b152-865a-48b9-895e-ac7e40629511"/>
+				<textFieldExpression><![CDATA[$F{pacientes_fecha_nac_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="80" width="100" height="20" uuid="f645181d-e774-470a-9959-664364a97cd1"/>
+				<text><![CDATA[Dirección residencia:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="80" width="265" height="20" uuid="2a03d9f5-010e-44e4-8912-21b35744e482"/>
+				<textFieldExpression><![CDATA[$F{pacientes_dir_residencia_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="41" height="20" uuid="27e5503a-0b26-4393-8674-696be5a50778"/>
+				<text><![CDATA[Ciudad:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="41" y="100" width="149" height="20" uuid="a27e7392-99fa-4de3-9827-16decd7a63c1"/>
+				<textFieldExpression><![CDATA[$F{pacientes_ciudad_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="100" width="33" height="20" uuid="cafb2d8e-26b3-4ae1-894a-341429c32685"/>
+				<text><![CDATA[Barrio:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="223" y="100" width="143" height="20" uuid="e57979b5-1af5-4175-bfc1-e746da5c4c66"/>
+				<textFieldExpression><![CDATA[$F{pacientes_barrio_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="366" y="100" width="100" height="20" uuid="414bef3c-ce56-4959-9260-fbbee8b75743"/>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="468" y="100" width="87" height="20" uuid="2e7d99df-58ca-4cc1-b500-351e7a5bfb93"/>
+				<textFieldExpression><![CDATA[$F{pacientes_telefono_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="120" width="41" height="20" uuid="9ed88f32-0b6e-4dac-b759-a16864824d1f"/>
+				<text><![CDATA[Celular:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="41" y="120" width="100" height="20" uuid="d1f0c310-32d2-4810-b460-23b70143a188"/>
+				<textFieldExpression><![CDATA[$F{pacientes_celular_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="141" y="120" width="39" height="20" uuid="773bb4c4-c6f8-4975-b873-f3390df55df8"/>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="120" width="184" height="20" uuid="aef40975-065f-40e8-8999-7b2029b47e68"/>
+				<textFieldExpression><![CDATA[$F{pacientes_correo_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="364" y="120" width="32" height="20" uuid="a9d55247-f286-437e-b01a-53d7af0bb404"/>
+				<text><![CDATA[EPS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="396" y="120" width="159" height="20" uuid="e8704cfb-79a3-4446-ba9e-7cf4774f9156"/>
+				<textFieldExpression><![CDATA[$F{pacientes_eps_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="140" width="53" height="20" uuid="3f0e14c3-5c4a-49a6-a0d5-1e5d6abb20fa"/>
+				<text><![CDATA[Ocupación:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="53" y="140" width="116" height="20" uuid="ac273961-54dd-418b-8c40-a200d59286f4"/>
+				<textFieldExpression><![CDATA[$F{pacientes_ocupacion_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="140" width="54" height="20" uuid="898565fb-1cf9-4250-8934-ead1801e3923"/>
+				<text><![CDATA[Empresa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="223" y="140" width="120" height="20" uuid="44066a26-2f0c-4295-9a28-e33e0383fdcb"/>
+				<textFieldExpression><![CDATA[$F{pacientes_empresa_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="343" y="140" width="100" height="20" uuid="d93fcddb-c5f5-4b41-ba77-a7e091c30490"/>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="443" y="140" width="112" height="20" uuid="7c6260cc-14a0-4fcb-b0d7-20bedc2e2812"/>
+				<textFieldExpression><![CDATA[$F{pacientes_tel_empresa_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="160" width="62" height="20" uuid="3d022def-283b-4402-bb93-f36797ceaa38"/>
+				<text><![CDATA[Responsable:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="160" width="135" height="20" uuid="5b822b52-6b4f-4d96-9587-46918083a75e"/>
+				<textFieldExpression><![CDATA[$F{pacientes_nom_responsable_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="160" width="108" height="20" uuid="65f35e8f-2b84-4f67-b0b9-1ed8b1734bae"/>
+				<text><![CDATA[Documento identidad:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="308" y="160" width="100" height="20" uuid="43df39d5-c88a-46e9-acae-2757b48d2bc2"/>
+				<textFieldExpression><![CDATA[$F{pacientes_doc_ident_resp_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="408" y="160" width="48" height="20" uuid="416da850-cffc-453b-8f24-191be947fcd0"/>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="456" y="160" width="99" height="20" uuid="d7e820df-378d-4f61-a339-858bd130b460"/>
+				<textFieldExpression><![CDATA[$F{pacientes_tel_resp_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="180" width="50" height="20" uuid="a108252e-4d98-4508-b60a-0cdab1ce0704"/>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="180" width="189" height="20" uuid="dfc3f9b1-3a85-49b9-82e7-1126e0799452"/>
+				<textFieldExpression><![CDATA[$F{pacientes_dir_resp_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="239" y="180" width="69" height="20" uuid="1b1a8a3e-2e74-4bbe-8c32-5e3aef1d15c8"/>
+				<text><![CDATA[Referido por:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="308" y="180" width="247" height="20" uuid="cde96c9d-7a57-45f8-be13-87fe89ef04aa"/>
+				<textFieldExpression><![CDATA[$F{pacientes_referido_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="200" width="100" height="20" uuid="b4bfff01-4822-4aee-ab14-0d7a54ef3e06"/>
+				<text><![CDATA[En caso de urgencia avisar a:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="200" width="139" height="20" uuid="fc4e876d-e0b3-41cb-ab7e-a9bac0146498"/>
+				<textFieldExpression><![CDATA[$F{pacientes_caso_urg_aviso_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="239" y="200" width="51" height="20" uuid="48a420df-2462-471b-83dd-9d3e5a271717"/>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="200" width="122" height="20" uuid="6fcf0f9d-3251-4b8a-9c91-61f67d1a75a4"/>
+				<textFieldExpression><![CDATA[$F{pacientes_dir_urg_aviso_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="200" width="44" height="20" uuid="067218d1-3ec1-4f36-940e-f272f641abb0"/>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="200" width="100" height="20" uuid="3549a485-568a-4075-9582-0772f8826e0f"/>
+				<textFieldExpression><![CDATA[$F{pacientes_tel_urg_aviso_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="220" width="77" height="20" uuid="7b227a13-d9ef-4ee4-bac1-ab3f1168edc1"/>
+				<text><![CDATA[Motivo consulta:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="77" y="220" width="478" height="20" uuid="25a51ed8-f609-4fa8-a1cd-753c5b957faa"/>
+				<textFieldExpression><![CDATA[$F{pacientes_motivo_consulta_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="240" width="555" height="20" uuid="6e593195-cc12-497a-ad98-9d9bfc518b8c"/>
+				<text><![CDATA[Evolución y estado actual( Ampliación motivo de consulta - reportes sintomas:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="260" width="555" height="60" uuid="757a4758-1c27-4ffa-b8f5-82934ed04071"/>
+				<textFieldExpression><![CDATA[$F{pacientes_evol_est_actual_paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="320" width="126" height="20" uuid="6b3f90a2-de61-493a-bb6c-2e4caa65f56d"/>
+				<text><![CDATA[Antecedentes familiares:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="126" y="320" width="429" height="20" uuid="b055b323-07b5-42d7-80ba-5a00dff4926c"/>
+				<textFieldExpression><![CDATA[$F{pacientes_antec_fam_paciente}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="219">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="41307f58-e6a2-45f5-a4b9-1a1b3f987c7c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Antecedentes odontológicos y medicos generales ( Registrar "SI" o "NO" en la casilla correspondiente)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="141" height="20" uuid="93cc6c62-01e0-442f-a12d-e97bd25c037e"/>
+				<text><![CDATA[Alergias:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="20" width="30" height="20" uuid="fc11f3c7-175d-4c1a-8103-8de18442cc1b"/>
+				<textFieldExpression><![CDATA[$F{pacientes_alergias_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="40" width="138" height="20" uuid="910aadb9-4c71-46b2-af1b-986db08bc5b5"/>
+				<text><![CDATA[Discracia sanguínea:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="40" width="30" height="20" uuid="2c028ca3-99d8-470d-bf3d-5faaa343726c"/>
+				<textFieldExpression><![CDATA[$F{pacientes_discrasia_sanguinea_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="60" width="137" height="20" uuid="cd16d516-5f8f-480e-be93-95637fd8e78f"/>
+				<text><![CDATA[Cardiopatías:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="60" width="30" height="20" uuid="c4884424-4cb9-4e8b-9066-25b09dbc1508"/>
+				<textFieldExpression><![CDATA[$F{pacientes_cardiopatias_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="80" width="138" height="20" uuid="5e1f19fe-d8e1-4678-a2e2-2e63ba2ddcf4"/>
+				<text><![CDATA[Embarazo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="80" width="30" height="20" uuid="4727c17b-3fbc-4f7b-a985-b8500d6ae475"/>
+				<textFieldExpression><![CDATA[$F{pacientes_embarazo_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="100" width="138" height="20" uuid="ff6b819b-38ad-47d9-a71f-7a4d55f6e50e"/>
+				<text><![CDATA[Alteración presión arterial:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="100" width="30" height="20" uuid="8e38c11c-dbed-4f57-9b5b-8b7fa15045c4"/>
+				<textFieldExpression><![CDATA[$F{pacientes_alter_pres_arterial_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="120" width="138" height="20" uuid="d1e527c4-bf3a-4793-b387-1e0ead0d70b3"/>
+				<text><![CDATA[Toma de medicamentos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="120" width="30" height="20" uuid="1d5a798c-1ed8-4b44-b496-081c62c63923"/>
+				<textFieldExpression><![CDATA[$F{pacientes_toma_medicamentos_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="140" width="138" height="20" uuid="529dd62a-7728-4ca7-8c78-8b30fe0860da"/>
+				<text><![CDATA[Tratamiento médico actual:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="140" width="30" height="20" uuid="69683c79-82ff-4be3-b65f-1c1260b27bab"/>
+				<textFieldExpression><![CDATA[$F{pacientes_trat_med_actual_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="20" width="121" height="20" uuid="1d75caa3-f68b-4a36-adb5-d8cfd56f0782"/>
+				<text><![CDATA[Hepatitis:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="20" width="18" height="20" uuid="5f110d05-a5d2-4131-bf06-44d04d6fd1df"/>
+				<textFieldExpression><![CDATA[$F{pacientes_hepatitis_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="40" width="121" height="20" uuid="2a234d4b-b5fb-4073-bf33-ba5abfcc914d"/>
+				<text><![CDATA[Diabetes:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="40" width="18" height="20" uuid="2726ff0c-78fc-411c-9320-673992ef7780"/>
+				<textFieldExpression><![CDATA[$F{pacientes_diabetes_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="59" width="121" height="20" uuid="4d4648ca-9f27-4bc9-bd8c-9782a878f5eb"/>
+				<text><![CDATA[Fiebre reumática:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="60" width="18" height="20" uuid="95a1b236-3ee1-4834-978d-39d34b3fdf8a"/>
+				<textFieldExpression><![CDATA[$F{pacientes_fiebre_reumatica_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="78" width="121" height="20" uuid="16ca43bc-a336-42ff-b435-d87e87bbb6b8"/>
+				<text><![CDATA[HIV - SIDA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="80" width="18" height="20" uuid="ef9d8638-30ad-454c-a570-fab62ac5617e"/>
+				<textFieldExpression><![CDATA[$F{pacientes_hiv_sida_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="98" width="121" height="20" uuid="d0a545fb-6a6d-4874-85cc-59d4ebe850d8"/>
+				<text><![CDATA[Inmunosupresión:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="100" width="18" height="20" uuid="204be8e4-c0fc-4207-a0e8-0343f58b420c"/>
+				<textFieldExpression><![CDATA[$F{pacientes_inmunosupresion_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="118" width="121" height="20" uuid="37cd139f-1374-4097-ae7e-959b7db6abc1"/>
+				<text><![CDATA[Patologías renales:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="120" width="18" height="20" uuid="48725c7a-b0b5-416d-8b89-4b717ad96f25"/>
+				<textFieldExpression><![CDATA[$F{pacientes_patologias_renales_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="138" width="121" height="20" uuid="f29e1dfc-70bb-4c95-90de-3337736812f2"/>
+				<text><![CDATA[Patologías respiratorias:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="138" width="18" height="20" uuid="b1780608-eb50-4bd1-8074-4e35a2eae392"/>
+				<textFieldExpression><![CDATA[$F{pacientes_patologias_respiratorias_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="307" y="20" width="170" height="20" uuid="ceab13e4-2e46-4645-900e-e1889fcc3f8d"/>
+				<text><![CDATA[Trastornos gástricos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="478" y="19" width="18" height="20" uuid="a6410c62-7cee-4ef9-a0f9-ecc05b2c9a3d"/>
+				<textFieldExpression><![CDATA[$F{pacientes_trastornos_gastricos_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="308" y="39" width="170" height="20" uuid="a719aa85-51a3-4856-9e6e-a813b9884c49"/>
+				<text><![CDATA[Trastornos emocionales:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="478" y="38" width="19" height="20" uuid="1b25678a-1293-47bd-8ae3-3a1aa7885cec"/>
+				<textFieldExpression><![CDATA[$F{pacientes_trastornos_emocionales_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="308" y="59" width="170" height="20" uuid="8dae5b00-4124-4c7a-8e0d-dfcb9ae9ab01"/>
+				<text><![CDATA[Sinusitis:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="478" y="59" width="19" height="20" uuid="37599147-df89-4179-8ada-0c8af1a695a7"/>
+				<textFieldExpression><![CDATA[$F{pacientes_sinusitis_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="308" y="78" width="170" height="20" uuid="d8409899-96de-4f08-909e-229b270b9878"/>
+				<text><![CDATA[Cirugías( incluso orales):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="478" y="81" width="19" height="20" uuid="fe21da52-daed-46e0-9130-b0e9a29bfdcf"/>
+				<textFieldExpression><![CDATA[$F{pacientes_cirugias_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="308" y="97" width="170" height="20" uuid="e74dbcd1-d52a-46fa-a0cf-8ce824ca7196"/>
+				<text><![CDATA[Exodoncias:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="477" y="101" width="19" height="20" uuid="7725ae3d-101f-4b7a-8720-19963a027a00"/>
+				<textFieldExpression><![CDATA[$F{pacientes_exodoncias_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="308" y="117" width="170" height="20" uuid="145dac4d-e1e3-4c40-a4df-07e2accf0f1b"/>
+				<text><![CDATA[Enfermedades orales:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="478" y="121" width="19" height="20" uuid="15dba3e9-56a4-4287-bf33-e785ee8cd8b4"/>
+				<textFieldExpression><![CDATA[$F{pacientes_enfermedades_orales_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="308" y="137" width="170" height="20" uuid="b3537008-4349-44db-aec3-f9573ced13cf"/>
+				<text><![CDATA[Uso de prótesis o aparatología oral:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="478" y="140" width="19" height="20" uuid="3ce885b4-e4c3-4b34-b29a-45ecd584d710"/>
+				<textFieldExpression><![CDATA[$F{pacientes_protesis_aparotologia_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="159" width="277" height="20" uuid="db1359b4-6c14-4c02-9d19-711d39bfcf28"/>
+				<text><![CDATA[Otras patologías o antecedentes odontológicos o médicos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="159" width="276" height="20" uuid="b50f232d-e315-4a12-b467-1d599a572279"/>
+				<textFieldExpression><![CDATA[$F{pacientes_otras_pat_antec_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="179" width="100" height="20" uuid="eda58efc-cb03-487f-9a69-bac31f1391b8"/>
+				<text><![CDATA[Observaciones:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="102" y="179" width="453" height="20" uuid="1cfd0ea6-7029-4193-bd80-1036c0cd059c"/>
+				<textFieldExpression><![CDATA[$F{pacientes_observaciones_o_m}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="199" width="167" height="20" uuid="d43181af-bba4-43d3-babc-f66640f56caa"/>
+				<text><![CDATA[Habitos asociados a cavidad oral:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="169" y="199" width="386" height="20" uuid="3de389c9-37e0-4bde-aa9d-d0802f2a485e"/>
+				<textFieldExpression><![CDATA[$F{pacientes_habitos_asociados_o_m}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="224">
+			<staticText>
+				<reportElement x="0" y="0" width="252" height="20" uuid="f31399fd-8442-4874-8e9d-98de1de8ac7e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Examen estomatologíco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="467c3573-0bf1-4c03-a1f3-d5a93104d39c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estructura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="20" width="26" height="20" uuid="5769bc17-732e-4997-8b32-2e757abafe21"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="38" width="100" height="20" uuid="e458b388-4bc8-48b1-b0ac-de673921ebe4"/>
+				<text><![CDATA[Labio superior:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="38" width="25" height="20" uuid="8a675dc7-fd10-453f-acb0-4ecfc836f296"/>
+				<textFieldExpression><![CDATA[$F{pacientes_labio_superior_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="58" width="100" height="20" uuid="31ba5fde-4244-4aa7-932a-f5ae432700f1"/>
+				<text><![CDATA[Labio inferior:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="58" width="26" height="20" uuid="6abba280-7242-4e01-9fb7-bdadc98d4bfc"/>
+				<textFieldExpression><![CDATA[$F{pacientes_labio_inferior_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="76" width="100" height="20" uuid="a6138a21-146e-45c2-9142-1440aa5e5e03"/>
+				<text><![CDATA[Comisuras:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="76" width="25" height="20" uuid="74e042f0-b148-4823-b523-b1ae091f7a49"/>
+				<textFieldExpression><![CDATA[$F{pacientes_comisuras_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="93" width="100" height="20" uuid="8b72e2b6-296a-4f96-9dd8-f084123eec3c"/>
+				<text><![CDATA[Mucosa oral:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="93" width="26" height="20" uuid="69d50055-5fb2-465c-9b3a-4d23c53bf89d"/>
+				<textFieldExpression><![CDATA[$F{pacientes_mucosa_oral_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="110" width="100" height="20" uuid="f9725d3c-8a5d-4d5e-a623-2119bf6b02b3"/>
+				<text><![CDATA[Surcos yugales:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="110" width="25" height="20" uuid="4b3b026f-30d2-4217-a3bd-97cc6201a24d"/>
+				<textFieldExpression><![CDATA[$F{pacientes_surcos_yugales_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="129" width="100" height="20" uuid="4b23492a-7e66-4dfd-8310-34c801d2ef25"/>
+				<text><![CDATA[Frenillos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="129" width="26" height="20" uuid="b11d4f9d-939b-4be7-a897-65c8db75ce2e"/>
+				<textFieldExpression><![CDATA[$F{pacientes_frenillos_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="126" y="20" width="100" height="20" uuid="cfe4694e-ab43-4f4d-8ae5-cebf67aa043e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estructura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="20" width="26" height="20" uuid="f0731e69-9e4c-4f65-94d7-7beebc225092"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="35" width="100" height="20" uuid="382730ca-c8d1-4b2b-90de-6c40ccaa3d29"/>
+				<text><![CDATA[Orofaringe:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="225" y="36" width="27" height="20" uuid="78d71205-d4db-4ae4-98b9-db4b7974fd6f"/>
+				<textFieldExpression><![CDATA[$F{pacientes_orofaringe_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="125" y="55" width="100" height="20" uuid="ebc8094d-d24d-4b05-8365-099984af0c62"/>
+				<text><![CDATA[Paladar:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="225" y="55" width="27" height="20" uuid="8abb0584-b849-473f-bd69-459f6f3014a1"/>
+				<textFieldExpression><![CDATA[$F{pacientes_paladar_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="125" y="74" width="100" height="20" uuid="1c3f36ad-ff03-4710-bb72-57726e5c7762"/>
+				<text><![CDATA[Glándulas salivales:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="225" y="74" width="27" height="20" uuid="9dc908e7-8cea-4631-8326-f44997d4a5fd"/>
+				<textFieldExpression><![CDATA[$F{pacientes_glandulas_salivales_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="125" y="94" width="100" height="20" uuid="ad465948-ace5-44fc-9625-0023dcea6287"/>
+				<text><![CDATA[Piso de boca:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="225" y="94" width="27" height="20" uuid="59f26643-4c71-43ec-8dca-2103959a449e"/>
+				<textFieldExpression><![CDATA[$F{pacientes_piso_boca_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="127" y="114" width="100" height="20" uuid="3cd0c3ce-991e-4dee-b69e-a8c542ba60aa"/>
+				<text><![CDATA[Dorso de lengua:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="227" y="114" width="25" height="20" uuid="372c954f-9fcc-43c5-a06f-9eed389fad03"/>
+				<textFieldExpression><![CDATA[$F{pacientes_dorso_lengua_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="126" y="129" width="100" height="20" uuid="454c11fc-fb22-44da-b2fd-5f0da2b1f907"/>
+				<text><![CDATA[Vientre de lengua:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="226" y="129" width="26" height="20" uuid="f1a1fe28-882d-4b75-b11d-7c6552880cbc"/>
+				<textFieldExpression><![CDATA[$F{pacientes_vientre_lengua_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="2" width="160" height="20" uuid="7b993ce0-83c0-49ae-8096-53ff9b4a556e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Articulación temporo mandibular]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="20" width="160" height="20" uuid="5b160bb7-21d7-4e8e-b838-129d5280fdbf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hallazgos clinicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="40" width="140" height="20" uuid="e209d852-445d-47be-8288-c260d44ab19b"/>
+				<text><![CDATA[Ruidos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="367" y="40" width="45" height="20" uuid="aa4534c1-d3f4-4b70-bb54-aaae90297df5"/>
+				<textFieldExpression><![CDATA[$F{pacientes_ruidos_atm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="59" width="141" height="20" uuid="d283897d-91ae-46e3-a68b-f2af069492a0"/>
+				<text><![CDATA[Desviación:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="366" y="59" width="46" height="20" uuid="ea556a73-1341-4538-8b4b-3bdfb3f3e0ca"/>
+				<textFieldExpression><![CDATA[$F{pacientes_desviacion_atm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="253" y="78" width="140" height="20" uuid="bd0ddec4-7a7b-4808-9eed-442d46161b7e"/>
+				<text><![CDATA[Cambio de volúmen:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="367" y="78" width="45" height="20" uuid="e93f414c-ec50-4d34-b1a1-fdaa97a1d0a8"/>
+				<textFieldExpression><![CDATA[$F{pacientes_cambio_volumen_atm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="254" y="97" width="139" height="20" uuid="0dd3f520-b679-4546-bf64-6ce6a93a4f41"/>
+				<text><![CDATA[Bloqueo mandibular:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="368" y="97" width="44" height="20" uuid="288c604a-9b2c-4663-8500-b02dddcde277"/>
+				<textFieldExpression><![CDATA[$F{pacientes_bloqueo_mandibular_atm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="115" width="141" height="20" uuid="802595ac-df66-4878-a98d-8a44329c1b3b"/>
+				<text><![CDATA[Limitación de apertura:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="366" y="115" width="46" height="20" uuid="8283391f-30cb-4d92-80e1-23e9bd219964"/>
+				<textFieldExpression><![CDATA[$F{pacientes_limitacion_apertura_atm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="253" y="134" width="140" height="20" uuid="c1260c24-f7a2-43ed-9424-db501632bdc7"/>
+				<text><![CDATA[Dolor articular:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="367" y="134" width="45" height="20" uuid="194b0573-4d48-4429-a278-463dcf426d38"/>
+				<textFieldExpression><![CDATA[$F{pacientes_dolor_articular_atm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="153" width="141" height="20" uuid="60f26cd2-b653-451f-b02b-5f00a94c3cd8"/>
+				<text><![CDATA[Dolor muscular:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="366" y="153" width="46" height="20" uuid="ef97f188-5129-465b-b33c-d6e46778ff21"/>
+				<textFieldExpression><![CDATA[$F{pacientes_dolor_muscular_atm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="2" width="83" height="20" uuid="936a5e10-bbf8-4267-9f84-c7490287abba"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cops / NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="22" width="54" height="20" uuid="4ee6d85e-581d-47cf-a968-c7bc0885a672"/>
+				<text><![CDATA[Cariados:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="467" y="22" width="28" height="20" uuid="202d9d25-1dc9-4ee4-a870-f8ac249c42b9"/>
+				<textFieldExpression><![CDATA[$F{pacientes_cariados_cops}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="42" width="54" height="20" uuid="c0b788fa-9555-484d-b48b-a5c13339b1fa"/>
+				<text><![CDATA[Obturados:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="467" y="42" width="28" height="20" uuid="cd09241a-fcfb-4fc7-a888-c047005615f6"/>
+				<textFieldExpression><![CDATA[$F{pacientes_obturados_cops}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="62" width="54" height="20" uuid="4afc5576-2856-467b-a2d1-4a83b139b9f9"/>
+				<text><![CDATA[Extraidos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="467" y="62" width="28" height="20" uuid="eb3b4678-8aa0-45c5-95c3-444147629740"/>
+				<textFieldExpression><![CDATA[$F{pacientes_extraidos_cops}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="82" width="54" height="20" uuid="f63f0467-be3c-4007-a45d-c99af65883b1"/>
+				<text><![CDATA[Sanos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="467" y="82" width="28" height="20" uuid="c0d5512f-0f36-452b-aad5-baa72e9967af"/>
+				<textFieldExpression><![CDATA[$F{pacientes_sanos_cops}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="494" y="2" width="59" height="20" uuid="cbe5cfe0-012c-4b7b-95a5-480a59bcdfb9"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ceo / NO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="507" y="22" width="29" height="20" uuid="8d9130b2-73ce-4640-bd0e-277033b99ec0"/>
+				<textFieldExpression><![CDATA[$F{pacientes_cariados_ceo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="42" width="31" height="20" uuid="d6031da8-9a34-4f66-b318-a62617823e92"/>
+				<textFieldExpression><![CDATA[$F{pacientes_obturados_ceo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="62" width="31" height="20" uuid="56550a73-706a-4ce8-9259-e98bfdee8c11"/>
+				<textFieldExpression><![CDATA[$F{pacientes_perdidos_ceo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="507" y="82" width="31" height="20" uuid="785ab8f2-ef14-4bca-9670-485f86fde392"/>
+				<textFieldExpression><![CDATA[$F{pacientes_sanos_ceo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="148" width="250" height="20" uuid="dcefac6e-dec0-49fe-b40f-7098bbe7354b"/>
+				<text><![CDATA[Observaciones examen estomatologíco:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="168" width="250" height="55" uuid="3340d0bf-2927-422e-852a-462bbcbf4628"/>
+				<textFieldExpression><![CDATA[$F{pacientes_observaciones_e_e}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="173" width="301" height="20" uuid="2a96927f-bbf4-4062-a8a8-2e1d9da95f24"/>
+				<text><![CDATA[Observaciones articulación temporo mandibular:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="253" y="193" width="300" height="30" uuid="8f2afa56-b89e-4f0c-b087-abe12f6e3764"/>
+				<textFieldExpression><![CDATA[$F{pacientes_observaciones_atm}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="386">
+			<staticText>
+				<reportElement x="1" y="0" width="555" height="20" uuid="391d9fec-6871-4959-8de4-39768da68c92"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Anexo de ortodoncia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="21" width="236" height="20" uuid="95d73b99-4ce9-4b8d-9061-732591037fcf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Análisis radiografico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="39" width="155" height="20" uuid="ad67bcbb-397c-4419-96b4-32cb38fbe3f7"/>
+				<text><![CDATA[Dientes retenidos o impactados:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="39" width="21" height="20" uuid="b8df6572-96f5-45b7-ac22-0e51b7426795"/>
+				<textFieldExpression><![CDATA[$F{pacientes_dientes_ret_imp_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="177" y="39" width="30" height="20" uuid="94b58bae-7efc-44b4-adf4-1978d3dbab55"/>
+				<text><![CDATA[Cual:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="206" y="39" width="30" height="20" uuid="a52eb472-a6a3-47bc-b7d0-26f8bc7b6803"/>
+				<textFieldExpression><![CDATA[$F{pacientes_cual_diente_ret_imp_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="58" width="155" height="20" uuid="953c1a48-866b-4292-a8ca-893126803a50"/>
+				<text><![CDATA[Dientes supernumerarios:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="58" width="21" height="20" uuid="5ebe8e22-bc74-44f2-b2ab-aebfa55c4a27"/>
+				<textFieldExpression><![CDATA[$F{pacientes_dientes_supernum_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="177" y="57" width="30" height="20" uuid="40f6f245-a792-49dd-bf0d-4e2a76e3d251"/>
+				<text><![CDATA[Cual:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="206" y="57" width="30" height="20" uuid="1fc734dd-bc3e-48b0-89d7-6c619d06e799"/>
+				<textFieldExpression><![CDATA[$F{pacientes_cual_dientes_supernum_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="77" width="155" height="20" uuid="093a1237-753c-49f4-82d1-dab939d0bd44"/>
+				<text><![CDATA[Longitud radicular disminuida:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="77" width="21" height="20" uuid="4e241c00-1f51-4ee8-8d35-139f7807bbf2"/>
+				<textFieldExpression><![CDATA[$F{pacientes_long_rad_dism_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="177" y="74" width="30" height="20" uuid="07ad9d39-ace9-4454-aa5f-59ac2e937da4"/>
+				<text><![CDATA[Cual:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="206" y="74" width="30" height="20" uuid="d428cef4-ea5c-4c80-9180-87e3f9096864"/>
+				<textFieldExpression><![CDATA[$F{pacientes_cual_long_rad_dis_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="95" width="236" height="20" uuid="d4c14d07-410a-4397-82c3-be2a335d5d59"/>
+				<text><![CDATA[Observaciones:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="115" width="236" height="43" uuid="09a3b5be-9da5-4a7c-81ef-07950d748225"/>
+				<textFieldExpression><![CDATA[$F{pacientes_observaciones_ar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="20" width="126" height="20" uuid="cf7696be-3013-404f-b312-db1649c3c8c3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Análisis cefalometrico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="39" width="100" height="20" uuid="644df296-d27d-4a11-9393-1250e771d58d"/>
+				<text><![CDATA[Perfil esquelético:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="334" y="39" width="28" height="20" uuid="6318a330-8ffb-48c0-8a67-9a9b54f44302"/>
+				<textFieldExpression><![CDATA[$F{pacientes_perfil_esqueletico_ac}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="57" width="100" height="20" uuid="5d5a4ebf-c0dc-475c-8bd5-264c4df2db87"/>
+				<text><![CDATA[Prognatismo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="336" y="57" width="28" height="20" uuid="dc60623f-4bbe-4d34-b678-83a626802d95"/>
+				<textFieldExpression><![CDATA[$F{pacientes_prognatismo_ac}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="76" width="100" height="20" uuid="9146c94a-7d91-48cf-8a03-444278f4b334"/>
+				<text><![CDATA[Retrognatismo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="336" y="76" width="28" height="20" uuid="b112e28a-e82a-4682-b139-bd256310caf4"/>
+				<textFieldExpression><![CDATA[$F{pacientes_retrognatismo_ac}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="96" width="100" height="20" uuid="8be3e4f8-32e8-4492-8e5a-2e281c516f48"/>
+				<text><![CDATA[Tipo de crecimiento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="336" y="96" width="28" height="20" uuid="b81f225d-121c-4087-83dd-e414963cf3ec"/>
+				<textFieldExpression><![CDATA[$F{pacientes_tipo_crecimiento_ac}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="115" width="100" height="20" uuid="c331f663-a324-430e-83ef-f29325a86304"/>
+				<text><![CDATA[Altura facial inf.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="336" y="115" width="28" height="20" uuid="94b17bfb-4518-488c-84eb-6cd2ae1a2e87"/>
+				<textFieldExpression><![CDATA[$F{pacientes_altura_facial_inf_ac}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="22" width="100" height="20" uuid="a5ea4bef-dba1-422d-969f-8e400a371898"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dentario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="42" width="49" height="20" uuid="557e0994-d62e-48a9-aa5e-fd4f64078002"/>
+				<text><![CDATA[Protrusión:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="412" y="42" width="48" height="20" uuid="40eabd51-30a7-416c-961a-1229e5af73b9"/>
+				<textFieldExpression><![CDATA[$F{pacientes_protrusion_dentario}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="363" y="61" width="49" height="20" uuid="b24b0dfb-6e8f-446b-bf18-c75bb5d0bd51"/>
+				<text><![CDATA[Retrusión:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="412" y="61" width="48" height="20" uuid="021679ab-f7da-42e6-a513-81ffd2644f32"/>
+				<textFieldExpression><![CDATA[$F{pacientes_retrusion_dentario}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="365" y="79" width="100" height="20" uuid="ee2be00b-7cfd-4b8b-8d0b-54fcd1e41fd0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tejidos blandos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="97" width="61" height="20" uuid="d289148f-6586-4ae3-ae38-b2346007f6db"/>
+				<text><![CDATA[Perfil:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="425" y="97" width="38" height="20" uuid="42f58e33-ef1a-4f1c-b700-6cba65be5300"/>
+				<textFieldExpression><![CDATA[$F{pacientes_perfil_tejidos_blandos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="365" y="115" width="59" height="20" uuid="88256db8-67d3-4a27-9f9f-b515349fd5ff"/>
+				<text><![CDATA[Proquelia:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="427" y="115" width="38" height="20" uuid="2b25c4b5-cea6-464b-b886-85df1ecee9b6"/>
+				<textFieldExpression><![CDATA[$F{pacientes_proquelia_tejidos_blandos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="364" y="135" width="60" height="20" uuid="5e7035a9-a1d1-4f4f-a222-827970745d23"/>
+				<text><![CDATA[Retroquelia:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="426" y="135" width="38" height="20" uuid="56b2650c-4430-421e-b024-58e7f25bc0e5"/>
+				<textFieldExpression><![CDATA[$F{pacientes_retroquelia_tejidos_blandos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="156" width="100" height="20" uuid="61a78023-c328-4d26-a2ca-5fa01f565c62"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Análisis de modelos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="173" width="100" height="20" uuid="50be27d1-aacc-44ef-8a30-994b15020c33"/>
+				<text><![CDATA[Dentición:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="103" y="173" width="100" height="20" uuid="b8b316ca-4a63-4dcc-a5cb-29c5d0c2c995"/>
+				<textFieldExpression><![CDATA[$F{pacientes_tipo_denticion_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="191" width="100" height="20" uuid="6f0e30cb-86c5-4315-a23c-cb2cfd4d0195"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Morfología del arco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="209" width="52" height="20" uuid="e511ceae-9490-4d3c-a149-d7c7ace671cc"/>
+				<text><![CDATA[Triangular:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="209" width="38" height="20" uuid="6b0d7c10-166c-4277-bf00-9a5351fa766e"/>
+				<textFieldExpression><![CDATA[$F{pacientes_morf_arco_triang_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="226" width="52" height="20" uuid="6c041db4-aea3-4646-a5dd-11897ccfb1c6"/>
+				<text><![CDATA[Cuadrado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="226" width="38" height="20" uuid="994a7f17-b8d7-4828-9a37-93678ba278df"/>
+				<textFieldExpression><![CDATA[$F{pacientes_morf_arco_cuadr_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="245" width="52" height="20" uuid="37976da6-cab8-4380-a4f9-47404372efef"/>
+				<text><![CDATA[Ovoide:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="245" width="38" height="20" uuid="81121673-8343-4fe6-9617-f8d69c95185a"/>
+				<textFieldExpression><![CDATA[$F{pacientes_morf_arco_ovoi_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="101" y="193" width="100" height="20" uuid="fd9deab0-0cae-4b84-ae61-f8cca8c92ff2"/>
+				<text><![CDATA[Tamaño dental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="212" width="66" height="20" uuid="c3f8c3a3-fc99-4256-956c-2bff585360aa"/>
+				<text><![CDATA[Normal:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="168" y="212" width="32" height="20" uuid="4107a4a6-0000-40a4-aca9-2496c8f745ce"/>
+				<textFieldExpression><![CDATA[$F{pacientes_tam_dental_normal_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="103" y="229" width="66" height="20" uuid="009ef9ca-df2f-40fa-bcc1-2885d16f0997"/>
+				<text><![CDATA[Macrodoncia:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="169" y="229" width="32" height="20" uuid="f7b791de-aad2-4758-8651-14b780021713"/>
+				<textFieldExpression><![CDATA[$F{pacientes_tam_dental_macrodoncia_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="102" y="245" width="66" height="20" uuid="126fc8d7-985a-42a5-a241-9bdd7df9c91e"/>
+				<text><![CDATA[Microdoncia:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="168" y="245" width="32" height="20" uuid="1255db54-f245-43e6-b884-7b9dc58faf9f"/>
+				<textFieldExpression><![CDATA[$F{pacientes_tam_dental_microdoncia_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="263" width="199" height="20" uuid="bc249898-5576-4443-bad8-202549b0efb8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relación molar y canina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="284" width="62" height="20" uuid="58285204-dbec-4633-8e8e-4f0e8d242a7e"/>
+				<text><![CDATA[Derecha : d]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="284" width="60" height="20" uuid="9390f94f-10e6-4e35-a2ea-cf8d2aa7d6a6"/>
+				<text><![CDATA[Izquierda: i]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="306" width="63" height="20" uuid="18f1ba67-e891-4794-a45c-c8c97bf77e71"/>
+				<text><![CDATA[Canino:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="66" y="306" width="59" height="20" uuid="348f2090-91ce-490f-bc6f-e05e665a0428"/>
+				<textFieldExpression><![CDATA[$F{pacientes_rmc_canino_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="324" width="63" height="20" uuid="263428dd-8611-43be-b2b8-9f009235affd"/>
+				<text><![CDATA[Molar:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="66" y="324" width="59" height="20" uuid="4940fff6-6abf-4729-a980-fcde2d9dfb65"/>
+				<textFieldExpression><![CDATA[$F{pacientes_rmc_molar_am}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="344" width="40" height="20" uuid="17407ddc-fc70-478f-9c36-d7d01fdf3b6f"/>
+				<textFieldExpression><![CDATA[$F{pacientes_rmc_lineamedia_izq}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="344" width="63" height="20" uuid="d40f03bf-08d4-4d4b-a12f-862db1e08685"/>
+				<text><![CDATA[Linea media:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="66" y="344" width="37" height="20" uuid="d4b96386-93ad-412b-b472-248016e75950"/>
+				<textFieldExpression><![CDATA[$F{pacientes_rmc_lineamedia_der}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="65" y="364" width="22" height="20" uuid="5751185f-2f32-4f95-b701-4cafd2130c6b"/>
+				<text><![CDATA[D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="363" width="19" height="20" uuid="2c1669cf-1e7b-4923-838b-ca3a0d8de607"/>
+				<text><![CDATA[I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="22" width="92" height="20" uuid="1f5743c7-a668-44ec-9743-47f296200949"/>
+				<text><![CDATA[x: Maxilar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="41" width="96" height="20" uuid="03fe7fe5-7a23-436f-bea8-b92e932500f9"/>
+				<text><![CDATA[d: Mandibular]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="464" y="60" width="93" height="20" uuid="7e4e1046-217c-4a68-8af0-8b4d1cbd7093"/>
+				<text><![CDATA[s: Superior]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="79" width="89" height="20" uuid="78945f22-b0d3-493d-a59c-cd5b2073979d"/>
+				<text><![CDATA[i: Inferior]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="175" width="49" height="20" uuid="8dcf6c3b-f03a-4228-ae66-074494c96b58"/>
+				<text><![CDATA[Overjet:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="252" y="176" width="100" height="20" uuid="98693316-9122-4c33-96fe-9b24584252b6"/>
+				<textFieldExpression><![CDATA[$F{pacientes_overjet_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="352" y="176" width="44" height="20" uuid="b5665ea3-8d19-48d9-9c9b-b269de75d314"/>
+				<text><![CDATA[Ovebite:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="176" width="100" height="20" uuid="867290ea-402a-4c5c-9dba-c85ceabedfda"/>
+				<textFieldExpression><![CDATA[$F{pacientes_ovebite_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="204" y="192" width="100" height="20" uuid="dad1e15a-1492-4155-9532-49f4a8a9d77f"/>
+				<text><![CDATA[Mordida cruzada:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="304" y="192" width="249" height="20" uuid="a893560c-7117-434d-ae70-8e047b763ecd"/>
+				<textFieldExpression><![CDATA[$F{pacientes_mordida_cruzada_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="211" width="100" height="20" uuid="1aa60d62-1127-4aa3-a41b-a2000313688e"/>
+				<text><![CDATA[Apinamiento        Sup:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="303" y="211" width="100" height="20" uuid="f57aea51-8f7d-4edc-abe2-cf15d59d9c15"/>
+				<textFieldExpression><![CDATA[$F{pacientes_apinamiento_sup_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="402" y="213" width="24" height="20" uuid="e9467255-b7b1-41c0-b02d-d386c5184494"/>
+				<text><![CDATA[Inf:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="427" y="213" width="100" height="20" uuid="b5b87f1a-c958-4036-8d5f-aae37272bee2"/>
+				<textFieldExpression><![CDATA[$F{pacientes_apinamiento_inf_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="204" y="229" width="100" height="20" uuid="9d914fa4-f396-49e9-a531-fd3f4898f7f8"/>
+				<text><![CDATA[Diastemas          Sup:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="304" y="229" width="100" height="20" uuid="ef459b47-9ef6-4a4c-b653-8b408509fecf"/>
+				<textFieldExpression><![CDATA[$F{pacientes_diastemas_sup_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="405" y="232" width="19" height="20" uuid="3f92c156-bcd0-4bb7-bf45-7f39e4a84a5f"/>
+				<text><![CDATA[Inf:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="424" y="232" width="100" height="20" uuid="325f7b8a-4b9b-4b2a-a534-1aa7f91788f4"/>
+				<textFieldExpression><![CDATA[$F{pacientes_diastemas_inf_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="248" width="100" height="20" uuid="9cfc2543-4845-4276-8511-1bae83de715d"/>
+				<text><![CDATA[Malposiciones:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="303" y="248" width="250" height="20" uuid="bc35f1f4-0555-4d57-945e-2375e9db8f5b"/>
+				<textFieldExpression><![CDATA[$F{pacientes_malposiciones_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="202" y="265" width="100" height="20" uuid="fd45ce53-828f-4c1e-b6f6-4928c782860a"/>
+				<text><![CDATA[Observaciones:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="202" y="285" width="351" height="98" uuid="79aa3418-8305-413f-962e-a668dde43eff"/>
+				<textFieldExpression><![CDATA[$F{pacientes_observaciones_am}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="465" y="98" width="90" height="20" uuid="4bffff4a-de06-4018-9155-715ccbf499c7"/>
+				<text><![CDATA[v: Vertical]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="117" width="89" height="20" uuid="47420948-4a9f-4988-a706-ff35979793d4"/>
+				<text><![CDATA[h: Horizontal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="283" width="76" height="20" uuid="701e1841-8bf6-416d-a17c-21807e4b1a11"/>
+				<text><![CDATA[Grado: 1,2,3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="135" width="100" height="20" uuid="52bca901-d600-43f2-88fd-ec18b6f75517"/>
+				<text><![CDATA[a: Aumentado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="156" width="100" height="20" uuid="e618f7e6-957f-4780-81c1-f3d86f78068e"/>
+				<text><![CDATA[d: Disminuido]]></text>
+			</staticText>
+		</band>
+		<band height="385">
+			<staticText>
+				<reportElement x="0" y="2" width="100" height="20" uuid="48df1806-9d04-4a6d-9d12-dc92f0af0d0e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diagnóstico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="20" width="100" height="20" uuid="a938cefc-b4e7-43f0-a662-01480390aecf"/>
+				<text><![CDATA[Esqueletico:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="20" width="452" height="35" uuid="56530a08-177e-4a43-85e0-f1d7798e4305"/>
+				<textFieldExpression><![CDATA[$F{pacientes_diagnostico_esqueletico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="60" width="100" height="20" uuid="bc717240-0847-40c9-a684-20d290c02cac"/>
+				<text><![CDATA[Facial:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="60" width="452" height="39" uuid="1a27a59d-5520-4ae8-866d-26df465dacae"/>
+				<textFieldExpression><![CDATA[$F{pacientes_diagnostico_facial}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="105" width="100" height="20" uuid="1e4b2831-8b21-4b6e-96ef-0523e1007423"/>
+				<text><![CDATA[Dental:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="105" width="452" height="44" uuid="a27a506d-26ce-404c-8db3-941fdba6a747"/>
+				<textFieldExpression><![CDATA[$F{pacientes_diagnostico_dental}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="157" width="100" height="20" uuid="d93901d0-266f-4024-bf84-99263aec9f68"/>
+				<text><![CDATA[Funcional:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="102" y="157" width="455" height="38" uuid="c3a52d94-81fa-418c-acb4-46801511dcb2"/>
+				<textFieldExpression><![CDATA[$F{pacientes_diagnostico_funcional}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="200" width="100" height="20" uuid="19e7af4b-2f78-4f7e-879d-bf5f42b5ade1"/>
+				<text><![CDATA[Plan de tratamiento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="200" width="452" height="52" uuid="baef4ffe-a7c2-4bea-bfc6-93499a30ce2b"/>
+				<textFieldExpression><![CDATA[$F{pacientes_plan_tratamiento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="269" width="123" height="20" uuid="6561f075-308c-41f8-bd43-df27f72729bb"/>
+				<text><![CDATA[Objetivos del tratamiento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="125" y="269" width="428" height="41" uuid="2abf9bb1-265a-4482-851f-bfc1b68b4d3a"/>
+				<textFieldExpression><![CDATA[$F{pacientes_objetivos_tratamiento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="322" width="100" height="20" uuid="3c54dd8e-4539-4f0a-956b-593bf0701127"/>
+				<text><![CDATA[Limites para corregir:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="108" y="322" width="447" height="32" uuid="cdaaad96-60cf-4224-9417-4fb772ea9df0"/>
+				<textFieldExpression><![CDATA[$F{pacientes_limites_corregir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="365" width="100" height="20" uuid="113f5bf4-fc99-4ed2-a4f5-1198a9b6f470"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
