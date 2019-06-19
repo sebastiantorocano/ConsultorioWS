@@ -22,7 +22,7 @@ Connection conect = null;
              
            //Cargamos el Driver MySQL
            Class.forName("org.gjt.mm.mysql.Driver");
-           conect = DriverManager.getConnection("jdbc:mysql://localhost/orthogarcia7","root","");
+           conect = DriverManager.getConnection("jdbc:mysql://localhost/odontosoft","root","");
            
            
            //Cargamos el Driver Access
