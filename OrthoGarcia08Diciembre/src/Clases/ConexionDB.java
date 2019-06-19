@@ -18,7 +18,7 @@ public class ConexionDB  {
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            String servidor = "jdbc:mysql://localhost/orthogarcia7";
+            String servidor = "jdbc:mysql://localhost/odontosoft";
             String usuarioDB="root";
             String passwordDB="";
             conexion= DriverManager.getConnection(servidor,usuarioDB,passwordDB);

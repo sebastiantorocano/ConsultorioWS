@@ -1599,7 +1599,7 @@ public class frmCitas extends javax.swing.JFrame{
                     odontologos.add(odont);
 
                 } catch (SQLException ex) {
-                    Logger.getLogger(frmMatcons.class.getName()).log(Level.SEVERE, null, ex);
+                    //Logger.getLogger(frmMatcons.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             for (int i = 0; i < odontologos.size(); i++) {
@@ -1610,7 +1610,7 @@ public class frmCitas extends javax.swing.JFrame{
                 }
             }
         } catch (SQLException ex) {
-            Logger.getLogger(frmMatcons.class.getName()).log(Level.SEVERE, null, ex);
+//            Logger.getLogger(frmMatcons.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -1644,7 +1644,7 @@ public class frmCitas extends javax.swing.JFrame{
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(frmMatcons.class.getName()).log(Level.SEVERE, null, ex);
+//            Logger.getLogger(frmMatcons.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (cont != 0) {
             return false;
